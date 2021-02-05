@@ -20,7 +20,7 @@
 
 **git add** - add files to be staged\
 **git log** - see all commits\
-**git branch [my-branch-name]** - creates a branch\
+**git branch my-branch-name** - creates a branch called my-branch-name\
 **git checkout** - Move to a branch or a commit, can also be used to restore files.\
 **git switch** - Move to a branch (short form)\
 **git merge** - Bring changes from a branch to the branch you currently are in (HEAD)\
