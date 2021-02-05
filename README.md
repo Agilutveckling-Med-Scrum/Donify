@@ -1,6 +1,4 @@
-# DO NOT WRITE CODE ON THE MAIN
-
-# CREATE A BRANCH INSTEAD
+# DO NOT WRITE CODE ON THE MAIN\ CREATE A BRANCH INSTEAD
 
 ## Basic Git Workflow
 
@@ -19,16 +17,13 @@ Code, get frustrated, google, cry, jump for joy and repeat! XD
 
 **git diff** - See all changed code\
 **git status** - Changes you have made but have not added/staged\
-**git diff** --cached - See all changed code, that you have\
-added/staged
+**git diff** --cached - See all changed code, that you have added/staged\
 
-**git add** - add files to be staged
-**git log** - see all commits
-**git branch [my-branch-name]** - creates a branch
-**git checkout** - Move to a branch or a commit, can also be used
-to restore files.
-**git switch** - Move to a branch (short form)
-**git merge** - Bring changes from a branch to the branch you
-currently are in (HEAD)
-**git rm** - Remove file/s & empty folders
-**git rm -r** - Remove folders (use -r and -f carefully)
+**git add** - add files to be staged\
+**git log** - see all commits\
+**git branch [my-branch-name]** - creates a branch\
+**git checkout** - Move to a branch or a commit, can also be used to restore files.\
+**git switch** - Move to a branch (short form)\
+**git merge** - Bring changes from a branch to the branch you currently are in (HEAD)\
+**git rm** - Remove file/s & empty folders\
+**git rm -r** - Remove folders (use -r and -f carefully)\
