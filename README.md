@@ -14,12 +14,12 @@ Code, get frustrated, google, cry, jump for joy and repeat! XD
 
 **npm run serve** - Start server
 
-**git push** - push your local commits to GitHub remote server
-**git pull** - fetch new commits from GitHub remote server
+**git push** - push your local commits to GitHub remote server\
+**git pull** - fetch new commits from GitHub remote server\
 
-**git diff** - See all changed code
-**git status** - Changes you have made but have not added/staged
-**git diff** --cached - See all changed code, that you have
+**git diff** - See all changed code\
+**git status** - Changes you have made but have not added/staged\
+**git diff** --cached - See all changed code, that you have\
 added/staged
 
 **git add** - add files to be staged
