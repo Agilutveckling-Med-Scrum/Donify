@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Walkthrough from "../views/Walkthrough.vue"
+import Walkthrough from "../views/Walkthrough.vue";
+import Home from "../views/Home.vue";
 
 Vue.use(VueRouter);
 
@@ -10,6 +11,16 @@ const routes = [
     name: "Walkthrough",
     component: Walkthrough
   },
+  {
+    path: "/",
+    name: "Home",
+    component: Home
+  },
+  {
+    path: "/",
+    name: "About",
+    component: About
+  }
 ];
 
 const router = new VueRouter({
