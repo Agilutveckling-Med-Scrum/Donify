@@ -58,4 +58,5 @@ h1 {
   flex-direction: column;
   padding: 1em;
   color: white;
+}
 </style>
