@@ -29,7 +29,7 @@ to restore files.
 currently are in (HEAD)
 **git rm** - Remove file/s & empty folders
 **git rm -r** - Remove folders (use -r and -f carefully)
-=======
+
 **git push** - push your local commits to GitHub remote server\
 **git pull** - fetch new commits from GitHub remote server\
 
