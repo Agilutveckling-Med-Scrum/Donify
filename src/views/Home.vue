@@ -48,15 +48,14 @@ export default {
   width: 100%;
 }
 
+h1 {
+  display: flex;
+  justify-content: space-between;
+}
 #footer a {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 1em;
   color: white;
-
-h1 {
-  display: flex;
-  justify-content: space-between;
-}
 </style>
