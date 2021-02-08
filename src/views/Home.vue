@@ -18,17 +18,19 @@
     <b-button>Button2</b-button>
     <b-button>Button3</b-button>
     <b-button>Button4</b-button>
+    <Donerasida> </Donerasida>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-
+import Donerasida from "@/components/donerasida.vue";
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    HelloWorld,
+    Donerasida
   }
 };
 </script>
