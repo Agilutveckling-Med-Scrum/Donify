@@ -2,10 +2,6 @@
   <div class="home">
     <h1>Donate Idag</h1>
     <HelloWorld msg="Welcome to Donate Page" />
-    <b-button>Button1</b-button>
-    <b-button>Button2</b-button>
-    <b-button>Button3</b-button>
-    <b-button>Button4</b-button>
   </div>
 </template>
 
