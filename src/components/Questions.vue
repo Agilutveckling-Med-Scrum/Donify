@@ -1,5 +1,7 @@
 <template>
-<div></div>
+<div style="background-color: blue;">
+
+</div>
 </template>
 
 <script>
