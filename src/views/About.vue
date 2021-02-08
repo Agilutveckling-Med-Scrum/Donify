@@ -16,7 +16,7 @@
 <style scoped>
 
 #footer {
-  background-color: ;
+  /* background-color: unset; */
   color: black;
   height: 6vh;
   display: flex;
