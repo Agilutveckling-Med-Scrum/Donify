@@ -18,7 +18,6 @@
     <b-button>Button2</b-button>
     <b-button>Button3</b-button>
     <b-button>Button4</b-button>
-
   </div>
 </template>
 
@@ -53,7 +52,7 @@ export default {
   flex-direction: column;
   padding: 1em;
   color: white;
-  
+
 h1 {
   display: flex;
   justify-content: space-between;
