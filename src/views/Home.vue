@@ -1,18 +1,41 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="preloader">
+    <ContentLoader 
+    viewBox="0 0 476 124" >
+     <rect x="48" y="8" rx="3" ry="3" width="88" height="6" />
+      <rect x="48" y="26" rx="3" ry="3" width="52" height="6" />
+      <rect x="0" y="56" rx="3" ry="3" width="410" height="6" />
+      <rect x="0" y="72" rx="3" ry="3" width="380" height="6" />
+      <rect x="0" y="88" rx="3" ry="3" width="178" height="6" />
+      <circle cx="20" cy="20" r="20" />
+    </ContentLoader>
+    </div>
+    
+    <Questions />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import { ContentLoader } from "vue-content-loader";
+
+import Questions from "@/components/Questions.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
+    Questions,
+    ContentLoader
   }
 };
 </script>
+
+<style scoped>
+.preloader{
+  margin-left: 10vw;
+  width: 80vw;
+}
+
+
+
+</style>
