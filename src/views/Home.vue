@@ -1,7 +1,11 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>Donate Idag</h1>
+    <HelloWorld msg="Welcome to Donate Page" />
+    <b-button>Button1</b-button>
+    <b-button>Button2</b-button>
+    <b-button>Button3</b-button>
+    <b-button>Button4</b-button>
   </div>
 </template>
 
@@ -16,3 +20,9 @@ export default {
   }
 };
 </script>
+<style scoped>
+h1 {
+  display: flex;
+  justify-content: space-between;
+}
+</style>
