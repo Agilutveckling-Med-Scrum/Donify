@@ -3,7 +3,7 @@
      <div id="header">
       <h1>Donify</h1>
     <div id="nav">
-      <router-link to="/">Om Donify</router-link> 
+    <router-link to="/">Om Donify</router-link> 
       <router-link to="/about">Logga in</router-link>
       </div>
     </div>
