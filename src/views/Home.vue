@@ -28,6 +28,7 @@ export default {
     name: 'Home',
     components: {
         HelloWorld,
+        // eslint-disable-next-line vue/no-unused-components
         Donerasida
     }
 }
