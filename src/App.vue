@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-     <div id="header">
+    <div id="header">
       <h1>Donify</h1>
-    <div id="nav">
-    <router-link to="/">Om Donify</router-link> 
-      <router-link to="/about">Logga in</router-link>
+      <div id="nav">
+        <router-link to="/">Om Donify</router-link>
+        <router-link to="/about">Logga in</router-link> 
       </div>
     </div>
     <router-view />
@@ -12,8 +12,7 @@
 </template>
 
 <style>
-
-body{
+body {
   padding: 0;
   margin: 0;
 }
@@ -27,13 +26,13 @@ body{
 }
 
 #header {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
-  margin: 20px; 
+  margin: 20px;
 }
 
 h1 {
-  font-size: 40px; 
+  font-size: 40px;
 }
 
 #nav {
@@ -43,8 +42,8 @@ h1 {
 #nav a {
   font-weight: bold;
   color: #2c3e50;
-   padding-left: 15px;
-   text-decoration: none; 
+  padding-left: 15px;
+  text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
