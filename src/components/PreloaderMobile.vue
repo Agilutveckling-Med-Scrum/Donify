@@ -1,5 +1,6 @@
 <template>
-<!-- THIS IS A PRELOADER EXAMPLE MADE FOR MOBILE :) -->
+  <!-- THIS IS A PRELOADER EXAMPLE MADE FOR MOBILE :) -->
+  <!-- Write /#/preloader in the adressbar to see the preloader  -->
   <div class="questions-container">
     <svg
       id="donify"
