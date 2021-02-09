@@ -15,7 +15,7 @@
     <h1>Donate Idag</h1>
 
     <Home msg="Welcome to Donate Page" />
-=======
+
     <b-button>Button1</b-button>
     <b-button>Button2</b-button>
     <b-button>Button3</b-button>
@@ -27,15 +27,24 @@
 <script>
 // @ is an alias to /src
 
-import Home from '@/components/Home.vue'
+
+
+
+
+import HelloWorld from '@/components/HelloWorld.vue'
+import Donerasida from '@/components/donerasida.vue'
 
 export default {
     name: 'Home',
     components: {
-        Home
+        HelloWorld,
+        // eslint-disable-next-line vue/no-unused-components
+        Donerasida
     }
-
 }
+
+
+
 </script>
 
 <style scoped>
