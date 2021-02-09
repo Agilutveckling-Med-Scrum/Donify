@@ -9,7 +9,6 @@
 import Questions from "@/components/Questions.vue";
 import About from "@/views/About.vue";
 
-
 export default {
   name: "Home",
   components: {
