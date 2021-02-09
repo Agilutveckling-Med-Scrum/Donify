@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="about">
     <h1 id="button">This is a Donate Page</h1>
 
@@ -40,3 +41,7 @@
   color: black;
 }
 </style>
+=======
+  <div class="about"></div>
+</template>
+>>>>>>> 25f9bb7f81f8117e77f418719f4134c231add6a4

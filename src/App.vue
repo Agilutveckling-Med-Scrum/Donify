@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <div id="header">
       <h1>Donify</h1>
       <div id="nav">
@@ -9,8 +10,15 @@
 
         <router-link to="/">Om Donify</router-link>
         <router-link to="/about">Logga in</router-link>
+
+      <div id="nav">
+        <router-link to="/" id="logo"><h1>Donify</h1></router-link>
+      <nav>
+        <router-link to="/aboutdonify" class="link">Om Donify</router-link>
+        <router-link to="/login" class="link">Logga in</router-link>
+       </nav>
+
       </div>
-    </div>
     <router-view />
   </div>
 </template>
@@ -33,19 +41,47 @@
 h1 {
   font-size: 40px;
 }
+#logo {
+  font-size: 20px;
+  text-decoration: none;
+  padding-right: 70px;
+
+}
 
 #nav {
   padding: 20px, 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
-  padding-left: 15px;
   text-decoration: none;
+  color: #2c3e50;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.link {
+  font-weight: bold;
+  color: #2c3e50;
+
+  padding-left: 15px;
+  text-decoration: none;
+
+  padding-left: 20px;
+
 }
+
+#nav a:hover {
+  color: red; 
+}
+
+/*TODO: fixa så att länkarna ändrar färg när de är aktiva */
+
+/* #nav a:active {
+  color: green; 
+} */
+
+/* .link.router-link-exact-active {
+  color: #42b983;
+} */
 </style>
