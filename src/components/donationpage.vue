@@ -24,13 +24,13 @@
 </template>
 
 <script>
-import VueSlider from "@/components/vue-slider-component.vue";
+import VueSlider from '@/components/vue-slider-component.vue'
 export default {
-  name: "Donationpage",
-  components: {
-    VueSlider
-  }
-};
+    name: 'Donationpage',
+    components: {
+        VueSlider
+    }
+}
 </script>
 
 <style scoped>

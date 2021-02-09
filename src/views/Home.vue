@@ -24,15 +24,15 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-import Donerasida from "@/components/donerasida.vue";
+import HelloWorld from '@/components/HelloWorld.vue'
+import Donerasida from '@/components/donerasida.vue'
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
-    Donerasida
-  }
-};
+    name: 'Home',
+    components: {
+        HelloWorld,
+        Donerasida
+    }
+}
 </script>
 
 <style scoped>
