@@ -10,8 +10,8 @@
 
 <script>
 export default {
-  name: "Donerasida"
-};
+    name: 'Donerasida'
+}
 </script>
 
 <style scoped>
