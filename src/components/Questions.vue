@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: blue;"></div>
+  <div class="questions"></div>
 </template>
 
 <script>
