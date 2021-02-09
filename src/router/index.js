@@ -19,24 +19,6 @@ import Login from '../views/Login.vue'
 Vue.use(VueRouter)
 
 const routes = [
-<<<<<<< HEAD
-    {
-        path: '/',
-        name: 'Walkthrough',
-        component: Walkthrough
-    },
-    {
-        path: '/aboutdonify',
-        name: 'Aboutdonify',
-        component: Aboutdonify
-    }, 
-    {
-        path: '/login',
-        name: 'Login',
-        component: Login
-    }
-]
-=======
   {
     path: "/",
     name: "Walkthrough",
@@ -58,8 +40,7 @@ const routes = [
     component: Login
 >>>>>>> 25f9bb7f81f8117e77f418719f4134c231add6a4
   }
-];
->>>>>>> 25f9bb7f81f8117e77f418719f4134c231add6a4
+]
 
 const router = new VueRouter({
     routes
