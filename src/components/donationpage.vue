@@ -44,7 +44,7 @@ button {
   margin-top: 200px;
 }
 @media screen and (max-width: 40.5em) {
-  .product-img {
+  .donationpage {
     width: auto;
     float: none;
   }
