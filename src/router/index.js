@@ -7,21 +7,21 @@ import Login from '../views/Login.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: "/",
-    name: "Walkthrough",
-    component: Walkthrough
-  },
-  {
-    path: "/aboutdonify",
-    name: "Aboutdonify",
-    component: Aboutdonify
-  },
-  {
-    path: "/login",
-    name: "Login",
-    component: Login
-  }
+    {
+        path: '/',
+        name: 'Walkthrough',
+        component: Walkthrough
+    },
+    {
+        path: '/aboutdonify',
+        name: 'Aboutdonify',
+        component: Aboutdonify
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login
+    }
 ]
 
 const router = new VueRouter({
