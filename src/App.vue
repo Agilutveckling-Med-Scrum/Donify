@@ -1,64 +1,66 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/" id="logo"><h1>Donify</h1></router-link>
-      <nav>
-        <router-link to="/aboutdonify" class="link">Om Donify</router-link>
-        <router-link to="/login" class="link">Logga in</router-link>
-      </nav>
+    <div id="app">
+        <div id="nav">
+            <router-link to="/" id="logo"><h1>Donify</h1></router-link>
+            <nav>
+                <router-link to="/aboutdonify" class="link"
+                    >Om Donify</router-link
+                >
+                <router-link to="/login" class="link">Logga in</router-link>
+            </nav>
+        </div>
+        <router-view />
     </div>
-    <router-view />
-  </div>
 </template>
 
 <script>
-  export default {}
+export default {}
 </script>
 
 <style>
-  #app {
+#app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-  }
+}
 
-  #logo {
+#logo {
     font-size: 20px;
     text-decoration: none;
     padding-right: 70px;
-  }
+}
 
-  #nav {
+#nav {
     padding: 20px, 20px;
     display: flex;
     justify-content: space-between;
     margin: 20px;
-  }
+}
 
-  #nav a {
+#nav a {
     text-decoration: none;
     color: #2c3e50;
-  }
+}
 
-  .link {
+.link {
     font-weight: bold;
     color: #2c3e50;
     padding-left: 20px;
-  }
+}
 
-  #nav a:hover {
+#nav a:hover {
     color: red;
-  }
+}
 
-  /*TODO: fixa så att länkarna ändrar färg när de är aktiva */
+/*TODO: fixa så att länkarna ändrar färg när de är aktiva */
 
-  /* #nav a:active {
+/* #nav a:active {
   color: green; 
 } */
 
-  /* .link.router-link-exact-active {
+/* .link.router-link-exact-active {
   color: #42b983;
 } */
 </style>
