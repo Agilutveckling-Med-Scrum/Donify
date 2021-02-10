@@ -7,7 +7,6 @@ import Login from '../views/Login.vue'
 Vue.use(VueRouter)
 
 const routes = [
-<<<<<<< HEAD
     {
         path: '/',
         name: 'Walkthrough',
@@ -23,27 +22,10 @@ const routes = [
         name: 'Login',
         component: Login
     }
-=======
-	{
-		path: '/',
-		name: 'Walkthrough',
-		component: Walkthrough
-	},
-	{
-		path: '/aboutdonify',
-		name: 'Aboutdonify',
-		component: Aboutdonify
-	},
-	{
-		path: '/login',
-		name: 'Login',
-		component: Login
-	}
->>>>>>> 8208b609bbbc2dae47a88be81876100869936e29
 ]
 
 const router = new VueRouter({
-	routes
+    routes
 })
 
 export default router
