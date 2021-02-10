@@ -1,7 +1,5 @@
-
 <template>
   <div class="home">
-    <Donerasida msg="Welcome to Your Vue.js App" />
     <footer id="footer">
       <a href="#" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
@@ -23,11 +21,11 @@
 
 <script>
 // @ is an alias to /src
-import Donerasida from '@/components/Donerasida.vue'
+
 export default {
     name: 'Home',
     components: {
-        Donerasida
+        
     }
 }
 
