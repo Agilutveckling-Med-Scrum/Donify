@@ -24,9 +24,9 @@
 </template>
 
 <script>
-import VueSlider from "@/components/vue-slider-component.vue";
+import VueSlider from '@/components/vue-slider-component.vue';
 export default {
-  name: "Donationpage",
+  name: 'Donationpage',
   components: {
     VueSlider
   }
