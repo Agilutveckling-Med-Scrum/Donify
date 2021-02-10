@@ -22,6 +22,12 @@ export default {
 
 <style scoped>
 
+/*Mobile*/
+
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) {
+
 .walkthrough{
   position: absolute;
    height: 100%;
@@ -44,6 +50,8 @@ margin-top: 22%;}
   margin:25px 0px;
   width: 100%
 }
+}
+
 
 
 
