@@ -10,8 +10,8 @@
 
 <script>
 export default {
-  name: "Donerasida"
-};
+  name: 'Donerasida'
+}
 </script>
 
 <style scoped>
@@ -25,7 +25,7 @@ export default {
 }
 button {
   width: 100px;
-  height: 30px;
+  height: 30px; 
   border-radius: 8%;
   margin: 20px auto;
 }

@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import VueSlider from "vue-slider-component";
-import "vue-slider-component/theme/antd.css";
+import VueSlider from 'vue-slider-component'
+import 'vue-slider-component/theme/antd.css'
 
 export default {
   components: {
@@ -15,9 +15,9 @@ export default {
   data() {
     return {
       value: 0
-    };
+    }
   }
-};
+}
 </script>
 <style scoped>
 .slider {
