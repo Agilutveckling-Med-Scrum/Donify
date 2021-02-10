@@ -1,13 +1,23 @@
-<template>
 
-  <div class="walkthrough" style="background-color: grey">
+<template>
+  <div class="walkthrough" >
+    <div class="who-are-you" v-if="slides.slide1 === 'not done'" >
 <h2>Välkommen till Donify!</h2>
 <p>Börja med att berätta vem du är</p>
-<div class="button-container" style="background-color:white">
-  <b-button variant="primary" class="mx-auto">Privat person</b-button>  
+<div class="who-container">
+  <b-button variant="primary" class="mx-auto" @click="slides.slide1 = 'done'">Privatperson</b-button>  
+  <b-button variant="primary" class="mx-auto" @click="slides.slide1 = 'done'">Företag</b-button>  
+  <b-button variant="primary" class="mx-auto" @click="slides.slide1 = 'done' ">Organisation</b-button>  
+</div>
+<p><u> Gör detta senare </u></p>
+    </div>
+  <div class="fundraiser-container" v-if="slides.slide1 === 'done'">
+    <h2>Donera till...?</h2>
+  <b-button variant="primary" class="mx-auto">Välgörenhet</b-button>  
   <b-button variant="primary" class="mx-auto">Företag</b-button>  
   <b-button variant="primary" class="mx-auto">Organisation</b-button>  
-</div>
+  <b-button variant="primary" class="mx-auto">Privatperson</b-button>  
+  </div>
   </div>
 </template>
 
@@ -16,36 +26,68 @@
 export default {
     name: 'Home',
     components: {
-
+    },
+    data() {
+        return {
+            slides:{
+                slide1: 'not done',
+                slide2: 'not done',
+                slide3: 'not done',
+            }
+        }
     }
 }
 </script>
 
 <style scoped>
 
+/*Mobile*/
+/*vem är du? val*/
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) {
+
 .walkthrough{
-  position: absolute;
-   height: 100%;
-   width: 100%;
+  display: flex;
+  flex-direction: column;
+   
 }
 h2{
-margin-top: 22%;}
+margin-top: 82.5px;}
 
-.button-container{
+.who-container{
+   display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  background-color: cornsilk;
   margin: 0 auto;
-  height: auto;
-  position: relative;
   width: 67%;
 
 }
-.button-container > button{
+.who-container > button{
   border-radius: 25px;
-  display: block;
   padding: 18px;
   margin:25px 0px;
-  width: 100%
+  width: 100%;
 }
 
+/* Vem vill du donera till? */
+.fundraiser-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  background-color: cornsilk;
+  margin: 0 auto;
+  width: 67%;
+}
 
+.fundraiser-container > button{
+  border-radius: 25px;
+  padding: 18px;
+  margin:25px 0px;
+  width: 100%;
+}
 
+}
 </style>
+

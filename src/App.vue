@@ -6,12 +6,18 @@
         <router-link to="/aboutdonify" class="link">Om Donify</router-link>
         <router-link to="/login" class="link">Logga in</router-link>
         </div>
+
       </div>
     <router-view />
   </div>
 </template>
 
 <style>
+body {
+  padding: 0;
+  margin: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

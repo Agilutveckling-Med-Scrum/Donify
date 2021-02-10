@@ -1,3 +1,4 @@
+
 <template>
   <div class="home">
     <HelloWorld msg="Welcome to Your Vue.js App" />
@@ -25,11 +26,11 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import Donerasida from '@/components/donerasida.vue'
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld,
-    Donerasida
-  }
+    name: 'Home',
+    components: {
+        HelloWorld,
+        Donerasida
+    }
 }
 
 

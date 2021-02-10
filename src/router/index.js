@@ -3,12 +3,13 @@ import VueRouter from 'vue-router'
 import Walkthrough from '../views/Walkthrough.vue'
 import Aboutdonify from '../views/Aboutdonify.vue'
 import Login from '../views/Login.vue'
+import Preloader from '../components/PreloaderMobile.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/',
+        path: '/walkthrough',
         name: 'Walkthrough',
         component: Walkthrough
     },
@@ -21,6 +22,11 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login
+    },
+    {
+        path: '/preloader',
+        name: 'MobilePreloader',
+        component: Preloader
     }
 ]
 
