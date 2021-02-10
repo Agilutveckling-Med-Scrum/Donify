@@ -1,12 +1,13 @@
 <template>
-  <div class="walkthrough" style="background-color: grey">
+  <div class="walkthrough" >
 <h2>Välkommen till Donify!</h2>
 <p>Börja med att berätta vem du är</p>
-<div class="button-container" style="background-color:white">
+<div class="button-container" style="background-color:whitesmoke">
   <b-button variant="primary" class="mx-auto">Privat person</b-button>  
   <b-button variant="primary" class="mx-auto">Företag</b-button>  
   <b-button variant="primary" class="mx-auto">Organisation</b-button>  
 </div>
+<p><u> Gör detta senare </u></p>
   </div>
 </template>
 
@@ -37,7 +38,7 @@ h2{
 margin-top: 22%;}
 
 .button-container{
-  margin: 0 auto;
+  margin: 60px auto;
   height: auto;
   position: relative;
   width: 67%;

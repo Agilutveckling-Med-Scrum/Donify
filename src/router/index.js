@@ -7,7 +7,7 @@ Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/',
+        path: '/walkthrough',
         name: 'Walkthrough',
         component: Walkthrough
     },
