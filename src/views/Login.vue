@@ -10,39 +10,12 @@
      Lösenord
    <input v-model="password" placeholder="Lösenord" type="password"/>
    </label>
-   <component v-bind:is="Loginpage" />
    <button @click="loginpage()">Logga in</button>
    </form>
    <p>Glömt ditt lösenord?</p>
     </div>
 </template>
 
-<script>
-import Loginpage from '@/components/Loginpage.vue'
-export default {
-    name: 'Loginpage',
-    components: {
-        Loginpage
-    },
-    data() {
-        return {
-            input: {
-                username: '',
-                password: ''
-            }
-        }
-    },
-    methods: {
-        loginpage(){
-            if (this.input.username != '' && this.input.password != '') {
-                this.component = Loginpage
-            } else {
-                alert('fel lösenord')
-            }
-        }
-    }
-}
-</script>
 
 <style scoped>
 label, input {
