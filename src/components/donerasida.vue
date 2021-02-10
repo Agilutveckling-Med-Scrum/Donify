@@ -9,24 +9,24 @@
 </template>
 
 <script>
-export default {
-  name: 'Donerasida'
-};
+  export default {
+    name: 'Donerasida'
+  }
 </script>
 
 <style scoped>
-.donerasida {
-  display: flex;
-  flex-direction: column;
-}
-.meddelande {
-  height: 300px;
-  background-color: rgb(196, 192, 192);
-}
-button {
-  width: 100px;
-  height: 30px;
-  border-radius: 8%;
-  margin: 20px auto;
-}
+  .donerasida {
+    display: flex;
+    flex-direction: column;
+  }
+  .meddelande {
+    height: 300px;
+    background-color: rgb(196, 192, 192);
+  }
+  button {
+    width: 100px;
+    height: 30px;
+    border-radius: 8%;
+    margin: 20px auto;
+  }
 </style>
