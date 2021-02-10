@@ -1,9 +1,9 @@
 <template>
-  <div style="background-color: blue;"></div>
+  <div style="background-color: blue;" />
 </template>
 
 <script>
-export default {};
+  export default {}
 </script>
 
 <style scoped></style>

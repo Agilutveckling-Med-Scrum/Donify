@@ -1,0 +1,61 @@
+<template>
+  <div class="donationPage2">
+    <p>Du har valt: <span>WWF</span></p>
+    <p class="Betalningssätt">Betalningssätt:</p>
+    <div class="buttons">
+      <div class="upbuttons">
+        <button>Banköverföring</button>
+        <button>Autogiro</button>
+        <button>Swish</button>
+      </div>
+      <p>
+        <strong>{{ this.$store.state.numvalue }} SEK</strong>
+      </p>
+      <div class="downbutton">
+        <button type="button" @click="Paynow">Betala nu</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default {
+    methods: {
+      Paynow() {
+        this.$router.push({
+          name: 'Donationpage3'
+        })
+      }
+    },
+    name: 'Donationpage2'
+  }
+</script>
+
+<style scoped>
+  template {
+    background-color: #f1f4f4;
+  }
+  .Betalningssätt {
+    margin-top: 100px;
+  }
+  button {
+    width: 100px;
+    height: 30px;
+    border-radius: 8%;
+    margin: 20px auto;
+  }
+  .upbuttons {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .donationPage2 {
+      position: absolute;
+      height: 100%;
+      margin: 25px 0px;
+      width: 100%;
+    }
+  }
+</style>
