@@ -6,20 +6,20 @@ import Preloader from '../components/PreloaderMobile.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Walkthrough',
-    component: Walkthrough,
-  },
-  {
-    path: '/preloader',
-    name: 'MobilePreloader',
-    component: Preloader,
-  },
+    {
+        path: '/',
+        name: 'Walkthrough',
+        component: Walkthrough
+    },
+    {
+        path: '/preloader',
+        name: 'MobilePreloader',
+        component: Preloader
+    }
 ]
 
 const router = new VueRouter({
-  routes,
+    routes
 })
 
 export default router
