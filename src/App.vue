@@ -1,11 +1,11 @@
 <template>
   <div id="app">
       <div id="nav">
-        <router-link to="/" id="logo"><h1>Donify</h1></router-link>
-      <nav>
+        <router-link to="/" id="logo"><img src="./assets/logo.png"/></router-link>
+        <div>
         <router-link to="/aboutdonify" class="link">Om Donify</router-link>
         <router-link to="/login" class="link">Logga in</router-link>
-       </nav>
+        </div>
       </div>
     <router-view />
   </div>
@@ -20,15 +20,12 @@
   color: #2c3e50;
 }
 
-#logo {
-  font-size: 20px;
-  text-decoration: none;
-  padding-right: 70px;
+img {
+  width: 150px;
 }
 
 #nav {
-  padding: 20px, 20px;
-  display: flex;
+  display: flex; 
   justify-content: space-between;
   margin: 20px;
 }
@@ -40,12 +37,13 @@
 
 .link {
   font-weight: bold;
+  font-size: 16px;
   color: #2c3e50;
-  padding-left: 20px;
+  margin-left: 15px;
 }
 
 #nav a:hover {
-  color: red; 
+  color: #FF00FF; 
 }
 
 /*TODO: fixa så att länkarna ändrar färg när de är aktiva */
