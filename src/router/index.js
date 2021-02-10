@@ -4,9 +4,13 @@ import Home from '../views/Home.vue'
 import Walkthrough from '../views/Walkthrough.vue'
 import Aboutdonify from '../views/Aboutdonify.vue'
 import Login from '../views/Login.vue'
+<<<<<<< HEAD
 import Donationpage1 from '../components/donationpg1.vue'
 import Donationpage2 from '../components/donationpg2.vue'
 import Donationpage3 from '../components/donationpg3.vue'
+=======
+
+>>>>>>> bbcb40f4b66e721be0092508648b401e293448ea
 Vue.use(VueRouter)
 
 const routes = [
@@ -29,6 +33,7 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
+<<<<<<< HEAD
   },
   {
     path: '/donate',
@@ -47,6 +52,8 @@ const routes = [
     name: 'Donationpage3',
     component: Donationpage3
     // component: () => import('views/Donationpage3.vue')
+=======
+>>>>>>> bbcb40f4b66e721be0092508648b401e293448ea
   }
 ]
 
