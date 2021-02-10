@@ -14,7 +14,6 @@
 </template>
 
 <style scoped>
-
 #footer {
   color: black;
   height: 6vh;
@@ -31,6 +30,6 @@
   justify-content: center;
   flex-direction: column;
   padding: 1em;
-  color:black;
+  color: black;
 }
 </style>
