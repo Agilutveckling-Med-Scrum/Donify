@@ -11,10 +11,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-<<<<<<< HEAD
-=======
-
->>>>>>> bbcb40f4b66e721be0092508648b401e293448ea
     <h1>Donate Idag</h1>
     <b-button>Button1</b-button>
     <b-button>Button2</b-button>
@@ -26,10 +22,7 @@
 <script>
   // @ is an alias to /src
   import HelloWorld from '@/components/HelloWorld.vue'
-<<<<<<< HEAD
 
-=======
->>>>>>> bbcb40f4b66e721be0092508648b401e293448ea
   export default {
     name: 'Home',
     components: {
