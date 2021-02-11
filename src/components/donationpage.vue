@@ -6,7 +6,7 @@
     <p>
       150
       <select v-for="item in list" v-bind:key="item.id">
-        <option>{{ item.rates.DKK }}</option>
+        <option>{{ item.rates.SEK }}</option>
       </select>
     </p>
     <p>Hur ofta vill du donera?</p>
