@@ -1,10 +1,10 @@
 <template>
   <div class="donerasida">
     <p>Idag donerade du</p>
-    <p><strong>150 SEK</strong></p>
-    <p>till <span>WWF</span></p>
-    <div class="meddelande">Meddalnde från WWF</div>
-    <button>Till beatlning</button>
+    <p>150</p>
+    <p>till</p>
+    <p>Meddalnde från WWF</p>
+    <button>Till betalning</button>
   </div>
 </template>
 
@@ -28,5 +28,18 @@ button {
   height: 30px; 
   border-radius: 8%;
   margin: 20px auto;
+}
+</style>
+
+<script>
+export default {
+  name: "Donerasida"
+};
+</script>
+
+<style scoped>
+.donerasida {
+  display: flex;
+  flex-direction: column;
 }
 </style>

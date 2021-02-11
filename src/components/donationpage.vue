@@ -2,12 +2,12 @@
   <div class="donationPage">
     <p>Du har valt:</p>
     <p>Hur mycket vill du donera?</p>
-    <VueSlider></VueSlider>
+  <!--  <VueSlider></VueSlider>-->
     <p>
       150
-      <select name="" id=""
-        ><option value="sek">Sek</option></select
-      >
+      <select v-for="item in list" v-bind:key="item.id">
+        <option>{{ item.rates.SEK }}</option>
+      </select>
     </p>
     <p>Hur ofta vill du donera?</p>
     <div class="buttons">
@@ -17,18 +17,36 @@
         <button>Varje år</button>
       </div>
       <div class="downbutton">
-        <button>Till beatlning</button>
+        <button>Till betalning</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import VueSlider from '@/components/vue-slider-component.vue'
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+//import VueSlider from "@/components/vue-slider-component.vue";
+
 export default {
     name: 'Donationpage',
+    data() {
+        return {
+            list: undefined
+        }
+    },
+    methods: {
+        currencyApi() {
+            Vue.axios.get('https://api.exchangeratesapi.io/latest').then(response => {
+                this.list = response.rates
+                console.log(response.rates)
+            })
+        }
+    },
     components: {
-        VueSlider
+        //  VueSlider
     }
 }
 </script>

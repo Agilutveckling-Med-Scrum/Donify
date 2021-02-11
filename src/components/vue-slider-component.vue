@@ -1,6 +1,23 @@
 <template>
   <div class="slider">
     <vue-slider v-model="value" />
+    <vue-slider
+      v-model="value"
+      :enable-cross="false"
+      :min="0"
+      :max="1000"
+      :interval="50"
+      :tooltip="always"
+      :tooltipPlacement="top"
+      :tooltip-formatter="val => val + ' kr'"
+    />
+    <vue-slider v-model="numvalue" v-bind="options" />
+    <p>
+      {{ numvalue }}
+      <select name="" id=""
+        ><option value="sek">Sek</option></select
+      >
+    </p>
   </div>
 </template>
 
