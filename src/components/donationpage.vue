@@ -2,7 +2,7 @@
   <div class="donationPage">
     <p>Du har valt:</p>
     <p>Hur mycket vill du donera?</p>
-  <!--  <VueSlider></VueSlider>-->
+    <VueSlider></VueSlider>
     <p>
       150
       <select v-for="item in list" v-bind:key="item.id">
@@ -28,7 +28,7 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
-//import VueSlider from "@/components/vue-slider-component.vue";
+import VueSlider from '@/components/vue-slider-component.vue'
 
 export default {
     name: 'Donationpage',
@@ -46,7 +46,7 @@ export default {
         }
     },
     components: {
-        //  VueSlider
+        VueSlider
     }
 }
 </script>
