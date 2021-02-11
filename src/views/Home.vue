@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
     <footer id="footer">
       <a href="#" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
@@ -22,14 +21,12 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-import Donerasida from '@/components/donerasida.vue'
+
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld,
-    Donerasida
-  }
+    name: 'Home',
+    components: {
+        
+    }
 }
 
 
