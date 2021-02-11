@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<template>
-  <div class="home">
-    <Questions />
-    <About />
-  </div>
-</template>
-
-<script>
-import Questions from '@/components/Questions.vue'
-import About from '@/views/About.vue'
-
-export default {
-    name: 'Home',
-    components: {
-        Questions,
-        About
-    }
-}
-</script>
-
-<style scoped></style>
-=======
 <template>
     <div class="walkthrough">
         <div class="who-are-you" v-if="slides.slide1 === 'not done'">
@@ -118,4 +95,3 @@ export default {
     }
 }
 </style>
->>>>>>> da259e3e33d40938e190c62082de3c3c159a604e
