@@ -8,13 +8,13 @@
   <b-button variant="primary" class="mx-auto" @click="slides.slide1 = 'done' ">Organisation</b-button>  
 </div>
 <p><u> Gör detta senare </u></p>
-  <div class="fundraiser-container" v-if="slides.slide1 === 'done'">
-   <b-button variant="primary" class="mx-auto">Välgörenhet</b-button>  
-  <b-button variant="primary" class="mx-auto">Företag</b-button>  
-  <b-button variant="primary" class="mx-auto">Organisation</b-button>  
-  <b-button variant="primary" class="mx-auto">Privatperson</b-button>  
+  <div class="fundraiser-container" v-if="slides.slide2 === 'not done' && slides.slide1 === 'done' ">
+  <b-button variant="primary" class="mx-auto" @click="slides.slide2 = 'done'">Välgörenhet</b-button>  
+  <b-button variant="primary" class="mx-auto" @click="slides.slide2 = 'done'">Företag</b-button>  
+  <b-button variant="primary" class="mx-auto" @click="slides.slide2 = 'done'">Organisation</b-button>  
+  <b-button variant="primary" class="mx-auto" @click="slides.slide2 = 'done'">Privatperson</b-button>  
   </div>
-  <div class="-container" v-if="slides.slide1 === 'done'">
+  <div class="donate-to-container" v-if="slides.slide2 === 'done' ">
    <b-button variant="primary" class="mx-auto">Välgörenhet</b-button>  
   <b-button variant="primary" class="mx-auto">Företag</b-button>  
   <b-button variant="primary" class="mx-auto">Organisation</b-button>  
