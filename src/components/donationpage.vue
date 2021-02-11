@@ -2,7 +2,7 @@
   <div class="donationPage">
     <p>Du har valt:</p>
     <p>Hur mycket vill du donera?</p>
-    <VueSlider></VueSlider>
+    <VueSlider/>
     <p>
       150
       <select v-for="item in list" v-bind:key="item.id">
