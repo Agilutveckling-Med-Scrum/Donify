@@ -15,14 +15,11 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-<<<<<<< HEAD
-=======
         name: 'Home',
         component: Home
     },
     {
         path: '/Walkthrough',
->>>>>>> da259e3e33d40938e190c62082de3c3c159a604e
         name: 'Walkthrough',
         component: Walkthrough
     },
@@ -35,8 +32,6 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login
-<<<<<<< HEAD
-=======
     },
     {
         path: '/userpage',
@@ -65,7 +60,6 @@ const routes = [
         name: 'Donationpage3',
         component: Donationpage3
         // component: () => import('views/Donationpage3.vue')
->>>>>>> da259e3e33d40938e190c62082de3c3c159a604e
     }
 ]
 
