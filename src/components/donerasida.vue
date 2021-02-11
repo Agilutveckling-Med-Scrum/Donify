@@ -1,10 +1,10 @@
 <template>
   <div class="donerasida">
     <p>Idag donerade du</p>
-    <p>150 SEK</p>
+    <p>150</p>
     <p>till</p>
     <p>Meddalnde från WWF</p>
-    <button>Till beatlning</button>
+    <button>Till betalning</button>
   </div>
 </template>
 
