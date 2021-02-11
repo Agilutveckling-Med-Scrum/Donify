@@ -14,6 +14,12 @@
   <b-button variant="primary" class="mx-auto">Organisation</b-button>  
   <b-button variant="primary" class="mx-auto">Privatperson</b-button>  
   </div>
+  <div class="-container" v-if="slides.slide1 === 'done'">
+   <b-button variant="primary" class="mx-auto">Välgörenhet</b-button>  
+  <b-button variant="primary" class="mx-auto">Företag</b-button>  
+  <b-button variant="primary" class="mx-auto">Organisation</b-button>  
+  <b-button variant="primary" class="mx-auto">Privatperson</b-button>  
+  </div>
   </div>
 </template>
 
