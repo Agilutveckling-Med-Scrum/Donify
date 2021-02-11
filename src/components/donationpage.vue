@@ -2,7 +2,7 @@
   <div class="donationPage">
     <p>Du har valt:</p>
     <p>Hur mycket vill du donera?</p>
-    <VueSlider/>
+    <VueSlider></VueSlider>
     <p>
       150
       <select v-for="item in list" v-bind:key="item.id">
@@ -24,31 +24,31 @@
 </template>
 
 <script>
-import Vue from "vue";
-import axios from "axios";
-import VueAxios from "vue-axios";
-Vue.use(VueAxios, axios);
-import VueSlider from "@/components/vue-slider-component.vue";
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+import VueSlider from '@/components/vue-slider-component.vue'
 
 export default {
-  name: "Donationpage",
-  data() {
-    return {
-      list: undefined
-    };
-  },
-  methods: {
-    currencyApi() {
-      Vue.axios.get("https://api.exchangeratesapi.io/latest").then(response => {
-        this.list = response.rates;
-        console.log(response.rates);
-      });
+    name: 'Donationpage',
+    data() {
+        return {
+            list: undefined
+        }
+    },
+    methods: {
+        currencyApi() {
+            Vue.axios.get('https://api.exchangeratesapi.io/latest').then(response => {
+                this.list = response.rates
+                console.log(response.rates)
+            })
+        }
+    },
+    components: {
+        VueSlider
     }
-  },
-  components: {
-    VueSlider
-  }
-};
+}
 </script>
 
 <style scoped>
