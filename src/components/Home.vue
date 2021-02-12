@@ -1,10 +1,10 @@
 <template>
   <div class="about">
     <footer id="footer">
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-instagram"></a>
-      <a href="#" class="fa fa-linkedin"></a>
+      <a href="#" class="fa fa-facebook" />
+      <a href="#" class="fa fa-twitter" />
+      <a href="#" class="fa fa-instagram" />
+      <a href="#" class="fa fa-linkedin" />
     </footer>
     <link
       rel="stylesheet"
@@ -14,22 +14,22 @@
 </template>
 
 <style scoped>
-#footer {
-  color: black;
-  height: 6vh;
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  padding: 10px 10px 0px 10px;
-  bottom: 0;
-  width: 100%;
-}
+  #footer {
+    color: black;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+  }
 
-#footer a {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 1em;
-  color: black;
-}
+  #footer a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    color: black;
+  }
 </style>
