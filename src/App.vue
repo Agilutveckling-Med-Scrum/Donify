@@ -1,64 +1,58 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/" id="logo"><h1>Donify</h1></router-link>
-      <nav>
+      <div id="nav">
+        <router-link to="/" id="logo"><img src="./assets/logo.png"/></router-link>
+        <div>
         <router-link to="/aboutdonify" class="link">Om Donify</router-link>
         <router-link to="/login" class="link">Logga in</router-link>
-      </nav>
-    </div>
+        </div>
+      </div>
     <router-view />
   </div>
+  <!-- remove me -->
 </template>
 
-<script>
-  export default {}
-</script>
-
 <style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
 
-  #logo {
-    font-size: 20px;
-    text-decoration: none;
-    padding-right: 70px;
-  }
+img {
+  width: 150px;
+}
 
-  #nav {
-    padding: 20px, 20px;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-  }
+#nav {
+  display: flex; 
+  justify-content: space-between;
+  margin: 20px;
+}
 
-  #nav a {
-    text-decoration: none;
-    color: #2c3e50;
-  }
+#nav a {
+  text-decoration: none;
+  color: #2c3e50;
+}
 
-  .link {
-    font-weight: bold;
-    color: #2c3e50;
-    padding-left: 20px;
-  }
+.link {
+  font-weight: bold;
+  font-size: 16px;
+  color: #2c3e50;
+  margin-left: 15px;
+}
 
-  #nav a:hover {
-    color: red;
-  }
+#nav a:hover {
+  color: #FF00FF; 
+}
 
-  /*TODO: fixa så att länkarna ändrar färg när de är aktiva */
+/*TODO: fixa så att länkarna ändrar färg när de är aktiva */
 
-  /* #nav a:active {
+/* #nav a:active {
   color: green; 
 } */
 
-  /* .link.router-link-exact-active {
+/* .link.router-link-exact-active {
   color: #42b983;
 } */
 </style>

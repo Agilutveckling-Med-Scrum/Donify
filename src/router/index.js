@@ -10,48 +10,50 @@ import Donationpage3 from '../components/donationpg3.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/Walkthrough',
-    name: 'Walkthrough',
-    component: Walkthrough
-  },
-  {
-    path: '/aboutdonify',
-    name: 'Aboutdonify',
-    component: Aboutdonify
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: Login
-  },
-  {
-    path: '/donate',
-    name: 'Donationpage1',
-    component: Donationpage1
-    //component: () => import('views/Donationpage1.vue')
-  },
-  {
-    path: '/pay',
-    name: 'Donationpage2',
-    component: Donationpage2
-    // component: () => import('views/Donationpage2.vue')
-  },
-  {
-    path: '/info',
-    name: 'Donationpage3',
-    component: Donationpage3
-    // component: () => import('views/Donationpage3.vue')
-  }
+    {
+        path: '/',
+        name: 'Home',
+        component: Home
+    },
+    {
+        path: '/Walkthrough',
+        name: 'Walkthrough',
+        component: Walkthrough
+    },
+    {
+        path: '/aboutdonify',
+        name: 'Aboutdonify',
+        component: Aboutdonify
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login
+    },
+    {
+        path: '/donate',
+        name: 'Donationpage1',
+        component: Donationpage1
+        //component: () => import('views/Donationpage1.vue')
+    },
+    {
+        path: '/pay',
+        name: 'Donationpage2',
+        component: Donationpage2
+        // component: () => import('views/Donationpage2.vue')
+    },
+    {
+        path: '/info',
+        name: 'Donationpage3',
+        component: Donationpage3
+        // component: () => import('views/Donationpage3.vue')
+    }
 ]
 
+Vue.use(VueRouter)
+
 const router = new VueRouter({
-  routes
+    routes
 })
 
 export default router
