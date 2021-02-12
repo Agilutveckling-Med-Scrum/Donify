@@ -35,6 +35,7 @@ label, input {
   display: block; 
 }
 
+
 input {
   margin-bottom: 20px; 
   width: 75%; 
@@ -56,15 +57,21 @@ h2 {
   padding-bottom: 20px; 
 }
 
+
+
+
 p {
   font-size: 12px; 
   cursor: pointer; 
   color: #718EFF; 
 }
 
+
 button {
   margin-top: 20px; 
   margin-bottom: 20px;
   cursor: pointer; 
 }
+
 </style>
+

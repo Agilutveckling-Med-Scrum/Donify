@@ -1,3 +1,8 @@
+
+
+
+
+
 <template>
   <div id="app">
       <div id="nav">
@@ -9,14 +14,39 @@
       </div>
     <router-view />
   </div>
-  <!-- remove me -->
+  
 </template>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing : grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 40px;
+}
+#logo {
+  font-size: 20px;
+  text-decoration: none;
+  padding-right: 70px;
+
+}
+
+#nav {
+  padding: 20px, 20px;
+  display: flex;
+
   color: #2c3e50;
 }
 
@@ -26,6 +56,7 @@ img {
 
 #nav {
   display: flex; 
+
   justify-content: space-between;
   margin: 20px;
 }
@@ -37,6 +68,19 @@ img {
 
 .link {
   font-weight: bold;
+
+  color: #2c3e50;
+
+  padding-left: 15px;
+  text-decoration: none;
+
+  padding-left: 20px;
+
+}
+
+#nav a:hover {
+  color: red; 
+
   font-size: 16px;
   color: #2c3e50;
   margin-left: 15px;
@@ -44,6 +88,7 @@ img {
 
 #nav a:hover {
   color: #FF00FF; 
+
 }
 
 /*TODO: fixa så att länkarna ändrar färg när de är aktiva */
