@@ -3,7 +3,7 @@
         <p>Du har valt:</p>
         <p>Hur mycket vill du donera?</p>
         <VueSlider />
-
+        {{ namevalue }}
         <p>Hur ofta vill du donera?</p>
         <div class="buttons">
             <div class="upbuttons">

@@ -39,7 +39,7 @@ template {
     margin-top: 100px;
 }
 button {
-    width: 100px;
+    width: 150px;
     height: 30px;
     border-radius: 8%;
     margin: 20px auto;

@@ -34,7 +34,7 @@ export default {
     background-color: rgb(196, 192, 192);
 }
 button {
-    width: 100px;
+    width: 150px;
     height: 30px;
     border-radius: 8%;
     margin: 20px auto;
