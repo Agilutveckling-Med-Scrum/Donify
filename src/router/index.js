@@ -23,7 +23,6 @@ const routes = [
     },
     {
         path: '/Walkthrough',
-
         name: 'Walkthrough',
         component: Walkthrough
     },
@@ -36,7 +35,6 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login
-
     },
     {
         path: '/userpage',
