@@ -1,4 +1,5 @@
 <template>
+
   <div class="walkthrough" >
 <div class="who-container" style="background-color:whitesmoke" v-if="slides.slide1 === 'not done'">
 <h2>Välkommen till Donify!</h2>
@@ -23,20 +24,18 @@
   <b-button variant="primary" class="mx-auto" @click=" slides.slide3 = 'done'" >Privatperson </b-button>  
   </div>
   </div>
+
 </template>
-
 <script>
-
 export default {
     name: 'Home',
-    components: {
-    },
+    components: {},
     data() {
         return {
-            slides:{
+            slides: {
                 slide1: 'not done',
                 slide2: 'not done',
-                slide3: 'not done',
+                slide3: 'not done'
             }
         }
     }
@@ -44,57 +43,47 @@ export default {
 </script>
 
 <style scoped>
-
 /*Mobile*/
 /*vem är du? val*/
-@media only screen 
-and (min-device-width: 375px) 
-and (max-device-width: 812px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .walkthrough {
+        display: flex;
+        flex-direction: column;
+    }
+    h2 {
+        margin-top: 82.5px;
+    }
 
-.walkthrough{
-  display: flex;
-  flex-direction: column;
-   
+    .who-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: cornsilk;
+        margin: 0 auto;
+        width: 67%;
+    }
+    .who-container > button {
+        border-radius: 25px;
+        padding: 18px;
+        margin: 25px 0px;
+        width: 100%;
+    }
+
+    /* Vem vill du donera till? */
+    .fundraiser-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: cornsilk;
+        margin: 0 auto;
+        width: 67%;
+    }
+
+    .fundraiser-container > button {
+        border-radius: 25px;
+        padding: 18px;
+        margin: 25px 0px;
+        width: 100%;
+    }
 }
-h2{
-margin-top: 22%;}
-
-.who-container{
-   display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  background-color: cornsilk;
-  margin: 0 auto;
-  width: 67%;
-
-}
-.who-container > button{
-  border-radius: 25px;
-  padding: 18px;
-  margin:25px 0px;
-  width: 100%;
-}
-
-/* Vem vill du donera till? */
-.fundraiser-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  background-color: cornsilk;
-  margin: 0 auto;
-  width: 67%;
-}
-
-.fundraiser-container > button{
-  border-radius: 25px;
-  padding: 18px;
-  margin:25px 0px;
-  width: 100%;
-}
-
-}
-
-
-
-
 </style>

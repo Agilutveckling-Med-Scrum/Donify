@@ -4,8 +4,14 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-	state: {},
-	mutations: {},
-	actions: {},
-	modules: {},
+    state: {
+        numvalue: ''
+    },
+    mutations: {
+        setnumValue(state, numvalue) {
+            state.numvalue = numvalue
+        }
+    },
+    actions: {},
+    modules: {}
 })
