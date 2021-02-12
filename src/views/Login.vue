@@ -10,11 +10,23 @@
      Lösenord
    <input v-model="password" placeholder="Lösenord" type="password"/>
    </label>
-   <button @click="loginpage()">Logga in</button>
+   <button @click="userpage">Logga in</button>
    </form>
    <p>Glömt ditt lösenord?</p>
     </div>
 </template>
+
+<script>
+export default {
+    methods: {
+        userpage() {
+            this.$router.push({
+                name: 'Userpage'
+            })
+        }
+    },
+}
+</script>
 
 
 
