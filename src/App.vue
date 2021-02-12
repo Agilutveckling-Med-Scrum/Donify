@@ -1,3 +1,8 @@
+
+
+
+
+
 <template>
     <div id="app">
         <div id="nav">
@@ -11,11 +16,13 @@
                 <Login />
                 <!--<router-link to="/login" class="link">Logga in</router-link>-->
             </div>
-            <Donationpage1 />
+        
         </div>
+
         <router-view />
-    </div>
-    <!-- remove me -->
+  </div>
+  
+
 </template>
 <script>
 import Login from '@/views/Login.vue'
@@ -29,6 +36,8 @@ export default {
     }
 }
 </script>
+<style>
+
 <style>
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
