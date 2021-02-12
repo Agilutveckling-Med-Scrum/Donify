@@ -1,40 +1,65 @@
 <template>
-    <div class="vue-tempalte">
-        <form>
-            <h3>Logga In</h3>
-
-            <div class="form-group">
-                <label>Email address</label>
-                <input type="email" class="form-control form-control-lg" />
-            </div>
-
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control form-control-lg" />
-            </div>
-
-            <button type="submit" class="btn btn-dark btn-lg btn-block">Sign In</button>
-
-            <p class="forgot-password text-right mt-2 mb-4">
-                <router-link to="/forgot-password">Forgot password ?</router-link>
-            </p>
-
-            <div class="social-icons">
-                <ul>
-                    <li><a href="#"><i class="fa fa-google"></i></a></li>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                </ul>
-            </div>
-
-        </form>
+  <div class="login">
+   <h2>Logga in</h2>
+   <form>
+   <label>
+     Användarnamn
+   <input v-model="username" placeholder="E-postadress">
+   </label>
+   <label>
+     Lösenord
+   <input v-model="password" placeholder="Lösenord" type="password"/>
+   </label>
+   <button @click="userpage">Logga in</button>
+   </form>
+   <p>Glömt ditt lösenord?</p>
     </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {}
-    }
+    methods: {
+        userpage() {
+            this.$router.push({
+                name: 'Userpage'
+            })
+        }
+    },
 }
 </script>
+
+
+
+<style scoped>
+label, input {
+  display: block; 
+}
+input {
+  margin-bottom: 20px; 
+  width: 75%; 
+  padding: 8px;
+  border: 2px solid #CCCCCC;
+  border-radius: 4px; 
+}
+.login {
+  width: 300px;
+  border: 2px solid #CCCCCC;
+  margin: auto;
+  margin-top: 100px;
+  padding: 40px;
+}
+h2 {
+  text-align: center; 
+  padding-bottom: 20px; 
+}
+p {
+  font-size: 12px; 
+  cursor: pointer; 
+  color: #718EFF; 
+}
+button {
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  cursor: pointer; 
+}
+</style>

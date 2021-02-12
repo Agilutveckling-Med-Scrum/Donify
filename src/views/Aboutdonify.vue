@@ -1,12 +1,12 @@
 <template>
 
  <div class="container">
+   <h2>OmDonify</h2>
     <section class="section">
             <div class="container-fliud">
             
-                <h2>OmDonify</h2>
-                <p>Det är ett Donify sidan
-                </p>
+                
+                
                 <button type="button" class="btn btn-primary btn-lg" >
                   Donera
                 </button>  
