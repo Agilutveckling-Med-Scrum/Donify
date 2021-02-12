@@ -4,23 +4,19 @@
 
     <div id="header">
       <h1>Donify</h1>
+      
       <div id="nav">
-        <router-link to="/">Walkthrough</router-link> |
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-
-        <router-link to="/">Om Donify</router-link>
-        <router-link to="/about">Logga in</router-link>
-
-      <div id="nav">
-        <router-link to="/" id="logo"><h1>Donify</h1></router-link>
-      <nav>
+       
+        <div>
+          
         <router-link to="/aboutdonify" class="link">Om Donify</router-link>
         <router-link to="/login" class="link">Logga in</router-link>
-       </nav>
-
+        
       </div>
-    <router-view />
+      </div>
+   
+      </div>
+     <router-view></router-view>
   </div>
 </template>
 

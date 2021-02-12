@@ -1,49 +1,30 @@
 
 <template>
-  <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="about">
+<!--     <h1 id="button">This is a Donate Page</h1>
+
+    <button class="btn btn-primary">Swish</button>
+    <button class="btn btn-primary">Autogiro</button>
+    <button class="btn btn-primary">Betalningsrätt</button>
+    <button class="btn btn-primary">Footer</button> 
     <footer id="footer">
       <a href="#" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
       <a href="#" class="fa fa-instagram"></a>
       <a href="#" class="fa fa-linkedin"></a>
-    </footer>
+    </footer>-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
-    <h1>Donate Idag</h1>
-
-    <Home msg="Welcome to Donate Page" />
-
-    <b-button>Button1</b-button>
-    <b-button>Button2</b-button>
-    <b-button>Button3</b-button>
-    <b-button>Button4</b-button>
-
   </div>
 </template>
 
-
-<script>
-
-import HelloWorld from '@/components/HelloWorld.vue'
-
-export default {
-    name: 'Home',
-    components: {
-        HelloWorld
-       
-    }
-}
-</script>
-
 <style scoped>
 #footer {
-  background-color: grey;
-  color: white;
-  height: 5vh;
+  background-color: wheat;
+  color: black;
+  height: 6vh;
   display: flex;
   justify-content: center;
   position: fixed;
@@ -52,15 +33,12 @@ export default {
   width: 100%;
 }
 
-h1 {
-  display: flex;
-  justify-content: space-between;
-}
 #footer a {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 1em;
-  color: white;
+  color: black;
 }
 </style>
+
