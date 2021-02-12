@@ -1,7 +1,7 @@
 
 <template>
   <div class="home">
-        <footer id="footer">
+    <footer id="footer">
       <a href="#" class="fa fa-facebook" />
       <a href="#" class="fa fa-twitter" />
       <a href="#" class="fa fa-instagram" />
@@ -20,12 +20,13 @@
 </template>
 
 <script>
-// @ is an alias to /src
 export default {
     name: 'Home',
     components: {
+      
     }
 }
+
 </script>
 
 <style scoped>
