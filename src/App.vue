@@ -9,6 +9,7 @@
       </div>
     <router-view />
   </div>
+  <!-- remove me -->
 </template>
 
 <style>

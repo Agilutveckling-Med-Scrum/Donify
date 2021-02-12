@@ -1,4 +1,6 @@
-/* eslint-disable*/
+/* eslint-disable no-console */
+/* eslint-disable no-undef */
+/* eslint-disable indent */
 
 
 import { register } from 'register-service-worker'

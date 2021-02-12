@@ -1,4 +1,3 @@
-
 <template>
   <div class="home">
     <footer id="footer">
