@@ -2,6 +2,7 @@
 
 <template>
 
+
   <div class="walkthrough" >
 <div class="who-container" style="background-color:whitesmoke" v-if="slides.slide1 === 'not done'">
 <h2>Välkommen till Donify!</h2>
@@ -11,8 +12,8 @@
   <b-button variant="primary" class="mx-auto" @click="slides.slide1 = 'done' ">Organisation</b-button>  
 <p><u> Gör detta senare </u></p>
 </div>
-<h2>Vad vill du donera till?</h2>
   <div class="fundraiser-container" v-if="slides.slide2 === 'not done' && slides.slide1 === 'done' ">
+<h2>Vad vill du donera till?</h2>
   <b-button variant="primary" class="mx-auto" @click="slides.slide2 = 'done'">Välgörenhet</b-button>  
   <b-button variant="primary" class="mx-auto" @click="slides.slide2 = 'done'">Företag</b-button>  
   <b-button variant="primary" class="mx-auto" @click="slides.slide2 = 'done'">Organisation</b-button>  
@@ -29,6 +30,11 @@
 
 </template>
 <script>
+import { gsap } from 'gsap'
+import { CSSPlugin } from 'gsap/CSSPlugin'
+gsap.registerPlugin(CSSPlugin)
+
+  
 export default {
     name: 'Home',
     components: {},
@@ -40,9 +46,23 @@ export default {
                 slide3: 'not done'
             }
         }
+    },
+    methods: {
+        animation(){
+            gsap.from('h2 ', { scale:0.3, duration: 1, opacity: 0, ease: 'easeOut'})
+            gsap.from('p', { scale:0.3, delay:1.7, duration: 1, opacity: 0, ease: 'easeOut'})
+            gsap.from('button', { scale:0.3, delay: .5, duration: 1, stagger: 1, opacity: 0, ease: 'easeOut'})
+            gsap.from('p:nth-of-type(2)', {y: 300, delay: 5.8, duration: 2.5, ease: 'easeOut'})
+        } 
+    },
+    mounted(){
+        this.animation()
     }
+    
 }
+
 </script>
+
 
 <style scoped>
 /*Mobile*/
