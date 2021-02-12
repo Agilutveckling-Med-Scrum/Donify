@@ -1,8 +1,7 @@
 
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <footer id="footer">
+        <footer id="footer">
       <a href="#" class="fa fa-facebook" />
       <a href="#" class="fa fa-twitter" />
       <a href="#" class="fa fa-instagram" />
@@ -21,15 +20,12 @@
 </template>
 
 <script>
-  // @ is an alias to /src
-  import HelloWorld from '@/components/HelloWorld.vue'
-
-  export default {
+// @ is an alias to /src
+export default {
     name: 'Home',
     components: {
-      HelloWorld
     }
-  }
+}
 </script>
 
 <style scoped>
