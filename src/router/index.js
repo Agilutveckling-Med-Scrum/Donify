@@ -1,4 +1,3 @@
-
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
@@ -12,18 +11,14 @@ import Donationpage3 from '../components/donationpg3.vue'
 import Preloader from '../components/PreloaderMobile.vue'
 import Userpage from '../components/Userpage.vue'
 
-
-
 Vue.use(VueRouter)
 
 const routes = [
-
     {
         path: '/walkthrough',
         name: 'Walkthrough',
         component: Walkthrough
     },
-
 
     {
         path: '/',
@@ -31,13 +26,6 @@ const routes = [
         component: Home
     },
     {
-
-        path: '/Walkthrough',
-        name: 'Walkthrough',
-        component: Walkthrough
-    },
-    {
-
         path: '/aboutdonify',
         name: 'Aboutdonify',
         component: Aboutdonify
@@ -46,10 +34,6 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login
-
-
-    
-
     },
     {
         path: '/userpage',
@@ -79,8 +63,6 @@ const routes = [
         component: Donationpage3
         // component: () => import('views/Donationpage3.vue')
     }
-
-
 ]
 
 Vue.use(VueRouter)
