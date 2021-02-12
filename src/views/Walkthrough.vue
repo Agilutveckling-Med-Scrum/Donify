@@ -45,45 +45,51 @@ export default {
 <style scoped>
 /*Mobile*/
 /*vem är du? val*/
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
-    .walkthrough {
-        display: flex;
-        flex-direction: column;
-    }
-    h2 {
-        margin-top: 82.5px;
-    }
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) {
 
-    .who-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: cornsilk;
-        margin: 0 auto;
-        width: 67%;
-    }
-    .who-container > button {
-        border-radius: 25px;
-        padding: 18px;
-        margin: 25px 0px;
-        width: 100%;
-    }
+.walkthrough{
+  display: flex;
+  flex-direction: column;
+  text-align: center
+   
+}
+h2{
+margin-top: 22%;}
 
-    /* Vem vill du donera till? */
-    .fundraiser-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: cornsilk;
-        margin: 0 auto;
-        width: 67%;
-    }
+.who-container{
+   display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  background-color: cornsilk;
+  margin: 0 auto;
+  width: 67%;
 
-    .fundraiser-container > button {
-        border-radius: 25px;
-        padding: 18px;
-        margin: 25px 0px;
-        width: 100%;
-    }
+}
+.who-container > button{
+  border-radius: 25px;
+  padding: 18px;
+  margin:25px 0px;
+  width: 100%;
+}
+
+/* Vem vill du donera till? */
+.fundraiser-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  background-color: cornsilk;
+  margin: 0 auto;
+  width: 67%;
+}
+
+.fundraiser-container > button{
+  border-radius: 25px;
+  padding: 18px;
+  margin:25px 0px;
+  width: 100%;
+}
+
 }
 </style>

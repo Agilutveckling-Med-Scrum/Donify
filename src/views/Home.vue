@@ -20,14 +20,14 @@
 </template>
 
 <script>
-  // @ is an alias to /src
+// @ is an alias to /src
 
-  export default {
+export default {
     name: 'Home',
     components: {
       
     }
-  }
+}
   
 </script>
 
