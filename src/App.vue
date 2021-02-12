@@ -1,32 +1,28 @@
 
+
+
+
+
 <template>
   <div id="app">
-
-    <div id="header">
-      <h1>Donify</h1>
-      
       <div id="nav">
-       
+        <router-link to="/" id="logo"><img src="./assets/logo.png"/></router-link>
         <div>
-          
         <router-link to="/aboutdonify" class="link">Om Donify</router-link>
         <router-link to="/login" class="link">Logga in</router-link>
-        
+        </div>
       </div>
-      </div>
-   
-      </div>
-     <router-view></router-view>
+    <router-view />
   </div>
+  
 </template>
 
-<style scoped>
-
+<style>
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing : grayscale;
   text-align: center;
   color: #2c3e50;
 }
@@ -50,6 +46,17 @@ h1 {
 #nav {
   padding: 20px, 20px;
   display: flex;
+
+  color: #2c3e50;
+}
+
+img {
+  width: 150px;
+}
+
+#nav {
+  display: flex; 
+
   justify-content: space-between;
   margin: 20px;
 }
@@ -61,6 +68,7 @@ h1 {
 
 .link {
   font-weight: bold;
+
   color: #2c3e50;
 
   padding-left: 15px;
@@ -72,6 +80,15 @@ h1 {
 
 #nav a:hover {
   color: red; 
+
+  font-size: 16px;
+  color: #2c3e50;
+  margin-left: 15px;
+}
+
+#nav a:hover {
+  color: #FF00FF; 
+
 }
 
 /*TODO: fixa så att länkarna ändrar färg när de är aktiva */

@@ -34,6 +34,8 @@ export default {
 label, input {
   display: block; 
 }
+
+
 input {
   margin-bottom: 20px; 
   width: 75%; 
@@ -41,6 +43,7 @@ input {
   border: 2px solid #CCCCCC;
   border-radius: 4px; 
 }
+
 .login {
   width: 300px;
   border: 2px solid #CCCCCC;
@@ -48,18 +51,27 @@ input {
   margin-top: 100px;
   padding: 40px;
 }
+
 h2 {
   text-align: center; 
   padding-bottom: 20px; 
 }
+
+
+
+
 p {
   font-size: 12px; 
   cursor: pointer; 
   color: #718EFF; 
 }
+
+
 button {
   margin-top: 20px; 
   margin-bottom: 20px;
   cursor: pointer; 
 }
+
 </style>
+

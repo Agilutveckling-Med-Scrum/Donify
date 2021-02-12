@@ -1,5 +1,12 @@
+
 /* eslint-disable no-undef */
 /* eslint-disable no-console */
+
+/* eslint-disable no-console */
+/* eslint-disable no-undef */
+/* eslint-disable indent */
+
+
 
 import { register } from 'register-service-worker'
 
@@ -8,6 +15,7 @@ if (process.env.NODE_ENV === 'production') {
         ready() {
             console.log(
                 'App is being served from cache by a service worker.\n' +
+
                     'For more details, visit https://goo.gl/AFskqB'
             )
         },
@@ -24,6 +32,11 @@ if (process.env.NODE_ENV === 'production') {
             console.log('New content is downloading.')
         },
 
+       
+
+
+       
+       
         updated() {
             console.log('New content is available; please refresh.')
         },
@@ -37,4 +50,9 @@ if (process.env.NODE_ENV === 'production') {
             console.error('Error during service worker registration:', error)
         }
     })
+
 }
+
+
+
+
