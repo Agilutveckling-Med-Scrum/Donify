@@ -7,12 +7,15 @@ import Login from '../views/Login.vue'
 import Donationpage1 from '../components/donationpg1.vue'
 import Donationpage2 from '../components/donationpg2.vue'
 import Donationpage3 from '../components/donationpg3.vue'
+
 import Preloader from '../components/PreloaderMobile.vue'
 import Userpage from '../components/Userpage.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
+
     {
         path: '/',
         name: 'Home',
@@ -61,6 +64,7 @@ const routes = [
         component: Donationpage3
         // component: () => import('views/Donationpage3.vue')
     }
+
 ]
 
 Vue.use(VueRouter)
