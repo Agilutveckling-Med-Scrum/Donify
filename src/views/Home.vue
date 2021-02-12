@@ -1,5 +1,20 @@
 
 <template>
+
+  <div class="about">
+<!--     <h1 id="button">This is a Donate Page</h1>
+
+    <button class="btn btn-primary">Swish</button>
+    <button class="btn btn-primary">Autogiro</button>
+    <button class="btn btn-primary">Betalningsrätt</button>
+    <button class="btn btn-primary">Footer</button> 
+    <footer id="footer">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+    </footer>-->
+
   <div class="home">
     <footer id="footer">
       <a href="#" class="fa fa-facebook" />
@@ -7,19 +22,19 @@
       <a href="#" class="fa fa-instagram" />
       <a href="#" class="fa fa-linkedin" />
     </footer>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <h1>Donate Idag</h1>
-    <b-button>Button1</b-button>
-    <b-button>Button2</b-button>
-    <b-button>Button3</b-button>
-    <b-button>Button4</b-button>
+  </div>
   </div>
 </template>
-
 <script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9755ab3ef5bbf8a6d10d765f12b85b9451980d29
 export default {
     name: 'Home',
     components: {
@@ -53,5 +68,6 @@ export default {
     padding: 1em;
     color: white;
   }
+
 </style>
 
