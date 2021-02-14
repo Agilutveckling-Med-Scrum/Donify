@@ -12,9 +12,9 @@
                 <!--<router-link to="/login" class="link">Logga in</router-link>-->
             </div>
         </div>
+
         <router-view />
     </div>
-    <!-- remove me -->
 </template>
 <script>
 import Login from '@/views/Login.vue'
@@ -27,6 +27,7 @@ export default {
     }
 }
 </script>
+
 <style>
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;

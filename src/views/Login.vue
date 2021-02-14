@@ -1,25 +1,6 @@
-<!--<template>
-    <div class="login">
-        <h2>Logga in</h2>
-        <form>
-            <label>
-                Användarnamn
-                <input v-model="username" placeholder="E-postadress" />
-            </label>
-            <label>
-                Lösenord
-                <input
-                    v-model="password"
-                    placeholder="Lösenord"
-                    type="password"
-                />
-            </label>
-            <button @click="loginpage()">Logga in</button>
-        </form>
-        <p>Glömt ditt lösenord?</p>
-    </div>
-</template>-->
+
 <template>
+
     <div>
         <b-button v-b-toggle.sidebar-right id="profileButton"
             ><i class="fa fa-user-circle"

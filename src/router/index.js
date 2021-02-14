@@ -20,14 +20,14 @@ const routes = [
         component: Home
     },
     {
-        path: '/Walkthrough',
-        name: 'Walkthrough',
-        component: Walkthrough
-    },
-    {
         path: '/aboutdonify',
         name: 'Aboutdonify',
         component: Aboutdonify
+    },
+    {
+        path: '/walkthrough',
+        name: 'Walkthrough',
+        component: Walkthrough
     },
     /*   {
         path: '/login',
