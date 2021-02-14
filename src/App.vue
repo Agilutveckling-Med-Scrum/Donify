@@ -1,8 +1,3 @@
-
-
-
-
-
 <template>
     <div id="app">
         <div id="nav">
@@ -16,27 +11,22 @@
                 <Login />
                 <!--<router-link to="/login" class="link">Logga in</router-link>-->
             </div>
-        
         </div>
 
         <router-view />
-  </div>
-  
-
+    </div>
 </template>
 <script>
 import Login from '@/views/Login.vue'
 // @ is an alias to /src
-import Donationpage1 from '@/components/donationpg1.vue'
+
 export default {
     name: 'Home',
     components: {
-        Login,
-        Donationpage1
+        Login
     }
 }
 </script>
-<style>
 
 <style>
 #app {

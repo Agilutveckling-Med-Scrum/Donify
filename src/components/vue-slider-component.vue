@@ -3,9 +3,6 @@
         <vue-slider v-model="numvalue" v-bind="options" />
         <p>
             {{ numvalue }}
-            <select name="" id=""
-                ><option value="sek">Sek</option></select
-            >
         </p>
     </div>
 </template>
@@ -37,7 +34,10 @@ export default {
 </script>
 <style scoped>
 .slider {
-    width: 50%;
-    margin: 0 auto 00;
+    width: 100%;
+    margin: 0 auto 0 0;
+}
+p {
+    text-align: center;
 }
 </style>

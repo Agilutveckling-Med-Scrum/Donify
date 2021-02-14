@@ -24,6 +24,11 @@ const routes = [
         name: 'Aboutdonify',
         component: Aboutdonify
     },
+    {
+        path: '/walkthrough',
+        name: 'Walkthrough',
+        component: Walkthrough
+    },
     /*   {
         path: '/login',
         name: 'Login',
