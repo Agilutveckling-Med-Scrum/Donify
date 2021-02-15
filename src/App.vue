@@ -1,14 +1,10 @@
 
-
-
-
-
 <template>
   <div id="app">
       <div id="nav">
         <router-link to="/" id="logo"><img src="./assets/logo.png"/></router-link>
         <div>
-        <router-link to="/aboutdonify" class="link">Om Donify</router-link>
+        <router-link to="/home" class="link">Om Donify</router-link>
         <router-link to="/login" class="link">Logga in</router-link>
         </div>
       </div>

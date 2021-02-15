@@ -17,6 +17,7 @@ export default {
 <style scoped>
 .donerasida {
   display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   flex-direction: column;
 }
 .meddelande {

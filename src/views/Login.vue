@@ -18,6 +18,13 @@
 
 <script>
 export default {
+    data: function() {
+        return {
+            username: '',  
+            password: '',
+      
+        }
+    },
     methods: {
         userpage() {
             this.$router.push({
