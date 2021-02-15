@@ -5,11 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        numvalue: ''
+        numvalue: '',
+        selected: 'SEK'
     },
     mutations: {
         setnumValue(state, numvalue) {
             state.numvalue = numvalue
+        },
+        setKey(state, selected) {
+            state.selected = selected
         }
     },
     actions: {},

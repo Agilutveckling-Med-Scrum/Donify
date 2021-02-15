@@ -1,5 +1,5 @@
-
 <template>
+
   <div class="home">
     <div class="home-container" style="background-color:whitesmoke" >
    
@@ -36,18 +36,25 @@
       <a href="#" class="fa fa-twitter" />
       <a href="#" class="fa fa-instagram" />
       <a href="#" class="fa fa-linkedin" />
+
+ 
+
     </footer>
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
   </div>
+  
+
   
 </template>
 <script>
 
 export default {
+
     name:'Home',
     methods: {
         walkthrough() {
@@ -76,18 +83,28 @@ export default {
     }  
     
     
-}
   
+
+}
+
 </script>
 
 <style scoped>
+
 .home{
   display: flex;
   flex-direction: column;
   text-align: center
    
 }
-  #footer {
+  
+
+
+
+
+
+ #footer {
+
     background-color: grey;
     color: white;
     height: 5vh;
@@ -97,7 +114,8 @@ export default {
     padding: 10px 10px 0px 10px;
     bottom: 0;
     width: 100%;
-  }
+}
+
 
   h1 {
     display: flex;
@@ -105,13 +123,15 @@ export default {
   }
   h2{
 margin-top: 2%;}
-  #footer a {
+  
+
+#footer a {
+
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 1em;
     color: white;
-  }
+}
 
 </style>
-
