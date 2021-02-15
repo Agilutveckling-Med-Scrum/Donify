@@ -67,8 +67,8 @@ export default {
                 var tl = gsap.timeline({repeat: 0})
                 tl.from('h2 ', { scale:0.3, duration: 1, opacity: 0, ease: 'easeOut'})
                 tl.from('p:nth-of-type(1)', { scale:0.3, duration: 1,opacity: 0, ease: 'easeOut'})
-                tl.from('.walkthrough .who-container button', { x:-1000, opacity: 0, ease: 'easeOut'})
-                tl.from('p:nth-of-type(2)', {scale:0.3, delay: .3, duration: 1, opacity: 0, ease: 'easeOut'})
+                tl.from('.walkthrough .who-container button', { x:-300, opacity: 0, ease: 'easeOut'})
+                tl.from('p:nth-of-type(2)', {scale:0.3, delay: .3, duration: 1.5, opacity: 0, ease: 'easeOut'})
             }          
         }
     }
