@@ -43,6 +43,7 @@ export default {
         this.noNewUser()
     }
 }
+
 </script>
 
 <style>
