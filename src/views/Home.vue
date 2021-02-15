@@ -1,6 +1,4 @@
-
 <template>
-
   <div class="about">
  <h1 id="button">This is a Donate Page</h1>
 
@@ -23,18 +21,15 @@
 </template>
 <script>
 
-
 export default {
     name: 'Home',
-    components: {
-      
-    }
+    components: {}
 }
 
 </script>
 
 <style scoped>
-  #footer {
+#footer {
     background-color: grey;
     color: white;
     height: 5vh;
@@ -44,19 +39,17 @@ export default {
     padding: 10px 10px 0px 10px;
     bottom: 0;
     width: 100%;
-  }
+}
 
-  h1 {
+h1 {
     display: flex;
     justify-content: space-between;
-  }
-  #footer a {
+}
+#footer a {
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 1em;
     color: white;
-  }
-
+}
 </style>
-

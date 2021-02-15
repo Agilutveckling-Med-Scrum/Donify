@@ -4,12 +4,15 @@
         <p class="Betalningssätt">Betalningssätt:</p>
         <div class="buttons">
             <div class="upbuttons">
-                <button>Banköverföring</button>
-                <button>Autogiro</button>
-                <button>Swish</button>
+                <button id="btn">Banköverföring</button>
+                <button id="btn">Autogiro</button>
+                <button id="btn">Swish</button>
             </div>
             <p>
-                <strong>{{ this.$store.state.numvalue }} SEK</strong>
+                <strong
+                    >{{ this.$store.state.numvalue }}
+                    {{ this.$store.state.selected }}</strong
+                >
             </p>
             <div class="downbutton">
                 <button type="button" @click="Paynow">Betala nu</button>
@@ -39,10 +42,17 @@ template {
     margin-top: 100px;
 }
 button {
-    width: 100px;
+    width: 150px;
     height: 30px;
-    border-radius: 8%;
     margin: 20px auto;
+    font-size: 14px;
+    border: transparent;
+    background-color: #cb99c5;
+    box-shadow: 0px 2px 0px #ad83a8;
+}
+#btn:focus {
+    box-shadow: 0 0 #ba8cb5;
+    background-color: #b663ab;
 }
 .upbuttons {
     display: flex;
