@@ -64,7 +64,6 @@ input {
 }
 
 p {
-    font-size: 12px;
     cursor: pointer;
     color: #1F9EFF;
 }
