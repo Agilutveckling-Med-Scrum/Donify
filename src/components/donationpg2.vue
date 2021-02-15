@@ -1,6 +1,6 @@
 <template>
     <div class="donationPage2">
-        <p>Du har valt: <span>WWF</span></p>
+        <p>Du har valt: <button class="vald">WWF</button></p>
         <p class="Betalningssätt">Betalningssätt:</p>
         <div class="buttons">
             <div class="upbuttons">
@@ -15,7 +15,9 @@
                 >
             </p>
             <div class="downbutton">
-                <button type="button" @click="Paynow">Betala nu</button>
+                <button id="btn" type="button" @click="Paynow">
+                    Betala nu
+                </button>
             </div>
         </div>
     </div>
@@ -35,24 +37,37 @@ export default {
 </script>
 
 <style scoped>
-template {
-    background-color: #f1f4f4;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+.donationPage2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    padding: 20px;
 }
 .Betalningssätt {
     margin-top: 100px;
 }
-button {
+.vald {
+    height: 80px;
+    width: 80px;
+    background-color: #bc6ecc;
+    border: transparent;
+    border-radius: 100px;
+}
+#btn {
     width: 150px;
     height: 30px;
     margin: 20px auto;
     font-size: 14px;
+    color: rgb(255, 255, 255);
     border: transparent;
-    background-color: #cb99c5;
-    box-shadow: 0px 2px 0px #ad83a8;
+    border-radius: 100px;
+    background-color: #8a2be2;
+    box-shadow: 0px 2px 0px #6f01d6;
 }
+
 #btn:focus {
     box-shadow: 0 0 #ba8cb5;
-    background-color: #b663ab;
+    background-color: #9d55e0;
 }
 .upbuttons {
     display: flex;
