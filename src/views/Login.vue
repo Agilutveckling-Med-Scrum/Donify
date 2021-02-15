@@ -73,6 +73,7 @@ p {
     margin-bottom: 20px;
     cursor: pointer;
 }
+
 .btn-secondary {
     background-color: transparent;
     border-color: transparent;
