@@ -9,7 +9,7 @@
        
         <div>
           
-        <router-link to="/aboutdonify" class="link">Om Donify</router-link>
+        <router-link to="/home" class="link">Om Donify</router-link>
         <router-link to="/login" class="link">Logga in</router-link>
         
       </div>

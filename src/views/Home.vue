@@ -1,12 +1,24 @@
 
 <template>
-  <div class="about">
-<!--     <h1 id="button">This is a Donate Page</h1>
+  <div class="home">
+<div class="home-container" >
+  <h2>Om Donify</h2>
+   <b-button variant="primary" class="mx-auto" @click="walkthrough">Donera Nu</b-button>
 
-    <button class="btn btn-primary">Swish</button>
-    <button class="btn btn-primary">Autogiro</button>
-    <button class="btn btn-primary">Betalningsrätt</button>
-    <button class="btn btn-primary">Footer</button> 
+   <div class="row">
+            <div class="col-lg-4">
+            <h4>Toplista</h4>
+            <select v-model="topLista">
+                <option v-for="popular in toplist" v-bind:key="popular" :value="popular.key">{{popular.name}}</option>
+                
+            </select>
+          </div>
+           <div class="col-lg-4">
+            <h4>Nyheter</h4>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+          </div>
+   </div>
     <footer id="footer">
       <a href="#" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
@@ -17,12 +29,52 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+</div>
   </div>
 </template>
-
+<script>
+export default {
+    name:'home',
+    data: function() {
+        return {
+   
+            topLista: [],
+            
+   
+            toplist: [
+                {key: 1, name: 'WHO'},
+                {key: 2, name: 'RäddaBarnen'},
+                {key: 3, name: 'Unicef'},
+                {key: 4, name: 'Amnesty International'},
+                {key: 5, name: ''},
+                {key: 6, name: ''},
+                {key: 7, name: ''}
+            ]
+        }
+    }  ,
+    methods: {
+        walkthrough() {
+            this.$router.push({
+                name: 'Walkthrough'
+            })
+        }
+    },
+}
+</script>
 <style scoped>
+h2{
+  color: white;
+margin-top: 2%;
+}
+
+.home{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #324f61;
+}
 #footer {
-  background-color: wheat;
+  background-color: #324f61;
   color: black;
   height: 6vh;
   display: flex;
