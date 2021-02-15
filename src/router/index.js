@@ -16,7 +16,7 @@ const routes = [
         component: Walkthrough
     },
     {
-        path: '/Home',
+        path: '/',
         name: 'Home',
         component: Home
     },
