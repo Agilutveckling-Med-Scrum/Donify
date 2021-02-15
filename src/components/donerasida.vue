@@ -21,7 +21,7 @@ export default {
 }
 .meddelande {
   height: 300px;
-  background-color: rgb(196, 192, 192);
+  background-color: #666666
 }
 button {
   width: 100px;
