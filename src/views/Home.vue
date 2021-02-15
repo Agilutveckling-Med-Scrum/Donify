@@ -2,7 +2,7 @@
 <template>
 
   <div class="about">
-<!--     <h1 id="button">This is a Donate Page</h1>
+ <h1 id="button">This is a Donate Page</h1>
 
     <button class="btn btn-primary">Swish</button>
     <button class="btn btn-primary">Autogiro</button>
@@ -13,28 +13,17 @@
       <a href="#" class="fa fa-twitter"></a>
       <a href="#" class="fa fa-instagram"></a>
       <a href="#" class="fa fa-linkedin"></a>
-    </footer>-->
-
-  <div class="home">
-    <footer id="footer">
-      <a href="#" class="fa fa-facebook" />
-      <a href="#" class="fa fa-twitter" />
-      <a href="#" class="fa fa-instagram" />
-      <a href="#" class="fa fa-linkedin" />
     </footer>
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-  </div>
-  </div>
+  </div>  
 </template>
 <script>
-<<<<<<< HEAD
-=======
 
->>>>>>> 9755ab3ef5bbf8a6d10d765f12b85b9451980d29
+
 export default {
     name: 'Home',
     components: {
