@@ -20,15 +20,14 @@ const routes = [
         component: Home
     },
     {
-        path: '/walkthrough',
-        name: 'Walkthrough',
-        component: Walkthrough
-    },
-
-    {
         path: '/aboutdonify',
         name: 'Aboutdonify',
         component: Aboutdonify
+    },
+    {
+        path: '/walkthrough',
+        name: 'Walkthrough',
+        component: Walkthrough
     },
     /*   {
         path: '/login',
@@ -49,16 +48,19 @@ const routes = [
         path: '/donate',
         name: 'Donationpage1',
         component: Donationpage1
+        //component: () => import('views/Donationpage1.vue')
     },
     {
         path: '/pay',
         name: 'Donationpage2',
         component: Donationpage2
+        // component: () => import('views/Donationpage2.vue')
     },
     {
         path: '/info',
         name: 'Donationpage3',
         component: Donationpage3
+        // component: () => import('views/Donationpage3.vue')
     }
 ]
 
