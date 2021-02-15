@@ -1,11 +1,10 @@
 
 <template>
-
     <div>
         <b-button v-b-toggle.sidebar-right id="profileButton"
             ><i class="fa fa-user-circle"
         /></b-button>
-        <b-sidebar id="sidebar-right" title="Log in" right shadow>
+        <b-sidebar id="sidebar-right" title="Logga in" right shadow>
             <div class="px-3 py-2">
                 <form>
                     <label>
@@ -20,15 +19,17 @@
                             type="password"
                         />
                     </label>
-                    <button class="loggainbtn" @click="loginpage()">
+                    <button class="loginbtn" @click="userpage">
                         Logga in
                     </button>
                 </form>
                 <p>Glömt ditt lösenord?</p>
+                <p>Inget konto? Skapa nytt här</p>
             </div>
         </b-sidebar>
     </div>
 </template>
+
 <script>
 export default {
     data() {
@@ -37,7 +38,14 @@ export default {
             password: ''
         }
     },
-    name: 'Login'
+    methods: {
+        userpage() {
+            this.$router.push({
+                name: 'Userpage'
+            })
+        }
+    },
+    name: 'Login', 
 }
 </script>
 
@@ -56,16 +64,16 @@ input {
 }
 
 p {
-    font-size: 12px;
     cursor: pointer;
-    color: #718eff;
+    color: #1F9EFF;
 }
 
-.loggainbtn {
+.loginbtn {
     margin-top: 20px;
     margin-bottom: 20px;
     cursor: pointer;
 }
+
 .btn-secondary {
     background-color: transparent;
     border-color: transparent;
