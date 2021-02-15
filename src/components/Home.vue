@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="scss">
   #footer {
     color: black;
     height: 6vh;

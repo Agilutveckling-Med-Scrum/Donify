@@ -32,7 +32,7 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style lang="scss">
 .slider {
     width: 100%;
     margin: 0 auto 0 0;
