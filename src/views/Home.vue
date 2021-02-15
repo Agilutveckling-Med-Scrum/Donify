@@ -21,7 +21,14 @@ export default {
 </script>
 
 <style scoped>
-#footer {
+
+
+h1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+ #footer {
     background-color: grey;
     color: white;
     height: 5vh;
@@ -33,10 +40,6 @@ export default {
     width: 100%;
 }
 
-h1 {
-    display: flex;
-    justify-content: space-between;
-}
 #footer a {
     display: flex;
     justify-content: center;
@@ -44,4 +47,5 @@ h1 {
     padding: 1em;
     color: white;
 }
+
 </style>
