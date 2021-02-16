@@ -41,7 +41,6 @@ export default {
     mounted(){
         this.onNewUser()
         this.noNewUser()
-
 </script>
 
 <style>
