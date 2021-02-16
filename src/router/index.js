@@ -2,8 +2,13 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Walkthrough from '../views/Walkthrough.vue'
+
+//import Aboutdonify from '../views/Aboutdonify.vue'
+//import Login from '../views/Login.vue'
+
 import Aboutdonify from '../views/Aboutdonify.vue'
 //import Login from '../views/Login.vue'
+
 import Donationpage1 from '../components/donationpg1.vue'
 import Donationpage2 from '../components/donationpg2.vue'
 import Donationpage3 from '../components/donationpg3.vue'
@@ -15,15 +20,25 @@ Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/',
+        path: '/Home',
         name: 'Home',
         component: Home
     },
     {
+
+
+        path: '/Walkthrough',
+        name: 'Walkthrough',
+        component: Walkthrough
+    },
+   
+    {
+
         path: '/aboutdonify',
         name: 'Aboutdonify',
         component: Aboutdonify
     },
+
     {
         path: '/walkthrough',
         name: 'Walkthrough',

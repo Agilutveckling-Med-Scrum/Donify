@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage3 {
     font-family: 'Open Sans', sans-serif;

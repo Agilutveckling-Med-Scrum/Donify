@@ -1,41 +1,29 @@
 
 <template>
-    <div>
-        <b-button v-b-toggle.sidebar-right id="profileButton"
-            ><i class="fa fa-user-circle"
-        /></b-button>
-        <b-sidebar id="sidebar-right" title="Logga in" right shadow>
-            <div class="px-3 py-2">
-                <form>
-                    <label>
-                        Användarnamn
-                        <input v-model="username" placeholder="E-postadress" />
-                    </label>
-                    <label>
-                        Lösenord
-                        <input
-                            v-model="password"
-                            placeholder="Lösenord"
-                            type="password"
-                        />
-                    </label>
-                    <button class="loginbtn" @click="userpage">
-                        Logga in
-                    </button>
-                </form>
-                <p>Glömt ditt lösenord?</p>
-                <p>Inget konto? Skapa nytt här</p>
-            </div>
-        </b-sidebar>
+  <div class="login">
+   <h2>Logga in</h2>
+   <form>
+   <label>
+     Användarnamn
+   <input v-model="username" placeholder="E-postadress">
+   </label>
+   <label>
+     Lösenord
+   <input v-model="password" placeholder="Lösenord" type="password"/>
+   </label>
+   <button @click="userpage">Logga in</button>
+   </form>
+   <p>Glömt ditt lösenord?</p>
     </div>
 </template>
 
 <script>
 export default {
-    data() {
+    data: function() {
         return {
-            username: '',
-            password: ''
+            username: '',  
+            password: '',
+      
         }
     },
     methods: {
@@ -45,39 +33,53 @@ export default {
             })
         }
     },
-    name: 'Login', 
 }
 </script>
 
+
+
 <style scoped>
-label,
-input {
-    display: block;
+label, input {
+  display: block; 
 }
 
+
 input {
-    margin-bottom: 20px;
-    width: 75%;
-    padding: 8px;
-    border: 2px solid #cccccc;
-    border-radius: 4px;
+  margin-bottom: 20px; 
+  width: 75%; 
+  padding: 8px;
+  border: 2px solid #CCCCCC;
+  border-radius: 4px; 
 }
+
+.login {
+  width: 300px;
+  border: 2px solid #CCCCCC;
+  margin: auto;
+  margin-top: 100px;
+  padding: 40px;
+}
+
+h2 {
+  text-align: center; 
+  padding-bottom: 20px; 
+}
+
+
+
 
 p {
-    cursor: pointer;
-    color: #1F9EFF;
+  font-size: 12px; 
+  cursor: pointer; 
+  color: #718EFF; 
 }
 
-.loginbtn {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
+
+button {
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  cursor: pointer; 
 }
 
-.btn-secondary {
-    background-color: transparent;
-    border-color: transparent;
-    color: black;
-    margin-left: 5px;
-}
 </style>
+
