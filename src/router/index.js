@@ -60,25 +60,26 @@ const routes = [
         path: '/donate',
         name: 'Donationpage1',
         component: Donationpage1
+        //component: () => import('views/Donationpage1.vue')
     },
     {
         path: '/pay',
         name: 'Donationpage2',
         component: Donationpage2
+        // component: () => import('views/Donationpage2.vue')
     },
     {
         path: '/info',
         name: 'Donationpage3',
         component: Donationpage3
+        // component: () => import('views/Donationpage3.vue')
     }
 ]
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-    routes,
-    mode: 'history'
-    //To remove the hash tag # in the URL
+    routes
 })
 
 export default router
