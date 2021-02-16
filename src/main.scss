@@ -1,3 +1,4 @@
+
 // Bootstrap body background
 $body-bg: white;
 
@@ -6,15 +7,14 @@ $body-color: black;
 
 // Bootstrap theme colors
 $theme-colors: (
-  'primary': #020D74,
-  'secondary': #8A2BE2
+    'primary': #020d74,
+    'secondary': #8a2be2
 );
-
 
 @import '~bootstrap';
 @import '~bootstrap-vue';
 
-
 #app {
-  color: unset;
+    color: unset;
 }
+

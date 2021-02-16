@@ -1,7 +1,3 @@
-
-
-
-
 <template>
     <div id="app">
         <div id="nav">
@@ -48,7 +44,6 @@ export default {
         this.noNewUser()
     }
 }
-
 </script>
 
 <style>

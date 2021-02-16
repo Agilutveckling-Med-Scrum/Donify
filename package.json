@@ -44,33 +44,32 @@
   },
   "eslintConfig": {
     "env": {
-      "node": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:vue/essential"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "root": true,
-    "rules": {
-      "no-console": "off",
-      "vue/html-self-closing": [
-        "error",
-        {
-          "html": {
-            "component": "always",
-            "normal": "always",
-            "void": "always"
-          }
+      "node": true}
+        "extends": [
+            "eslint:recommended",
+            "plugin:vue/essential"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "root": true,
+        "rules": {
+            "no-console": "off",
+            "vue/html-self-closing": [
+                "error",
+                {
+                    "html": {
+                        "component": "always",
+                        "normal": "always",
+                        "void": "always"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
 }

@@ -1,17 +1,6 @@
 <template>
 
 <div class="aboutdonify">
- 
-   <h2>OmDonify</h2>
-    <section class="section">
-            <div class="container-fliud">
-                  
-                <button @click="home">Donera
-                  
-                </button>  
-                
-            </div> 
-    </section>
     <div class="container">
         <h2>OmDonify</h2>
         <section class="section">
@@ -86,7 +75,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .aboutdonify {
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
