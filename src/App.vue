@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div id="nav">
-            <router-link to="/" id="logo"
+            <router-link to="/home" id="logo"
                 ><img src="./assets/logo.png"
             /></router-link>
             <div class="rightside">
@@ -11,7 +11,6 @@
                 <Login />
                 <!--<router-link to="/login" class="link">Logga in</router-link>-->
             </div>
-
         </div>
 
         <router-view />
@@ -24,22 +23,22 @@ import Login from '@/views/Login.vue'
 export default {
     name: 'Home',
     components: {
-        Login,
+        Login
     },
     methods: {
-        onNewUser(){
-            if(localStorage.getItem('NewUser') === null){
-                setTimeout(()=>{
+        onNewUser() {
+            if (localStorage.getItem('NewUser') === null) {
+                setTimeout(() => {
                     this.$router.push('/walkthrough'), 0
                 })
             }
         },
-        noNewUser(){
+        noNewUser() {
             localStorage.setItem('NewUser', false)
             console.log(localStorage.getItem('NewUser'))
         }
     },
-    mounted(){
+    mounted() {
         this.onNewUser()
         this.noNewUser()
     }
@@ -47,11 +46,23 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif, 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
 }
 
 img {
