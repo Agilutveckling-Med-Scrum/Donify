@@ -1,13 +1,15 @@
 <template>
     <div class="donationPage3">
-        <p>Idag donerade du</p>
-        <p>
-            <strong
-                >{{ this.$store.state.numvalue }}
-                {{ this.$store.state.selected }}</strong
-            >
-        </p>
-        <p>till <button class="vald">WWF</button></p>
+        <div class="info">
+            <p>Idag donerade du</p>
+            <p>
+                <strong
+                    >{{ this.$store.state.numvalue }}
+                    {{ this.$store.state.selected }}</strong
+                >
+            </p>
+            <p>till <button class="vald">WWF</button></p>
+        </div>
         <div class="meddelande">Meddalnde från WWF</div>
         <button id="btn" type="button" @click="Tohome">Till startsidan</button>
     </div>
@@ -26,29 +28,42 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage3 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     padding: 20px;
+    background: #f7f2fc;
+}
+.info {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .meddelande {
-    height: 300px;
-    background-color: rgb(196, 192, 192);
+    height: 280px;
+    background-color: #ffffff;
 }
 .vald {
+    font-size: 24px;
     height: 80px;
     width: 80px;
-    background-color: #bc6ecc;
+    background-color: #ffffff;
     border: transparent;
     border-radius: 100px;
 }
+strong {
+    font-size: 30px;
+}
 #btn {
     width: 150px;
-    height: 30px;
-    margin: 20px auto;
-    font-size: 14px;
+    height: 40px;
+    font-size: 18px;
+    display: block;
+    margin: 40px auto;
     color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 100px;
