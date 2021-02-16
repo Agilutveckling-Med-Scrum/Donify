@@ -47,7 +47,7 @@
 
 
 
-<style lang="scss">
+<style scoped lang="scss">
 #userpage {
   margin-top: 50px; 
   margin-left: 20px; 
