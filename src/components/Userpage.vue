@@ -1,9 +1,11 @@
 <template>
   <div id="userpage">
+    <div id="info">
     <h2>Min sida</h2>
-    <h3>Insamlade donationer: 23 750 SEK</h3>
-    <button id="btn">Begär utbetalning</button>
+    <h3>Insamlade donationer: <strong>23 750 SEK</strong></h3>
+    <b-button variant="primary" class="mx-auto" id="btn-1" >Begär utbetalning</b-button> 
      <p id="contact">Kontakta oss för för frågor eller ändringar</p>
+     </div>
      <div id="data">
        <hr>
     <p><strong>Kontaktuppgifter</strong></p>
@@ -39,7 +41,7 @@
      Upprepa nytt lösenord: 
    <input v-model="password" placeholder="Lösenord" type="password"/>
    </label>
-    <button>Spara ändringar</button>
+    <b-button variant="primary" class="mx-auto" id="btn-2" >Spara ändringar</b-button>
    </form>
    </div>
     </div>
@@ -47,10 +49,14 @@
 
 
 
-<style scoped>
+<style scoped lang="scss">
 #userpage {
   margin-top: 50px; 
   margin-left: 20px; 
+}
+
+#info {
+  display: block; 
 }
 
 #data {
@@ -79,7 +85,7 @@ margin-top: 40px;
 
 #contact { 
   cursor: pointer; 
-  color: #718EFF; 
+  color: #1F9EFF; 
 }
 
 h3 {
@@ -93,8 +99,12 @@ button {
   margin-left: 15px; 
 }
 
-#btn {
+#btn-1 {
   margin-bottom: 30px; 
+}
+
+#btn-2 {
+  margin-bottom: 50px; 
 }
 
 </style>

@@ -11,6 +11,7 @@
                 <Login />
                 <!--<router-link to="/login" class="link">Logga in</router-link>-->
             </div>
+
         </div>
 
         <router-view />
@@ -23,7 +24,24 @@ import Login from '@/views/Login.vue'
 export default {
     name: 'Home',
     components: {
-        Login
+        Login,
+    },
+    methods: {
+        onNewUser(){
+            if(localStorage.getItem('NewUser') === null){
+                setTimeout(()=>{
+                    this.$router.push('/walkthrough'), 0
+                })
+            }
+        },
+        noNewUser(){
+            localStorage.setItem('NewUser', false)
+            console.log(localStorage.getItem('NewUser'))
+        }
+    },
+    mounted(){
+        this.onNewUser()
+        this.noNewUser()
     }
 }
 </script>
