@@ -96,7 +96,7 @@ export default {
 /*Mobile*/
 /*vem är du? val*/
 @media only screen 
-and (min-device-width: 375px) 
+and (min-device-width: 325px) 
 and (max-device-width: 812px) {
 
 
