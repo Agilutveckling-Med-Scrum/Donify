@@ -1,9 +1,11 @@
 <template>
   <div id="userpage">
+    <div id="info">
     <h2>Min sida</h2>
     <h3>Insamlade donationer: <strong>23 750 SEK</strong></h3>
     <b-button variant="primary" class="mx-auto" id="btn-1" >Begär utbetalning</b-button> 
      <p id="contact">Kontakta oss för för frågor eller ändringar</p>
+     </div>
      <div id="data">
        <hr>
     <p><strong>Kontaktuppgifter</strong></p>
@@ -51,6 +53,10 @@
 #userpage {
   margin-top: 50px; 
   margin-left: 20px; 
+}
+
+#info {
+  display: block; 
 }
 
 #data {
