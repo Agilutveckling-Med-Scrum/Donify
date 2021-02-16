@@ -8,9 +8,12 @@
                 <button id="btn">Autogiro</button>
                 <button id="btn">Swish</button>
             </div>
+        </div>
+
+        <div class="downinfo">
             <p>
                 <strong
-                    >{{ this.$store.state.numvalue }}
+                    >Belopp: {{ this.$store.state.numvalue }}
                     {{ this.$store.state.selected }}</strong
                 >
             </p>
@@ -36,26 +39,30 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage2 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     padding: 20px;
+    background: #f7f2fc;
 }
 .Betalningssätt {
     margin-top: 100px;
+    padding-left: 20px;
 }
+
 .vald {
+    font-size: 24px;
     height: 80px;
     width: 80px;
-    background-color: #bc6ecc;
+    background-color: #ffffff;
     border: transparent;
     border-radius: 100px;
 }
 #btn {
     width: 150px;
-    height: 30px;
+    height: 40px;
     margin: 20px auto;
     font-size: 14px;
     color: rgb(255, 255, 255);
@@ -74,7 +81,11 @@ export default {
     flex-direction: column;
     margin-bottom: 100px;
 }
-
+.downinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .donationPage2 {
         position: absolute;
