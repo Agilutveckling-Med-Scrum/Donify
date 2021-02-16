@@ -18,9 +18,7 @@
                             type="password"
                         />
                     </label>
-                    <button class="loginbtn" @click="userpage">
-                        Logga in
-                    </button>
+                    <b-button variant="primary" class="mx-auto" @click="userpage" >Logga in </b-button> 
                 </form>
                 <p>Glömt ditt lösenord?</p>
                 <p>Inget konto? Skapa nytt här</p>
@@ -65,13 +63,10 @@ input {
 p {
     cursor: pointer;
     color: #1F9EFF;
+    margin-top: 30px; 
+    float: left; 
 }
 
-.loginbtn {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
 
 .btn-secondary {
     background-color: transparent;

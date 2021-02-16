@@ -2,7 +2,7 @@
   <div id="userpage">
     <h2>Min sida</h2>
     <h3>Insamlade donationer: <strong>23 750 SEK</strong></h3>
-    <button id="btn-1">Begär utbetalning</button>
+    <b-button variant="primary" class="mx-auto" id="btn-1" >Begär utbetalning</b-button> 
      <p id="contact">Kontakta oss för för frågor eller ändringar</p>
      <div id="data">
        <hr>
@@ -39,7 +39,7 @@
      Upprepa nytt lösenord: 
    <input v-model="password" placeholder="Lösenord" type="password"/>
    </label>
-    <button id="btn-2">Spara ändringar</button>
+    <b-button variant="primary" class="mx-auto" id="btn-2" >Spara ändringar</b-button>
    </form>
    </div>
     </div>
