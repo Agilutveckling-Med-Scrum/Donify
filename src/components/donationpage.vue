@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 template {
   background-color: #f1f4f4;
 }
