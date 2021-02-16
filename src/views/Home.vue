@@ -89,14 +89,26 @@ export default {
 
 </script>
 
-<style scoped>
+ 
+<style lang="scss">
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 812px) {
 
 .home{
   display: flex;
   flex-direction: column;
-  text-align: center
+  text-align: center;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
    
 }
+b-button {
+  margin-top: 20px; 
+  margin-left: 15px; 
+}
+
   
 
 
@@ -132,6 +144,7 @@ margin-top: 2%;}
     flex-direction: column;
     padding: 1em;
     color: white;
+}
 }
 
 </style>

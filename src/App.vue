@@ -9,7 +9,7 @@
                 ><img src="./assets/logo.png"
             /></router-link>
             <div class="rightside">
-                <router-link to="/aboutdonify" class="link"
+                <router-link to="/home" class="link"
                     >Om Donify</router-link
                 >
                 <Login />
