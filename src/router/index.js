@@ -3,11 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Walkthrough from '../views/Walkthrough.vue'
 
-//import Aboutdonify from '../views/Aboutdonify.vue'
-//import Login from '../views/Login.vue'
-
 import Aboutdonify from '../views/Aboutdonify.vue'
-//import Login from '../views/Login.vue'
+import Login from '../views/Login.vue'
 
 import Donationpage1 from '../components/donationpg1.vue'
 import Donationpage2 from '../components/donationpg2.vue'
@@ -44,11 +41,11 @@ const routes = [
         name: 'Walkthrough',
         component: Walkthrough
     },
-    /*   {
+    {
         path: '/login',
         name: 'Login',
         component: Login
-    }, */
+    },
     {
         path: '/userpage',
         name: 'Userpage',
