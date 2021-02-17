@@ -8,22 +8,32 @@
                 key
             }}</option>
         </select>
-        <p>Hur ofta vill du donera?</p>
-        <div class="buttons">
-            <div class="upbuttons">
-                <button id="btn" type="button">En gång</button>
-                <button id="btn" type="button">Varje månad</button>
-                <button id="btn" type="button">Varje år</button>
-            </div>
-            <div class="downbutton">
-                <button
-                    id="btn"
-                    class="Tillbetalning"
-                    type="button"
-                    @click="Topay"
-                >
-                    Till betalning
-                </button>
+        <div class="downinfo">
+            <p>Hur ofta vill du donera?</p>
+            <div class="buttons">
+                <div class="upbuttons">
+                    <button id="btn" type="button">En gång</button>
+
+                    <button id="btn" type="button" @click="clickMonth">
+                        Varje månad
+                    </button>
+
+                    <button id="btn" type="button" @click="clickYear">
+                        Varje år
+                    </button>
+                </div>
+                <span v-show="isShowmonth">{{ popinfomonth }}</span>
+                <span v-show="isShowyear">{{ popinfoyear }}</span>
+                <div class="downbutton">
+                    <button
+                        id="btn"
+                        class="Tillbetalning"
+                        type="button"
+                        @click="Topay"
+                    >
+                        Till betalning
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -42,7 +52,11 @@ export default {
     },
     data() {
         return {
-            list: ''
+            list: '',
+            popinfomonth: '',
+            popinfoyear: '',
+            isShowmonth: false,
+            isShowyear: false
         }
     },
     methods: {
@@ -51,13 +65,24 @@ export default {
                 .get('https://api.exchangeratesapi.io/latest')
                 .then(response => {
                     this.list = response.data.rates
-                    console.log(this.list)
                 })
         },
         Topay() {
             this.$router.push({
                 name: 'Donationpage2'
             })
+        },
+        clickMonth() {
+            this.isShowmonth = !this.isShowmonth
+            if (this.isShowmonth) {
+                this.popinfomonth = 'Du har valt en månadsprenumeration!'
+            }
+        },
+        clickYear() {
+            this.isShowyear = !this.isShowyear
+            if (this.isShowyear) {
+                this.popinfoyear = 'Du har valt en årsprenumeration!'
+            }
         }
     },
     computed: {
@@ -98,6 +123,7 @@ export default {
 .upbuttons {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 .buttons {
     display: flex;
@@ -113,11 +139,15 @@ export default {
     font-size: 18px !important;
     font-weight: 600 !important;
 }
+
 p {
-    margin-top: 26px;
+    margin: 30px 5px 30px;
 }
 select {
     display: block;
+    margin: 0 auto;
+}
+span {
     margin: 0 auto;
 }
 #btn {
@@ -133,7 +163,10 @@ select {
 #btn:focus {
     background-color: #7300df;
 }
-
+// .clickinfo {
+//     display: flex;
+//     flex-direction: column;
+// }
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .donationPage1 {
         position: absolute;
