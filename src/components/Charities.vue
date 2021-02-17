@@ -16,7 +16,12 @@
                     stor nöd som annars inte skulle våga bertätta om sina
                     svårigheter.
                 </p>
-                <b-button variant="primary" class="mx-auto">Donera</b-button>
+                <b-button
+                    variant="primary"
+                    class="mx-auto"
+                    @click="$router.push('donate')"
+                    >Donera</b-button
+                >
             </div>
         </div>
 
@@ -38,7 +43,12 @@
                     domesticerade djur i nöd i Amerika. Dina donationer hjälper
                     djur att få mat, vård och ett hem för livet.
                 </p>
-                <b-button variant="primary" class="mx-auto">Donera</b-button>
+                <b-button
+                    variant="primary"
+                    class="mx-auto"
+                    @click="$router.push('donate')"
+                    >Donera</b-button
+                >
             </div>
         </div>
         <div class="charity-card-container">

@@ -155,7 +155,6 @@ export default {
 
         'slides.slide2': function(val) {
             if (val === 'done') {
-                alert()
                 this.$router.push('all')
             }
         }
