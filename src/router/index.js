@@ -22,25 +22,17 @@ const routes = [
         component: Home
     },
     {
-
-
         path: '/Walkthrough',
         name: 'Walkthrough',
         component: Walkthrough
     },
-   
-    {
 
+    {
         path: '/aboutdonify',
         name: 'Aboutdonify',
         component: Aboutdonify
     },
 
-    {
-        path: '/walkthrough',
-        name: 'Walkthrough',
-        component: Walkthrough
-    },
     {
         path: '/login',
         name: 'Login',
@@ -79,7 +71,8 @@ const routes = [
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-    routes
+    routes,
+    modle: 'history'
 })
 
 export default router
