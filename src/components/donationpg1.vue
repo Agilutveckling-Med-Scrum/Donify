@@ -16,7 +16,12 @@
                 <button id="btn" type="button">Varje år</button>
             </div>
             <div class="downbutton">
-                <button id="btn" type="button" @click="Topay">
+                <button
+                    id="btn"
+                    class="Tillbetalning"
+                    type="button"
+                    @click="Topay"
+                >
                     Till betalning
                 </button>
             </div>
@@ -83,6 +88,7 @@ export default {
 }
 .vald {
     font-size: 24px;
+    font-weight: 900;
     height: 80px;
     width: 80px;
     background-color: #ffffff;
@@ -102,6 +108,11 @@ export default {
 .downbutton {
     margin: 0 auto;
 }
+.Tillbetalning {
+    width: 160px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
 p {
     margin-top: 26px;
 }
@@ -111,6 +122,7 @@ select {
 }
 #btn {
     font-size: 14px;
+    font-weight: 600;
     height: 40px;
     width: 100px;
     color: rgb(255, 255, 255);

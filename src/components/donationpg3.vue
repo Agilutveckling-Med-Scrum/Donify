@@ -45,10 +45,13 @@ export default {
 }
 .meddelande {
     height: 280px;
+    border-radius: 5%;
     background-color: #ffffff;
+    padding: 20px 20px;
 }
 .vald {
     font-size: 24px;
+    font-weight: 900;
     height: 80px;
     width: 80px;
     background-color: #ffffff;
@@ -62,6 +65,7 @@ strong {
     width: 150px;
     height: 40px;
     font-size: 18px;
+    font-weight: 600;
     display: block;
     margin: 40px auto;
     color: rgb(255, 255, 255);
