@@ -10,7 +10,7 @@
             </p>
             <p>till <button class="vald">WWF</button></p>
         </div>
-        <div class="meddelande">Meddalnde från WWF</div>
+        <div class="meddelande">Meddelande från WWF</div>
         <button id="btn" type="button" @click="Tohome">Till startsidan</button>
     </div>
 </template>
