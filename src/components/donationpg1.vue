@@ -13,19 +13,15 @@
             <div class="buttons">
                 <div class="upbuttons">
                     <button id="btn" type="button">En gång</button>
-
                     <button id="btn" type="button" @click="clickMonth">
                         Varje månad
                     </button>
-
                     <button id="btn" type="button" @click="clickYear">
                         Varje år
                     </button>
                 </div>
-
                 <span v-show="!isShow" v-if="isShowmonth">{{ popinfo }}</span>
                 <span v-show="isShow" v-if="isShowyear">{{ popinfo }}</span>
-
                 <div class="downbutton">
                     <button
                         id="btn"
@@ -55,8 +51,7 @@ export default {
     data() {
         return {
             list: '',
-            popinfomonth: '',
-            popinfoyear: '',
+            popinfo: '',
             isShowmonth: false,
             isShowyear: false,
             isShow: false
