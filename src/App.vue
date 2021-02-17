@@ -14,7 +14,7 @@
         </div>
 
         <router-view />
-    </div
+    </div>
 </template>
 <script>
 import Login from '@/views/Login.vue'
