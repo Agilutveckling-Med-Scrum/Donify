@@ -35,7 +35,7 @@ export default {
 <style scoped lang="scss">
 .slider {
     width: 100%;
-    margin: 0 auto 0 0;
+    margin: 0 auto;
 }
 p {
     text-align: center;
