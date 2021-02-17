@@ -18,7 +18,7 @@
                 >
             </p>
             <div class="downbutton">
-                <button id="btn" type="button" @click="Paynow">
+                <button id="btn" class="betalanu" type="button" @click="Paynow">
                     Betala nu
                 </button>
             </div>
@@ -54,6 +54,7 @@ export default {
 
 .vald {
     font-size: 24px;
+    font-weight: 900;
     height: 80px;
     width: 80px;
     background-color: #ffffff;
@@ -65,6 +66,7 @@ export default {
     height: 40px;
     margin: 20px auto;
     font-size: 14px;
+    font-weight: 600;
     color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 100px;
@@ -85,6 +87,11 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.betalanu {
+    width: 160px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .donationPage2 {
