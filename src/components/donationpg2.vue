@@ -8,14 +8,17 @@
                 <button id="btn">Autogiro</button>
                 <button id="btn">Swish</button>
             </div>
+        </div>
+
+        <div class="downinfo">
             <p>
                 <strong
-                    >{{ this.$store.state.numvalue }}
+                    >Belopp: {{ this.$store.state.numvalue }}
                     {{ this.$store.state.selected }}</strong
                 >
             </p>
             <div class="downbutton">
-                <button id="btn" type="button" @click="Paynow">
+                <button id="btn" class="betalanu" type="button" @click="Paynow">
                     Betala nu
                 </button>
             </div>
@@ -36,28 +39,34 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage2 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     padding: 20px;
+    background: #f7f2fc;
 }
 .Betalningssätt {
     margin-top: 100px;
+    padding-left: 20px;
 }
+
 .vald {
+    font-size: 24px;
+    font-weight: 900;
     height: 80px;
     width: 80px;
-    background-color: #bc6ecc;
+    background-color: #ffffff;
     border: transparent;
     border-radius: 100px;
 }
 #btn {
     width: 150px;
-    height: 30px;
+    height: 40px;
     margin: 20px auto;
     font-size: 14px;
+    font-weight: 600;
     color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 100px;
@@ -74,7 +83,16 @@ export default {
     flex-direction: column;
     margin-bottom: 100px;
 }
-
+.downinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.betalanu {
+    width: 160px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .donationPage2 {
         position: absolute;

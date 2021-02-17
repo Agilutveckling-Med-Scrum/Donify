@@ -9,7 +9,7 @@
 
 <script>
 import VueSlider from 'vue-slider-component'
-import 'vue-slider-component/theme/antd.css'
+import 'vue-slider-component/theme/material.css'
 
 export default {
     components: {
@@ -32,7 +32,7 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style scoped lang="scss">
 .slider {
     width: 100%;
     margin: 0 auto 0 0;

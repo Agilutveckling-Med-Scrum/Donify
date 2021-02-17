@@ -16,7 +16,12 @@
                 <button id="btn" type="button">Varje år</button>
             </div>
             <div class="downbutton">
-                <button id="btn" type="button" @click="Topay">
+                <button
+                    id="btn"
+                    class="Tillbetalning"
+                    type="button"
+                    @click="Topay"
+                >
                     Till betalning
                 </button>
             </div>
@@ -73,17 +78,20 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     padding: 20px;
+    background: #f7f2fc;
 }
 .vald {
+    font-size: 24px;
+    font-weight: 900;
     height: 80px;
     width: 80px;
-    background-color: #bc6ecc;
+    background-color: #ffffff;
     border: transparent;
     border-radius: 100px;
 }
@@ -100,6 +108,11 @@ export default {
 .downbutton {
     margin: 0 auto;
 }
+.Tillbetalning {
+    width: 160px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
 p {
     margin-top: 26px;
 }
@@ -109,17 +122,16 @@ select {
 }
 #btn {
     font-size: 14px;
+    font-weight: 600;
     height: 40px;
     width: 100px;
     color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 100px;
     background-color: #8a2be2;
-    box-shadow: 0px 2px 0px #6f01d6;
 }
 #btn:focus {
-    box-shadow: 0 0 #ba8cb5;
-    background-color: #9d55e0;
+    background-color: #7300df;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {

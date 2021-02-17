@@ -1,47 +1,69 @@
 <template>
 
-  <div class="home">
-    
-     <h1>OmDonify</h1>
-    <div class="home-container" >
-                <b-button @click="Todonera">Donera Nu    
-                </b-button>  
-        <div class="row">
-         <div class="col-lg-3">
-              <h3>Toplista</h3>
-               <select v-model="topLista">
-                <option v-for="popular in toplist" v-bind:key="popular" :value="popular.key">{{popular.name}}</option>
-                
-            </select>
-    </div>
-     
-     
-            <div class="col-lg-4">
-            <h4>Nyheter</h4>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. .</p>
-            <p><b-button variant="primary" class="mx-auto">Veta Mera»</b-button></p>
-            </div> </div>
-     
+
+   <div class="aboutdonify">
+        <div class="container">
+           <h2>Aktuellt</h2>
+            <section class="section">
+                <div class="container-fliud">
+                  <img src="../pictures/facemask_640.jpg">
+                   <p>
+                        Donec sed odio dui. Etiam porta sem malesuada magna
+                        mollis euismod.
+                    </p>
+                    <div id="btn">
+                    <button
+                        type="button"
+                        class="btn btn-primary btn-lg"
+                        @click="Todonera">Donera nu
+                    </button>
+                    </div>
+                </div>
+            </section>
+            <div id="toplist" class="col-lg-4">
+                    <h4>Topplista</h4>
+                    <select v-model="topLista">
+                        <option
+                            v-for="popular in toplist"
+                            v-bind:key="popular"
+                            :value="popular.key"
+                            >{{ popular.name }}</option>
+                    </select>
+                </div>
+            <div id="news" class="row">
+                <div class="col-lg-4">
+                    <h2>Nyheter</h2>
+                    <img src="../pictures/wwf_640.jpg">
+                    <p>
+                        Donec sed odio dui. Etiam porta sem malesuada magna
+                        mollis euismod. Donec sed odio dui. Etiam porta sem malesuada magna
+                        mollis euismod.
+                    </p>
+                    <div id="readmore">
+                        <button type="button" class="btn btn-secondary">Läs mer</button>
+                        </div>
+                </div>
+            </div>
+        </div>  
+
     <footer id="footer">
       <a href="#" class="fa fa-facebook" />
       <a href="#" class="fa fa-twitter" />
       <a href="#" class="fa fa-instagram" />
       <a href="#" class="fa fa-linkedin" />
-
- 
-
     </footer>
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </div>
+
   
- </div>  
-  
-</template>
+ 
+
+    
+  </template>
+
 <script>
 
 export default {
@@ -53,14 +75,10 @@ export default {
                 name: 'Donationpg1'
             })
         }
-    }
-    ,
+    },
     data: function() {
         return {
-   
             topLista: [],
-            
-   
             toplist: [
                 {key: 1, name: 'WHO'},
                 {key: 2, name: 'RäddaBarnen'},
@@ -72,85 +90,54 @@ export default {
             ]
         }
     }  
-    
-    
-  
-
 }
-
 </script>
 
+
  
-<style lang="scss">
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-
-.home{
-  font-family: 'Open Sans', sans-serif;
-   border-radius: 30px;
-  font-size: 21.5px;
-  padding: 18px;
-  margin:25px 0px;
-  width: 100%;
-  height: 100%;
- display: flex;
- 
-  flex-direction: column;
-  text-align: center;
-  background-color: #324f61;
-  align-items: center;
-   justify-content: center;
-    margin: 0 auto;
+.aboutdonify {
+  display: flex; 
 }
-.home-container{
-  flex-direction: column;
-  
-  font-family: 'Open Sans', sans-serif;
-     border-radius: 20px;
-  font-size: 21.5px;
-  align-items: center;
-   font-weight: 800;
-    padding: 15px;
-  margin:25px 0px;
+
+h2 {
+margin-top: 30px;
+}
+
+img {
   width: 100%; 
-}
-b-button {
   margin-top: 20px; 
-  margin-left: 15px; 
 }
 
-  
- h1{
-   margin-top: 22%;
-    font-family: 'Open Sans', sans-serif;
-    color:beige;
-   flex-grow: 1;
-    margin-top: 2%;}
-    .row{
-      display: inline;
-      flex-direction: row;
-    }
-  
-.col-lg-4 {
-
-background-color: bisque;
-flex-direction: column;
-flex-basis: 100px;
-
+#btn {
+text-align: center; 
+ margin-top: 10px; 
+ margin-bottom: 40px; 
 }
 
-.col-lg-3{
-flex-grow: 0;
-flex-direction: column;
-  background-color: bisque;
-  flex-basis: 1000px;
-
-
+#toplist {
+  margin-top: 30px;
+  margin-bottom: 30px; 
 }
+
+#news {
+  margin-bottom: 70px; 
+}
+
+
+#readmore {
+  text-align: right; 
+}
+
+
+
  select {
     display: block;
     margin: 0 auto;
 }
+
 
  #footer {
 
@@ -174,8 +161,9 @@ flex-direction: column;
     color: white;
 }
 
+
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
-    .home{
+    .aboutdonify{
       flex-direction: column;
         position: absolute;
         height: 100%;
