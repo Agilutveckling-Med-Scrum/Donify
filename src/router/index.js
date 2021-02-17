@@ -10,7 +10,7 @@ import Walkthrough from '../views/Walkthrough.vue'
 //import Aboutdonify from '../views/Aboutdonify.vue'
 //import Login from '../views/Login.vue'
 
-import Aboutdonify from '../views/Aboutdonify.vue'
+//import Aboutdonify from '../views/Aboutdonify.vue'
 import Login from '../views/Login.vue'
 
 import Donationpage1 from '../components/donationpg1.vue'

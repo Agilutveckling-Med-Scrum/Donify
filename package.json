@@ -44,8 +44,8 @@
   },
   "eslintConfig": {
     "env": {
-      "node": true}
-        "extends": [
+      "node": true},
+        "extends" :[ 
             "eslint:recommended",
             "plugin:vue/essential"
         ],
