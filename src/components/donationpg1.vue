@@ -22,8 +22,10 @@
                         Varje år
                     </button>
                 </div>
-                <span v-show="isShowmonth">{{ popinfomonth }}</span>
-                <span v-show="isShowyear">{{ popinfoyear }}</span>
+
+                <span v-show="!isShow" v-if="isShowmonth">{{ popinfo }}</span>
+                <span v-show="isShow" v-if="isShowyear">{{ popinfo }}</span>
+
                 <div class="downbutton">
                     <button
                         id="btn"
@@ -56,7 +58,8 @@ export default {
             popinfomonth: '',
             popinfoyear: '',
             isShowmonth: false,
-            isShowyear: false
+            isShowyear: false,
+            isShow: false
         }
     },
     methods: {
@@ -75,13 +78,13 @@ export default {
         clickMonth() {
             this.isShowmonth = !this.isShowmonth
             if (this.isShowmonth) {
-                this.popinfomonth = 'Du har valt en månadsprenumeration!'
+                this.popinfo = 'Du har valt en månadsprenumeration!'
             }
         },
         clickYear() {
             this.isShowyear = !this.isShowyear
             if (this.isShowyear) {
-                this.popinfoyear = 'Du har valt en årsprenumeration!'
+                this.popinfo = 'Du har valt en årsprenumeration!'
             }
         }
     },
