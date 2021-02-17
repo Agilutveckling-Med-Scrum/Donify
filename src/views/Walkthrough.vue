@@ -1,23 +1,54 @@
 <template>
     <div class="walkthrough">
-        <!--<Preloader v-if="showPreloader === true"/>-->
+        <Preloader v-if="showPreloader === true" />
         <div class="who-container" v-if="slides.slide1 === 'not done'">
-            <!--<h2>Välkommen till Donify!</h2>
-<p>Börja med att berätta vem du är</p>
-  <b-button variant="primary" class="mx-auto" @click="slides.slide1 = 'done'" >Privatperson</b-button>
-  <b-button variant="primary" class="mx-auto" @click="slides.slide1 = 'done'">Företag</b-button>  
-    <b-button variant="primary" class="mx-auto" @click="slides.slide1 = 'done' ">Organisation</b-button>  
-<p @click="$router.push('/')"><u> Gör detta senare </u></p>
-</div>
-  <div class="fundraiser-container" v-if="slides.slide2 === 'not done' && slides.slide1 === 'done' ">
-<h2>Vad vill du donera till?</h2>
-  <b-button variant="primary" class="mx-auto" @click="slides.slide2 = 'done'">Välgörenhet</b-button>  
-  <b-button variant="primary" class="mx-auto" @click="slides.slide2 = 'done'">Företag</b-button>  
-  <b-button variant="primary" class="mx-auto" @click="slides.slide2 = 'done'">Privatperson</b-button> 
-  </div>
-  <div class="donate-to-container" v-if="slides.slide2 === 'done'  && slides.slide3 === 'not done'"> -->
-            <Charities />
+            <h2>Välkommen till Donify!</h2>
+            <p>Börja med att berätta vem du är</p>
+            <b-button
+                variant="primary"
+                class="mx-auto"
+                @click="slides.slide1 = 'done'"
+                >Privatperson</b-button
+            >
+            <b-button
+                variant="primary"
+                class="mx-auto"
+                @click="slides.slide1 = 'done'"
+                >Företag</b-button
+            >
+            <b-button
+                variant="primary"
+                class="mx-auto"
+                @click="slides.slide1 = 'done'"
+                >Organisation</b-button
+            >
+            <p @click="$router.push('/')"><u> Gör detta senare </u></p>
         </div>
+        <div
+            class="fundraiser-container"
+            v-if="slides.slide2 === 'not done' && slides.slide1 === 'done'"
+        >
+            <h2>Vad vill du donera till?</h2>
+            <b-button
+                variant="primary"
+                class="mx-auto"
+                @click="slides.slide2 = 'done'"
+                >Välgörenhet</b-button
+            >
+            <b-button
+                variant="primary"
+                class="mx-auto"
+                @click="slides.slide2 = 'done'"
+                >Företag</b-button
+            >
+            <b-button
+                variant="primary"
+                class="mx-auto"
+                @click="slides.slide2 = 'done'"
+                >Privatperson</b-button
+            >
+        </div>
+        <!--<div class="donate-to-container" v-if="slides.slide2 === 'done'  && slides.slide3 === 'not done'">-->
     </div>
 </template>
 <script>
@@ -25,14 +56,12 @@ import { gsap } from 'gsap'
 import { CSSPlugin } from 'gsap/CSSPlugin'
 gsap.registerPlugin(CSSPlugin)
 
-//import Preloader from '../components/PreloaderMobile'
-import Charities from '../components/Charities.vue'
+import Preloader from '../components/PreloaderMobile'
 
 export default {
     name: 'Home',
     components: {
-        //Preloader,
-        Charities
+        Preloader
     },
     data() {
         return {
@@ -122,6 +151,13 @@ export default {
                 localStorage.setItem('NewUser', 'false')
                 console.log(localStorage.getItem('NewUsers'))
             }
+        },
+
+        'slides.slide2': function(val) {
+            if (val === 'done') {
+                alert()
+                this.$router.push('all')
+            }
         }
     }
 }
@@ -131,22 +167,22 @@ export default {
 /*Mobile*/
 /*vem är du? val*/
 @media only screen and (min-device-width: 325px) and (max-device-width: 812px) {
-    /*.walkthrough{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background-color: #324f61;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23dd00ff'/%3E%3Cstop offset='1' stop-color='%23324f61'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23ee8fff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23ee8fff' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; 
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  z-index: 1;
-}*/
+    .walkthrough {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: #324f61;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23dd00ff'/%3E%3Cstop offset='1' stop-color='%23324f61'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23ee8fff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23ee8fff' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        z-index: 1;
+    }
     h2 {
         color: white;
         margin-top: 22%;

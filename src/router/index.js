@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import AllCharities from '../views/AllCharities.vue'
 import Walkthrough from '../views/Walkthrough.vue'
 
 import Aboutdonify from '../views/Aboutdonify.vue'
@@ -22,15 +23,12 @@ const routes = [
         component: Home
     },
     {
-
-
         path: '/Walkthrough',
         name: 'Walkthrough',
         component: Walkthrough
     },
-   
-    {
 
+    {
         path: '/aboutdonify',
         name: 'Aboutdonify',
         component: Aboutdonify
@@ -55,6 +53,11 @@ const routes = [
         path: '/preloader',
         name: 'MobilePreloader',
         component: Preloader
+    },
+    {
+        path: '/all',
+        name: 'AllCharities',
+        component: AllCharities
     },
     {
         path: '/donate',
