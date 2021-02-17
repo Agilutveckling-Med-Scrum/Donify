@@ -3,7 +3,7 @@
         <div id="nav">
             <router-link to="/home" id="logo"
                 ><img src="./assets/logo.png"
-            /></router-link>
+            ></router-link>
             <div class="rightside">
                 <router-link to="/aboutdonify" class="link"
                     >Om Donify</router-link
@@ -93,6 +93,7 @@ img {
 #nav a:hover {
     color: #ff00ff;
 }
+
 .rightside {
     display: flex;
     align-items: center;
