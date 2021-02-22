@@ -3,7 +3,8 @@
         <div id="nav">
             <router-link to="/home" id="logo"
                 ><img src="./assets/logo.png"
-            ></router-link>
+            /></router-link>
+
             <div class="rightside">
                 <router-link to="/aboutdonify" class="link"
                     >Om Donify</router-link
@@ -11,35 +12,36 @@
                 <Login />
                 <!--<router-link to="/login" class="link">Logga in</router-link>-->
             </div>
-
         </div>
-
+        <MainTabBar />
         <router-view />
     </div>
 </template>
 <script>
 import Login from '@/views/Login.vue'
+import MainTabBar from '@/components/MainTabBar/MainTabBar.vue'
 // @ is an alias to /src
 
 export default {
     name: 'Home',
     components: {
         Login,
+        MainTabBar
     },
     methods: {
-        onNewUser(){
-            if(localStorage.getItem('NewUser') === null){
-                setTimeout(()=>{
+        onNewUser() {
+            if (localStorage.getItem('NewUser') === null) {
+                setTimeout(() => {
                     this.$router.push('/walkthrough'), 0
                 })
             }
         },
-        noNewUser(){
+        noNewUser() {
             localStorage.setItem('NewUser', false)
             console.log(localStorage.getItem('NewUser'))
         }
     },
-    mounted(){
+    mounted() {
         this.onNewUser()
         this.noNewUser()
     }
