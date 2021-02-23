@@ -11,7 +11,7 @@
       Donify samarbetar tätt med välkända välgörenhetsorganisationer och stämmer regelbundet av hur donationerna kommer till nytta.
     </p>
     <img class="happyman" alt="happy-man" src="../assets/happyman.png">
-    <img class="quote" alt="quote-from-cancerfonden"      src="../assets/quote-cancer.png">
+    <img class="quote" alt="quote-from-cancerfonden" src="../assets/quote-cancer.png">
     <img class="marie" src="../assets/mariecurie.png">
     <img class="map" src="../assets/world.png">
     <div class="circle1">
