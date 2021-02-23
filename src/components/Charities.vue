@@ -1,87 +1,74 @@
 <template>
-    <div class="grid-container">
-        <div class="charity-card-container">
-            <picture>
-                <img
-                    src="https://www.reachmentoringprogram.com/wp-content/uploads/2020/07/social-share.png"
-                    alt=""
-                />
-                <source media="(min-width: 325px)" srcset="" />
-            </picture>
-            <div class="text-div">
-                <h3>Crisis Text Line</h3>
-                <p>
-                    Människor i desparta sitautioner behöver någon att tala med
-                    så fort som möjligt. Crisis Text Line hjälper personer i
-                    stor nöd som annars inte skulle våga bertätta om sina
-                    svårigheter.
-                </p>
-                <b-button
-                    variant="primary"
-                    class="mx-auto"
-                    @click="$router.push('donate')"
-                    >Donera</b-button
-                >
+    <div>
+        <div class="grid-container" v-if="charities !== null">
+            <div
+                class="charity-card-container"
+                v-for="charity in charities"
+                :key="charity.id"
+            >
+                <picture>
+                    <img :src="charity.img" alt="" />
+                    <source media="(min-width: 325px)" srcset="" />
+                </picture>
+                <div class="text-div">
+                    <h3>{{ charity.name }}</h3>
+                    <p>{{ charity.description }}</p>
+                    <b-button
+                        variant="primary"
+                        class="mx-auto"
+                        @click="$router.push('donate')"
+                        >Donera</b-button
+                    >
+                </div>
             </div>
+            <button @click="addFundraiser()">delete me</button>
         </div>
-
-        <div class="charity-card-container">
-            <picture>
-                <img
-                    src="http://caninechronicle.com/wp-content/uploads/2015/06/American-Humane-Association-Logo.jpg"
-                    alt=""
-                />
-                <source
-                    media="(min-width: 325px)"
-                    srcset="https://images.squarespace-cdn.com/content/v1/5b48ae2d96e76ffeb9871ba6/1598287480103-M1OXPODTZDNH36QZX9L0/ke17ZwdGBToddI8pDm48kOYA7ktt62Z88cYQKsvEnIx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UVw_DmTuzY27MAzILCohm3lg_Yoo7S90wseEYrozD2QXzhM-Sjnu6G9qv44EQ4jJbQ/_MG_7450.jpg?format=2500w"
-                />
-            </picture>
-            <div class="text-div">
-                <h3>American Humane</h3>
-                <p>
-                    Sedan 1877 har American Humane hjälpt både vilda och
-                    domesticerade djur i nöd i Amerika. Dina donationer hjälper
-                    djur att få mat, vård och ett hem för livet.
-                </p>
-                <b-button
-                    variant="primary"
-                    class="mx-auto"
-                    @click="$router.push('donate')"
-                    >Donera</b-button
-                >
-            </div>
-        </div>
-        <div class="charity-card-container">
-            <picture>
-                <img
-                    src="https://amp-server.s3.amazonaws.com/uploads/org/logo/05e96c406eb34862912837ff09276f48.png"
-                    alt=""
-                />
-                <source
-                    media="(min-width: 325px)"
-                    srcset="https://www.skees.org/wp-content/uploads/2014/08/WCK-Logo.png"
-                />
-            </picture>
-            <div class="text-div">
-                <h3>World Central Kitchen</h3>
-                <p>
-                    WCK har levererat över 25 miljoner måltider sedan 2010. Med
-                    volontörer i ett dussintal städer i Amerika levererar WCK
-                    250 000 måltider dagligen.
-                </p>
-                <b-button
-                    variant="primary"
-                    class="mx-auto"
-                    @click="$router.push('/donate')"
-                    >Donera</b-button
-                >
-            </div>
-        </div>
+        <h2 v-else>
+            Start the local server to see charity listings, write in the
+            terminal:
+            <br />json-server db.json
+        </h2>
     </div>
+    <!--https://www.reachmentoringprogram.com/wp-content/uploads/2020/07/social-share.png-->
 </template>
 
 <script>
-export default {}
+export default {
+    created() {
+        this.getDonationData()
+    },
+    methods: {
+        getDonationData() {
+            fetch('http://localhost:3000/allCharities')
+                .then(response => {
+                    return response.json()
+                })
+                .then(result => {
+                    this.charities = result
+                    console.log(result)
+                })
+        },
+        addFundraiser() {
+            fetch('http://localhost:3000/allCharities', {
+                body:
+                    '{ "name": "Teststad", "description": "ddd", "img": "htp", "id": "5"}',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST'
+            })
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result)
+                })
+        }
+    },
+    data() {
+        return {
+            charities: null
+        }
+    }
+}
 </script>
 
 <style scoped>
