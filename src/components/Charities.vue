@@ -1,5 +1,37 @@
 <template>
-    <div>
+    <div class="charity-root">
+        <h1 class="half-circle-text">Alla <br />Kategorier</h1>
+        <p class="half-circle-text-paragraph">
+            Välj bland våra kategorier eller sök för att hita rätt välgörenhet
+        </p>
+        <svg
+            id="purple-half-circle"
+            viewBox="0 0 414 251"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M422 0C422 32.9618 416.426 65.6008 405.596 96.0536C394.766 126.506 378.893 154.176 358.882 177.484C338.87 200.791 315.114 219.28 288.968 231.894C262.823 244.508 234.8 251 206.5 251C178.2 251 150.177 244.508 124.032 231.894C97.886 219.28 74.1295 200.791 54.1185 177.484C34.1075 154.176 18.2338 126.506 7.40395 96.0535C-3.42593 65.6008 -9 32.9618 -9 -1.52588e-05L206.5 0H422Z"
+                fill="#8A2BE2"
+            />
+        </svg>
+        <svg
+            class="XS-ball"
+            width="23"
+            height="28"
+            viewBox="0 0 23 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <ellipse
+                cx="11.5"
+                cy="13.8342"
+                rx="11.5"
+                ry="13.8342"
+                fill="#8A2BE2"
+            />
+        </svg>
+
         <div class="grid-container" v-if="charities !== null">
             <div
                 class="charity-card-container"
@@ -71,7 +103,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 /*mobile versions*/
 
 .grid-container {
@@ -79,8 +111,10 @@ export default {
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-row-gap: 40px;
+    margin: 0 auto;
     height: 100vh;
     position: relative;
+    width: 80vw;
 }
 
 h3 {
@@ -88,11 +122,11 @@ h3 {
 }
 
 button {
+    border-radius: 300px;
     font-size: 18px;
     padding: 15px;
     margin: 10px 0px 30px 0px;
     width: 60%;
-    border-radius: 30px;
 }
 img {
     width: 100%;
@@ -104,6 +138,11 @@ picture {
     height: 100%;
 }
 
+.charity-root {
+    position: relative;
+    width: 100%;
+}
+
 .charity-card-container {
     border: 1px solid whitesmoke;
     padding: 10px;
@@ -113,5 +152,40 @@ picture {
     text-align: center;
     background-color: white;
     margin: 25px 10px;
+}
+
+.half-circle-text {
+    position: absolute;
+    top: 6.8%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    font-size: 3.052em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.half-circle-text-paragraph {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    font-size: 1rem;
+}
+
+//Purple Balls
+#purple-half-circle {
+    /*position: relative;*/
+    top: 0;
+    left: 0;
+}
+
+.XS-ball {
+    position: absolute;
+    top: 23%;
+    right: 5%;
 }
 </style>

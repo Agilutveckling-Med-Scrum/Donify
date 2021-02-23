@@ -89,7 +89,7 @@
 export default {}
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .questions-container {
     position: absolute;
     width: 100vw;
