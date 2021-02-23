@@ -12,13 +12,15 @@
             <p>Hur ofta vill du donera?</p>
             <div class="buttons">
                 <div class="upbuttons">
-                    <button id="btn" type="button">En gång</button>
+                    <button id="btn" type="button" @click="reset()">
+                        En gång
+                    </button>
 
-                    <button id="btn" type="button" @click="clickMonth">
+                    <button id="btn" type="button" @click="clickMonth()">
                         Varje månad
                     </button>
 
-                    <button id="btn" type="button" @click="clickYear">
+                    <button id="btn" type="button" @click="clickYear()">
                         Varje år
                     </button>
                 </div>
@@ -72,17 +74,19 @@ export default {
                 name: 'Donationpage2'
             })
         },
+        reset() {
+            this.isShowmonth = false
+            this.isShowyear = false
+        },
         clickMonth() {
-            this.isShowmonth = !this.isShowmonth
-            if (this.isShowmonth) {
-                this.popinfomonth = 'Du har valt en månadsprenumeration!'
-            }
+            this.isShowmonth = true
+            this.isShowyear = false
+            this.popinfomonth = 'Du har valt en månadsprenumeration!'
         },
         clickYear() {
-            this.isShowyear = !this.isShowyear
-            if (this.isShowyear) {
-                this.popinfoyear = 'Du har valt en årsprenumeration!'
-            }
+            this.isShowyear = true
+            this.isShowmonth = false
+            this.popinfoyear = 'Du har valt en årsprenumeration!'
         }
     },
     computed: {
