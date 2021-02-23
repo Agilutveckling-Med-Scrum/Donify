@@ -13,18 +13,22 @@
                 <!--<router-link to="/login" class="link">Logga in</router-link>-->
             </div>
         </div>
-
+        <MainTabBar />
         <router-view />
     </div>
 </template>
 <script>
 import Login from '@/views/Login.vue'
+import MainTabBar from '@/components/MainTabBar/MainTabBar.vue'
 // @ is an alias to /src
 
 export default {
     name: 'Home',
     components: {
-        Login
+
+        Login,
+        MainTabBar
+
     },
     methods: {
         onNewUser() {
