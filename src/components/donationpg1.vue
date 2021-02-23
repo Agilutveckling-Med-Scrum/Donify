@@ -1,0 +1,182 @@
+<template>
+    <div class="donationPage1">
+        <p>Du har valt: <button class="vald">WWF</button></p>
+        <p>Hur mycket vill du donera?</p>
+        <VueSlider />
+        <select v-model="selected">
+            <option v-for="(item, key) in list" v-bind:key="item">{{
+                key
+            }}</option>
+        </select>
+        <div class="downinfo">
+            <p>Hur ofta vill du donera?</p>
+            <div class="buttons">
+                <div class="upbuttons">
+                    <button id="btn" type="button" @click="reset()">
+                        En gång
+                    </button>
+
+                    <button id="btn" type="button" @click="clickMonth()">
+                        Varje månad
+                    </button>
+
+                    <button id="btn" type="button" @click="clickYear()">
+                        Varje år
+                    </button>
+                </div>
+                <span v-show="isShowmonth">{{ popinfomonth }}</span>
+                <span v-show="isShowyear">{{ popinfoyear }}</span>
+                <div class="downbutton">
+                    <button
+                        id="btn"
+                        class="Tillbetalning"
+                        type="button"
+                        @click="Topay"
+                    >
+                        Till betalning
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import VueSlider from '@/components/vue-slider-component.vue'
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
+export default {
+    created() {
+        this.coolApi()
+    },
+    data() {
+        return {
+            list: '',
+            popinfomonth: '',
+            popinfoyear: '',
+            isShowmonth: false,
+            isShowyear: false
+        }
+    },
+    methods: {
+        coolApi() {
+            Vue.axios
+                .get('https://api.exchangeratesapi.io/latest')
+                .then(response => {
+                    this.list = response.data.rates
+                })
+        },
+        Topay() {
+            this.$router.push({
+                name: 'Donationpage2'
+            })
+        },
+        reset() {
+            this.isShowmonth = false
+            this.isShowyear = false
+        },
+        clickMonth() {
+            this.isShowmonth = true
+            this.isShowyear = false
+            this.popinfomonth = 'Du har valt en månadsprenumeration!'
+        },
+        clickYear() {
+            this.isShowyear = true
+            this.isShowmonth = false
+            this.popinfoyear = 'Du har valt en årsprenumeration!'
+        }
+    },
+    computed: {
+        selected: {
+            get() {
+                return this.$store.state.selected
+            },
+            set(selected) {
+                this.$store.commit('setKey', selected)
+            }
+        }
+    },
+
+    name: 'Donationpage1',
+    components: {
+        VueSlider
+    }
+}
+</script>
+
+<style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+.donationPage1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    padding: 20px;
+    background: #f7f2fc;
+}
+.vald {
+    font-size: 24px;
+    font-weight: 900;
+    height: 80px;
+    width: 80px;
+    background-color: #ffffff;
+    border: transparent;
+    border-radius: 100px;
+}
+.upbuttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    justify-content: space-between;
+}
+.downbutton {
+    margin: 0 auto;
+}
+.Tillbetalning {
+    width: 160px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+
+p {
+    margin: 30px 5px 30px;
+}
+select {
+    display: block;
+    margin: 0 auto;
+}
+span {
+    margin: 0 auto;
+}
+#btn {
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    border: transparent;
+    border-radius: 100px;
+    background-color: #8a2be2;
+}
+#btn:focus {
+    background-color: #7300df;
+}
+// .clickinfo {
+//     display: flex;
+//     flex-direction: column;
+// }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .donationPage1 {
+        position: absolute;
+        height: 100%;
+        margin: 25px 0px;
+        width: 100%;
+    }
+}
+</style>

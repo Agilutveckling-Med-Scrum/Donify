@@ -1,12 +1,15 @@
 <template>
-  <div class="slider">
-    <vue-slider v-model="value" />
-  </div>
+    <div class="slider">
+        <vue-slider v-model="numvalue" v-bind="options" />
+        <p>
+            {{ numvalue }}
+        </p>
+    </div>
 </template>
 
 <script>
 import VueSlider from 'vue-slider-component'
-import 'vue-slider-component/theme/antd.css'
+import 'vue-slider-component/theme/material.css'
 
 export default {
     components: {
@@ -14,14 +17,27 @@ export default {
     },
     data() {
         return {
-            value: 0
+            options: { min: 0, max: 1000 }
+        }
+    },
+    computed: {
+        numvalue: {
+            get() {
+                return this.$store.state.numvalue
+            },
+            set(numvalue) {
+                this.$store.commit('setnumValue', numvalue)
+            }
         }
     }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
 .slider {
-  width: 50%;
-  margin: 0 auto 00;
+    width: 100%;
+    margin: 0 auto;
+}
+p {
+    text-align: center;
 }
 </style>

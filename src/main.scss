@@ -1,0 +1,20 @@
+
+// Bootstrap body background
+$body-bg: white;
+
+// Bootstrap body foreground
+$body-color: black;
+
+// Bootstrap theme colors
+$theme-colors: (
+    'primary': #020d74,
+    'secondary': #8a2be2
+);
+
+@import '~bootstrap';
+@import '~bootstrap-vue';
+
+#app {
+    color: unset;
+}
+
