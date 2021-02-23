@@ -47,8 +47,10 @@ export default {
     padding: 20px;
     background: #f7f2fc;
 }
+p {
+    margin: 20px 5px 40px;
+}
 .Betalningssätt {
-    margin-top: 100px;
     padding-left: 20px;
 }
 

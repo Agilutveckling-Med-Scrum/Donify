@@ -36,6 +36,7 @@ export default {
     padding: 20px;
     background: #f7f2fc;
 }
+
 .info {
     display: flex;
     height: 300px;

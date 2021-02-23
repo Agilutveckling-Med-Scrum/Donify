@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Home from '../views/Home.vue'
+import AllCharities from '../views/AllCharities.vue'
 import Walkthrough from '../views/Walkthrough.vue'
 
 
@@ -32,6 +33,7 @@ const routes = [
         name: 'Home',
         component: Home
     },
+
     {
         path: '/home',
         name: 'Home',
@@ -46,11 +48,16 @@ const routes = [
         component: Aboutdonify
     },*/
 
+
+   
+   
+
     {
         path: '/walkthrough',
         name: 'Walkthrough',
         component: Walkthrough
     },
+
     {
         path: '/aboutdonify',
         name: 'Aboutdonify',
@@ -72,29 +79,35 @@ const routes = [
         component: Preloader
     },
     {
+        path: '/all',
+        name: 'AllCharities',
+        component: AllCharities
+    },
+    {
         path: '/donate',
         name: 'Donationpage1',
         component: Donationpage1
-        //component: () => import('views/Donationpage1.vue')
+        
     },
     {
         path: '/pay',
         name: 'Donationpage2',
         component: Donationpage2
-        // component: () => import('views/Donationpage2.vue')
+        
     },
     {
         path: '/info',
         name: 'Donationpage3',
         component: Donationpage3
-        // component: () => import('views/Donationpage3.vue')
+        
     }
 ]
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-    routes
+    routes,
+    modle: 'history'
 })
 
 export default router
