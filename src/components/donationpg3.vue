@@ -1,17 +1,24 @@
 <template>
     <div class="donationPage3">
         <div class="info">
-            <p>Idag donerade du</p>
+            <div class="mittkonto"><P>Mitt Konto</P></div>
+            <p>Idag donerade du <i class="fa fa-bell"></i></p>
             <p>
                 <strong
                     >{{ this.$store.state.numvalue }}
                     {{ this.$store.state.selected }}</strong
                 >
             </p>
-            <p>till <button class="vald">WWF</button></p>
+            <img src="@/assets/children.jpg" alt="" />
         </div>
-        <div class="meddelande">Meddelande från WWF</div>
-        <button id="btn" type="button" @click="Tohome">Till startsidan</button>
+        <div class="personalInfo">
+            <div class="item">
+                Min donatehistorik<i class="fa fa-angle-down"></i>
+            </div>
+            <div class="item">Kontakta oss<i class="fa fa-angle-down"></i></div>
+            <div class="item">Om Donify<i class="fa fa-angle-down"></i></div>
+            <div class="item">Logga ut<i class="fa fa-angle-down"></i></div>
+        </div>
     </div>
 </template>
 
@@ -32,60 +39,36 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage3 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
     padding: 20px;
-    background: #f7f2fc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-
+.mittkonto {
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+}
 .info {
     display: flex;
-    height: 300px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
-.meddelande {
-    height: 280px;
-    border-radius: 5%;
-    background-color: #ffffff;
-    padding: 20px 20px;
-}
-.vald {
-    font-size: 24px;
-    font-weight: 900;
-    height: 80px;
-    width: 80px;
-    background-color: #ffffff;
-    border: transparent;
-    border-radius: 100px;
-}
-strong {
-    font-size: 30px;
-}
-#btn {
-    width: 150px;
-    height: 40px;
-    font-size: 18px;
-    font-weight: 600;
-    display: block;
-    margin: 40px auto;
-    color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 100px;
-    background-color: #8a2be2;
-    box-shadow: 0px 2px 0px #6f01d6;
+    margin-top: 30px;
 }
 
-#btn:focus {
-    box-shadow: 0 0 #ba8cb5;
-    background-color: #9d55e0;
+img {
+    height: 300px;
+    width: 440px;
 }
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
-    .donationPage3 {
-        position: absolute;
-        height: 100%;
-        margin: 25px 0px;
-        width: 100%;
-    }
+.personalInfo {
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
 }
 </style>

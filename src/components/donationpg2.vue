@@ -1,12 +1,39 @@
 <template>
     <div class="donationPage2">
-        <p>Du har valt: <button class="vald">WWF</button></p>
-        <p class="Betalningssätt">Betalningssätt:</p>
+        <div @click="Goback" class="backicon">
+            <i class="fa fa-angle-left"></i> Tillbaka
+        </div>
+        <div class="chosedOrg">
+            <div><span> Du har valt: </span></div>
+            <div class="valde"><span> WWF</span></div>
+        </div>
+        <div class="wwftext">
+            <img src="@/assets/Vector.png" alt="" />WWF hjälper organisationer
+            att uppnå sina mål med hjälp av användarnas ekonomiska stöd.
+            Donationstjänsten kan hjälpa samt stötta slutkunder i den breda
+            skalan.
+        </div>
+        <div class="Betalningssätt">
+            <p>Betalningssätt:<img src="@/assets/info.svg" alt="" /></p>
+        </div>
         <div class="buttons">
             <div class="upbuttons">
-                <button id="btn">Banköverföring</button>
-                <button id="btn">Autogiro</button>
-                <button id="btn">Swish</button>
+                <label class="m-check ui-margin">
+                    <input
+                        type="radio"
+                        name="remindType"
+                        value="2"
+                    />Banköverföring
+                    <img src="@/assets/bankcard.svg" alt="" />
+                </label>
+                <label class="m-check ui-margin">
+                    <input type="radio" name="remindType" value="2" /> Autogiro
+                </label>
+                <label class="m-check ui-margin">
+                    <input type="radio" name="remindType" value="2" />
+                    Swish
+                    <img src="@/assets/swish.svg" alt="" />
+                </label>
             </div>
         </div>
 
@@ -31,7 +58,12 @@ export default {
     methods: {
         Paynow() {
             this.$router.push({
-                name: 'Donationpage3'
+                name: 'TackPage'
+            })
+        },
+        Goback() {
+            this.$router.push({
+                name: 'Donationpage1'
             })
         }
     },
@@ -45,45 +77,65 @@ export default {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     padding: 20px;
-    background: #f7f2fc;
 }
 p {
     margin: 20px 5px 40px;
 }
+.wwftext img {
+    width: 8px;
+    height: 12px;
+    margin: 5px 3px;
+}
+.wwftext {
+    margin-top: 8px;
+    font-size: 12px;
+}
+img {
+    width: 24px;
+    height: 24px;
+    float: right;
+    height: 40px;
+}
 .Betalningssätt {
-    padding-left: 20px;
+    margin: 0 auto;
+    height: 40px;
+    left: 46px;
+    top: 119px;
+    background: #f8f8f8;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    line-height: 40px;
 }
 
-.vald {
+.chosedOrg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 140px;
+    background: #f8f8f8;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+.valde {
     font-size: 24px;
     font-weight: 900;
     height: 80px;
     width: 80px;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 100px;
-}
-#btn {
-    width: 150px;
-    height: 40px;
-    margin: 20px auto;
-    font-size: 14px;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 100px;
-    background-color: #8a2be2;
-    box-shadow: 0px 2px 0px #6f01d6;
+    line-height: 80px;
 }
 
-#btn:focus {
-    box-shadow: 0 0 #ba8cb5;
-    background-color: #9d55e0;
+label {
+    margin-top: 50px;
 }
+input {
+    margin-right: 12px;
+}
+
 .upbuttons {
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
 }
 .downinfo {
     display: flex;
@@ -91,16 +143,13 @@ p {
     align-items: center;
 }
 .betalanu {
-    width: 160px !important;
-    font-size: 18px !important;
-    font-weight: 600 !important;
-}
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
-    .donationPage2 {
-        position: absolute;
-        height: 100%;
-        margin: 25px 0px;
-        width: 100%;
-    }
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 300px;
+    height: 60px;
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+    background-color: #020d74;
 }
 </style>
