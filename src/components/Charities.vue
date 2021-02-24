@@ -2,7 +2,7 @@
     <div class="charity-root">
         <h1 class="half-circle-text">Alla <br />Kategorier</h1>
         <p class="half-circle-text-paragraph">
-            Välj bland våra kategorier eller sök för att hita rätt välgörenhet
+            Alla välgörenheter
         </p>
         <svg
             id="purple-half-circle"
@@ -83,7 +83,6 @@
                     >
                 </div>
             </div>
-            <button @click="addFundraiser()">delete me</button>
         </div>
         <h2 v-else>
             Start the local server to see charity listings, write in the
@@ -147,11 +146,6 @@ export default {
     width: 80vw;
 }
 
-.grid-container div:nth-of-type(1) {
-    background-color: white;
-    border-radius: 25px;
-}
-
 h3 {
     margin-top: 30px;
 }
@@ -179,8 +173,10 @@ picture {
 }
 
 .charity-card-container {
-    border: 1px solid whitesmoke;
+    background-color: white;
     padding: 10px;
+    border: 1px solid #fee;
+    border-radius: 25px;
 }
 
 .text-div p {
@@ -208,14 +204,14 @@ picture {
     left: 50%;
     transform: translate(-50%, 0);
     color: white;
-    font-size: 1em;
+    font-size: 1.4em;
 }
 
 //Purple Balls
 #purple-half-circle {
-    /*position: relative;*/
     top: 0;
     left: 0;
+    margin-bottom: 123px;
 }
 
 .XS-Small-Ball-Right {
@@ -253,7 +249,7 @@ picture {
 
     .half-circle-text-paragraph {
         top: 16.2%;
-        font-size: 0.8em;
+        font-size: 1em;
     }
 
     .XS-Small-Ball-Right {
@@ -270,7 +266,7 @@ picture {
 
     .half-circle-text-paragraph {
         top: 18.2%;
-        font-size: 1em;
+        font-size: 1.3em;
     }
 
     .XS-Small-Ball-Right {
