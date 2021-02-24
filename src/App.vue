@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <div id="nav">
+        <div id="nav" v-if="!mobileView">
             <router-link to="/" id="logo"
                 ><img src="./assets/logo.png"
             /></router-link>
@@ -13,7 +13,7 @@
                 <!--<router-link to="/login" class="link">Logga in</router-link>-->
             </div>
         </div>
-        <MainTabBar />
+        <MainTabBar v-if="mobileView" />
         <router-view />
     </div>
 </template>
@@ -25,12 +25,31 @@ import MainTabBar from '@/components/MainTabBar/MainTabBar.vue'
 export default {
     name: 'Home',
     components: {
-
         Login,
         MainTabBar
+    },
 
+    created() {
+        window.addEventListener('resize', this.handleResize)
+        this.handleResize()
+    },
+
+    data() {
+        return {
+            mobileView: true,
+            windowWidth: null
+        }
     },
     methods: {
+        handleResize() {
+            this.windowWidth = window.innerWidth
+            if (this.windowWidth > 720) {
+                console.log(this.windowWidth)
+                this.mobileView = false
+            } else {
+                this.mobileView = true
+            }
+        },
         onNewUser() {
             if (localStorage.getItem('NewUser') === null) {
                 setTimeout(() => {
@@ -45,7 +64,9 @@ export default {
     },
     mounted() {
         this.onNewUser()
-        this.noNewUser()
+    },
+    destroyed() {
+        window.removeEventListener('resize', this.handleResize)
     }
 }
 </script>

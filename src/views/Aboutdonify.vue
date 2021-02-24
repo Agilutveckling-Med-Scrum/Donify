@@ -1,214 +1,130 @@
 <template>
-    <div class="aboutdonify">
-        <div class="container">
-            <h2>OmDonify</h2>
-            <section class="section">
-                <div class="container-fliud">
-                    <button
-                        type="button"
-                        class="btn btn-primary btn-lg"
-                        @click="Todonera"
-                    >
-                        Donera
-                    </button>
-                </div>
-            </section>
-            <div class="row">
-                <div class="col-lg-4">
-                    <h2>Nyheter</h2>
-                    <p>
-                        Donec sed odio dui. Etiam porta sem malesuada magna
-                        mollis euismod. .
-                    </p>
-                    <p>
-                        <a class="btn btn-secondary" href="#" role="button"
-                            >View details »</a
-                        >
-                    </p>
-                </div>
-                <div class="col-lg-4">
-                    <h2>Updates</h2>
-                    <p>
-                        Donec sed odio dui. Etiam porta sem malesuada magna
-                        mollis euismod. cursus magna.
-                    </p>
-                    <p>
-                        <a class="btn btn-secondary" href="#" role="button"
-                            >View details »</a
-                        >
-                    </p>
-                </div>
-                <div class="col-lg-4">
-                    <h4>Toplista</h4>
-                    <select v-model="topLista">
-                        <option
-                            v-for="popular in toplist"
-                            v-bind:key="popular"
-                            :value="popular.key"
-                            >{{ popular.name }}</option
-                        >
-                    </select>
-
-                    <h2>Notifications</h2>
-                    <p>
-                        Donec sed odio dui. Etiam porta sem malesuada magna
-                        mollis euismod.Praesent commodo cursus magna.
-                    </p>
-                    <p>
-                        <a class="btn btn-secondary" href="#" role="button"
-                            >View details »</a
-                        >
-                    </p>
-                </div>
-            </div>
-        </div>
+  <div class="about">
+    <h2 class="heading">Om Donify</h2>
+    <div class="container">
+    <img class="balloons" src="../assets/Balloons-small.png" alt="Balloons">
+    <div class="centered">Give a festive Gift</div>
     </div>
+    <h2>Donify är världens mest betrodda plattform online för insamling till välgörenhet</h2>
+    <p>
+      Donify hjälper organisationer att uppnå sina mål med hjälp av användarnas ekonomiska stöd. Donationstjänsten kan hjälpa samt stötta slutkunder i den breda skalan. Allt från att hjälpa samhällets mest utsatta med medicin, till ett nystartat företag att uppnå sin dröm. 
+      Donify samarbetar tätt med välkända välgörenhetsorganisationer och stämmer regelbundet av hur donationerna kommer till nytta.
+    </p>
+    <img class="happyman" alt="happy-man" src="../assets/happyman.png">
+    <img class="quote" alt="quote-from-cancerfonden" src="../assets/quote-cancer.png">
+    <img class="marie" src="../assets/mariecurie.png">
+    <img class="map" src="../assets/world.png">
+    <div class="circle1">
+      <p class="circletx1">Härifrån kan du donera</p>
+    </div>
+    <div class="circle2">
+      <p class="circletx2">Donify-kontor</p>
+    </div>
+    <div class="circle3">
+      <p class="circletx3">Ej verksamma</p>
+    </div>
+  </div>
 </template>
 
-<script>
-export default {
-    name: 'Aboutdonify',
-
-    data: function() {
-        return {
-            topLista: [],
-
-            toplist: [
-                { key: 1, name: 'WHO' },
-                { key: 2, name: 'RäddaBarnen' },
-                { key: 3, name: 'Unicef' },
-                { key: 4, name: 'Amnesty International' },
-                { key: 5, name: '' },
-                { key: 6, name: '' },
-                { key: 7, name: '' }
-            ]
-        }
-    },
-    // add method to click to donationpage
-    methods: {
-        Todonera() {
-            this.$router.push({
-                name: 'Donationpage1'
-            })
-        }
-    }
-}
-</script>
-
 <style scoped>
-.aboutdonify {
-    display: flex;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    flex-direction: column;
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+/* Open sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  margin: 25px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: type 3s steps(14);
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Raleway', san-serif;
+  font-size: 40px;
+  border-right:4px solid red;
+  color: black;
+  width: 14ch;
+  text-align: center;
+}
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 14ch;
+  }
 }
 h2 {
-    text-align: center;
-    padding-bottom: 20px;
+  font-family: 'Raleway', san-serif;
+  font-size: 31.25px;
+  text-align: left;
+  margin: 25px;
+  justify-content: center;
 }
-
-.btn-group {
-    min-width: 160px;
-    height: 40px;
-    position: relative;
-    margin: 10px 1px;
-    display: inline-block;
-    vertical-align: middle;
+.heading {
+  text-align: center;
 }
-.btn-group a:hover {
-    text-decoration: none;
+.happyman {
+  margin: 30px;
 }
-
-* {
-    box-sizing: border-box;
+.quote {
+  margin: 30px;
 }
-
-.dropdown-toggle {
-    color: #636b6f;
-    min-width: 160px;
-    padding: 10px 20px 10px 10px;
-    text-transform: none;
-    font-weight: 300;
-    margin-bottom: 7px;
-    border: 0;
-    background-image: linear-gradient(#009688, #009688),
-        linear-gradient(#d2d2d2, #d2d2d2);
-    background-size: 0 2px, 100% 1px;
-    background-repeat: no-repeat;
-    background-position: center bottom, center calc(100% - 1px);
-    background-color: transparent;
-    transition: background 0s ease-out;
-    float: none;
-    box-shadow: none;
-    border-radius: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.marie {
+  margin: 30px;
 }
-.dropdown-toggle:hover {
-    background: #e1e1e1;
-    cursor: pointer;
+.map {
+  margin-top: 40px;
 }
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    float: left;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    list-style: none;
-    font-size: 14px;
-    text-align: left;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-    background-clip: padding-box;
+.circle1 {
+  height: 15px;
+  width: 15px;
+  background-color: #8A2BE2;
+  border-radius: 50%;
+  text-align: center;
+  margin:40px;
+  margin-bottom: 0px;
 }
-
-.dropdown-menu > li > a {
-    padding: 10px 30px;
-    display: block;
-    clear: both;
-    font-weight: normal;
-    line-height: 1.6;
-    color: #333333;
-    white-space: nowrap;
-    text-decoration: none;
+.circle2 {
+  height: 15px;
+  width: 15px;
+  background-color: #FF00FF;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
-.dropdown-menu > li > a:hover {
-    background: #efefef;
-    color: #409fcb;
+.circle3 {
+  height: 15px;
+  width: 15px;
+  background-color: #1F9EFF;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
-
-.dropdown-menu > li {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    margin: 0;
+.circletx1 {
+  width: 250px;
+  margin-top: 0px;
 }
-
-.caret {
-    width: 0;
-    position: absolute;
-    top: 19px;
-    height: 0;
-    margin-left: -24px;
-    vertical-align: middle;
-    border-top: 4px dashed;
-    border-top: 4px solid \9;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-    right: 10px;
+.circletx2 {
+  width: 250px;
 }
-
-body {
-    background-color: #666666;
-    min-height: 100vh;
-    display: flex;
-    font-weight: 400;
+.circletx3 {
+  width: 250px;
 }
 </style>

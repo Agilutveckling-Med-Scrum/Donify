@@ -1,6 +1,6 @@
 <template>
     <div class="charity-container">
-        <h1>Alla Välgörenheter</h1>
+        <h1>Alla <br />Kategorier</h1>
         <Charities />
     </div>
 </template>
