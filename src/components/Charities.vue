@@ -16,7 +16,7 @@
             />
         </svg>
         <svg
-            class="XS-ball"
+            class="XS-Small-Ball-Right"
             width="23"
             height="28"
             viewBox="0 0 23 28"
@@ -30,6 +30,36 @@
                 ry="13.8342"
                 fill="#8A2BE2"
             />
+        </svg>
+        <svg
+            class="MD-Ball-Right"
+            width="101"
+            height="142"
+            viewBox="0 0 101 142"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <ellipse cx="59" cy="70.9753" rx="59" ry="70.9753" fill="#8A2BE2" />
+        </svg>
+        <svg
+            class="MD-Ball-Left"
+            width="106"
+            height="142"
+            viewBox="0 0 106 142"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <ellipse cx="47" cy="70.9753" rx="59" ry="70.9753" fill="#8A2BE2" />
+        </svg>
+        <svg
+            class="MD-Ball-Right2"
+            width="104"
+            height="142"
+            viewBox="0 0 104 142"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <ellipse cx="59" cy="70.9753" rx="59" ry="70.9753" fill="#8A2BE2" />
         </svg>
 
         <div class="grid-container" v-if="charities !== null">
@@ -110,11 +140,16 @@ export default {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-row-gap: 40px;
+    grid-row-gap: 123px;
     margin: 0 auto;
     height: 100vh;
     position: relative;
     width: 80vw;
+}
+
+.grid-container div:nth-of-type(1) {
+    background-color: white;
+    border-radius: 25px;
 }
 
 h3 {
@@ -140,7 +175,7 @@ picture {
 
 .charity-root {
     position: relative;
-    width: 100%;
+    width: 100vw;
 }
 
 .charity-card-container {
@@ -156,11 +191,11 @@ picture {
 
 .half-circle-text {
     position: absolute;
-    top: 6.8%;
+    top: 6%;
     left: 50%;
     transform: translate(-50%, 0);
     color: white;
-    font-size: 3.052em;
+    font-size: 3.252em;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -169,11 +204,11 @@ picture {
 
 .half-circle-text-paragraph {
     position: absolute;
-    top: 22%;
+    top: 21.2%;
     left: 50%;
     transform: translate(-50%, 0);
     color: white;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 //Purple Balls
@@ -183,9 +218,63 @@ picture {
     left: 0;
 }
 
-.XS-ball {
+.XS-Small-Ball-Right {
     position: absolute;
-    top: 23%;
+    top: 25%;
     right: 5%;
+}
+
+.MD-Ball-Right {
+    position: absolute;
+    top: 76%;
+    right: 0%;
+}
+
+.MD-Ball-Right2 {
+    position: absolute;
+    top: 130%;
+    right: 0%;
+}
+
+.MD-Ball-Left {
+    position: absolute;
+    top: 82%;
+    left: 0%;
+}
+
+//Media Queries
+
+@media (max-width: 409px) {
+    .half-circle-text {
+        top: 2.8%;
+        left: 50%;
+        font-size: 2.552em;
+    }
+
+    .half-circle-text-paragraph {
+        top: 16.2%;
+        font-size: 0.8em;
+    }
+
+    .XS-Small-Ball-Right {
+        top: 22%;
+    }
+}
+
+@media (min-width: 409px) and (max-width: 510px) {
+    .half-circle-text {
+        top: 2.8%;
+        left: 50%;
+        font-size: 3em;
+    }
+
+    .half-circle-text-paragraph {
+        top: 18.2%;
+        font-size: 1em;
+    }
+
+    .XS-Small-Ball-Right {
+        top: 24.5%;
+    }
 }
 </style>
