@@ -171,6 +171,9 @@ img {
     text-align: center;
     height: 140px;
     background: #f8f8f8;
+    /*  background-image: url('../assets/panda.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%; */
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 
