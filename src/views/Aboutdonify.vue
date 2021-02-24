@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="aboutdonify">
         <div class="container">
             <h2>OmDonify</h2>
@@ -62,9 +63,36 @@
                 </div>
             </div>
         </div>
+=======
+  <div class="about">
+    <h2 class="heading">Om Donify</h2>
+    <div class="container">
+    <img class="balloons" src="../assets/Balloons-small.png" alt="Balloons">
+    <div class="centered">Give a festive Gift</div>
     </div>
+    <h2>Donify är världens mest betrodda plattform online för insamling till välgörenhet</h2>
+    <p>
+      Donify hjälper organisationer att uppnå sina mål med hjälp av användarnas ekonomiska stöd. Donationstjänsten kan hjälpa samt stötta slutkunder i den breda skalan. Allt från att hjälpa samhällets mest utsatta med medicin, till ett nystartat företag att uppnå sin dröm. 
+      Donify samarbetar tätt med välkända välgörenhetsorganisationer och stämmer regelbundet av hur donationerna kommer till nytta.
+    </p>
+    <img class="happyman" alt="happy-man" src="../assets/happyman.png">
+    <img class="quote" alt="quote-from-cancerfonden" src="../assets/quote-cancer.png">
+    <img class="marie" src="../assets/mariecurie.png">
+    <img class="map" src="../assets/world.png">
+    <div class="circle1">
+      <p class="circletx1">Härifrån kan du donera</p>
+    </div>
+    <div class="circle2">
+      <p class="circletx2">Donify-kontor</p>
+>>>>>>> 429637a34da74f0675b579d5919b7e42d326801b
+    </div>
+    <div class="circle3">
+      <p class="circletx3">Ej verksamma</p>
+    </div>
+  </div>
 </template>
 
+<<<<<<< HEAD
 <script>
 export default {
     name: 'Aboutdonify',
@@ -98,11 +126,56 @@ export default {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     flex-direction: column;
+=======
+<style scoped>
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+/* Open sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  margin: 25px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: type 3s steps(14);
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Raleway', san-serif;
+  font-size: 40px;
+  border-right:4px solid red;
+  color: black;
+  width: 14ch;
+  text-align: center;
+}
+@keyframes type {
+  0% {
+    width: 0ch;
+  }
+  100% {
+    width: 14ch;
+  }
+>>>>>>> 429637a34da74f0675b579d5919b7e42d326801b
 }
 h2 {
-    text-align: center;
-    padding-bottom: 20px;
+  font-family: 'Raleway', san-serif;
+  font-size: 31.25px;
+  text-align: left;
+  margin: 25px;
+  justify-content: center;
 }
+<<<<<<< HEAD
 
 
 
@@ -125,5 +198,60 @@ body {
     min-height: 100vh;
     display: flex;
     font-weight: 400;
+=======
+.heading {
+  text-align: center;
+}
+.happyman {
+  margin: 30px;
+}
+.quote {
+  margin: 30px;
+}
+.marie {
+  margin: 30px;
+}
+.map {
+  margin-top: 40px;
+}
+.circle1 {
+  height: 15px;
+  width: 15px;
+  background-color: #8A2BE2;
+  border-radius: 50%;
+  text-align: center;
+  margin:40px;
+  margin-bottom: 0px;
+}
+.circle2 {
+  height: 15px;
+  width: 15px;
+  background-color: #FF00FF;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  margin-bottom: 0px;
+}
+.circle3 {
+  height: 15px;
+  width: 15px;
+  background-color: #1F9EFF;
+  border-radius: 50%;
+  text-align: center;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  margin-bottom: 0px;
+}
+.circletx1 {
+  width: 250px;
+  margin-top: 0px;
+}
+.circletx2 {
+  width: 250px;
+}
+.circletx3 {
+  width: 250px;
+>>>>>>> 429637a34da74f0675b579d5919b7e42d326801b
 }
 </style>

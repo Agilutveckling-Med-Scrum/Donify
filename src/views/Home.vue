@@ -3,16 +3,26 @@
 
     <div class="aboutdonify">
 
+
         <div class="container">
             <h2>Aktuellt</h2>
             <section class="section">
                 <div class="container-fliud">
                     <img src="../pictures/facemask_640.jpg" />
                     <p>
+
+        <div class="container">  
+
+            <div class="picture-1"> 
+                <p class="text">
+                  <strong>Aktuellt</strong><br>
+
                         Donec sed odio dui. Etiam porta sem malesuada magna
                         mollis euismod.
                     </p>
-                    <div id="btn">
+                    </div>
+                    <h4 id="text-under">make someone happy!</h4>
+                    <div id="btn-1">
                         <button
                             type="button"
                             class="btn btn-primary btn-lg"
@@ -21,35 +31,41 @@
                             Donera nu
                         </button>
                     </div>
-                </div>
-            </section>
+              
+            
             <div id="toplist" class="col-lg-4">
-                <h4>Topplista</h4>
-                <select v-model="topLista">
-                    <option
+                <h4>De 5 populäraste på Donify</h4>
+                 <p
                         v-for="popular in toplist"
                         v-bind:key="popular"
                         :value="popular.key"
-                        >{{ popular.name }}</option
-                    >
-                </select>
+                        >{{popular.number}}{{ popular.name }}
+                        </p>
             </div>
+
+            <div id="search">
+<h4>Använd sökfunktionen för att hitta specifika donationer</h4>
+            </div>
+
+
             <div id="news" class="row">
                 <div class="col-lg-4">
-                    <h2>Nyheter</h2>
-                    <img src="../pictures/wwf_640.jpg" />
-                    <p>
+                  <div class="picture-2">
+                    
+                    <p class="text">
+                      <strong>Nyheter</strong><br>
                         Donec sed odio dui. Etiam porta sem malesuada magna
-                        mollis euismod. Donec sed odio dui. Etiam porta sem
-                        malesuada magna mollis euismod.
+                        mollis euismod. Donec sed odio dui.
                     </p>
-                    <div id="readmore">
+                    </div>
+                    <div id="btn-2">
                         <button type="button" class="btn btn-secondary">
                             Läs mer
                         </button>
                     </div>
                 </div>
             </div>
+
 
         </div>  
 
@@ -69,7 +85,12 @@
  
 
     
-  </template>
+  
+
+
+        </div>
+    </div>
+</template>
 
 
 <script>
@@ -88,15 +109,12 @@ export default {
     },
     data: function() {
         return {
-            topLista: [],
             toplist: [
-                { key: 1, name: 'WHO' },
-                { key: 2, name: 'RäddaBarnen' },
-                { key: 3, name: 'Unicef' },
-                { key: 4, name: 'Amnesty International' },
-                { key: 5, name: '' },
-                { key: 6, name: '' },
-                { key: 7, name: '' }
+                { key: 1, number: 1, name: '. WHO' },
+                { key: 2, number: 2, name: '. RäddaBarnen' },
+                { key: 3, number: 3, name: '. Unicef' },
+                { key: 4, number: 4, name: '. Amnesty International' },
+                { key: 5, number: 5, name: '. WWF' },
             ]
         }
     }
@@ -108,33 +126,62 @@ export default {
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
+
+.picture-1 {
+  margin-top: 40px; 
+position: relative;
+padding-top: 250px; 
+width: 100%;
+background: linear-gradient(to top, white, transparent), url("../pictures/facemask_640.jpg"); 
+background-size: cover; 
+}
+
+.picture-2 {
+  margin-top: 20px; 
+position: relative;
+padding-top: 250px; 
+width: 100%;
+background: linear-gradient(to top, black, transparent), url("../pictures/wwf_640.jpg"); 
+background-size: cover; 
+color: white; 
+}
+
+.text {
+  position: absolute;
+  bottom: 2px;
+  left: 10px;
+}
+
+
 .aboutdonify {
     display: flex;
 }
 
-h2 {
+#text-under {
     margin-top: 30px;
+    margin-bottom: 20px; 
+    color: #020D74; 
+    text-align: center; 
 }
 
-img {
-    width: 100%;
-    margin-top: 20px;
+h4 {
+   margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 
-#btn {
+#btn-1 {
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 40px;
-}
-
-#toplist {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-#news {
     margin-bottom: 70px;
 }
+
+#btn-2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
 
 
 #readmore {
@@ -182,4 +229,20 @@ img {
         width: 100%;
     }
 }
+#search {
+margin-top: 50px; 
+margin-bottom: 50px; 
+}
+
+#toplist {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 25px; 
+    background-color: #D09E54; 
+}
+
+#news {
+    margin-bottom: 70px;
+}
+
 </style>

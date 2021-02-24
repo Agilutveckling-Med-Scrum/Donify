@@ -1,13 +1,28 @@
 <template>
     <div class="donationPage1">
-        <p>Du har valt: <button class="vald">WWF</button></p>
+        <div @click="Goback" class="backicon">
+            <i class="fa fa-angle-left"></i> Tillbaka
+        </div>
+        <div class="chosedOrg">
+            <div><span> Du har valt: </span></div>
+            <div class="valde"><span> WWF</span></div>
+        </div>
+        <div class="wwftext">
+            <img src="@/assets/Vector.png" alt="" />WWF hjälper organisationer
+            att uppnå sina mål med hjälp av användarnas ekonomiska stöd.
+            Donationstjänsten kan hjälpa samt stötta slutkunder i den breda
+            skalan.
+        </div>
         <p>Hur mycket vill du donera?</p>
-        <VueSlider />
-        <select v-model="selected">
-            <option v-for="(item, key) in list" v-bind:key="item">{{
-                key
-            }}</option>
-        </select>
+        <div class="slider">
+            <input type="text" v-model="numvalue" v-bind="options" />
+            <select v-model="selected">
+                <option v-for="(item, key) in list" v-bind:key="item">{{
+                    key
+                }}</option>
+            </select>
+        </div>
+
         <div class="downinfo">
             <p>Hur ofta vill du donera?</p>
             <div class="buttons">
@@ -42,7 +57,6 @@
 </template>
 
 <script>
-import VueSlider from '@/components/vue-slider-component.vue'
 import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -54,6 +68,8 @@ export default {
     },
     data() {
         return {
+            namevalue: '',
+            options: { min: 0, max: 1000 },
             list: '',
             popinfomonth: '',
             popinfoyear: '',
@@ -74,6 +90,11 @@ export default {
                 name: 'Donationpage2'
             })
         },
+        Goback() {
+            this.$router.push({
+                name: 'Home'
+            })
+        },
         reset() {
             this.isShowmonth = false
             this.isShowyear = false
@@ -90,6 +111,15 @@ export default {
         }
     },
     computed: {
+        numvalue: {
+            get() {
+                return this.$store.state.numvalue
+            },
+            set(numvalue) {
+                this.$store.commit('setnumValue', numvalue)
+            }
+        },
+
         selected: {
             get() {
                 return this.$store.state.selected
@@ -100,10 +130,7 @@ export default {
         }
     },
 
-    name: 'Donationpage1',
-    components: {
-        VueSlider
-    }
+    name: 'Donationpage1'
 }
 </script>
 
@@ -113,16 +140,42 @@ export default {
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     padding: 20px;
-    background: #f7f2fc;
 }
-.vald {
+
+.valde {
     font-size: 24px;
     font-weight: 900;
     height: 80px;
     width: 80px;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 100px;
+    line-height: 80px;
+}
+img {
+    width: 8px;
+    height: 12px;
+    margin-right: 3px;
+}
+.slider {
+    margin: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+.chosedOrg {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 140px;
+    background: #f8f8f8;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.backicon {
+    font-weight: 600;
 }
 .upbuttons {
     display: flex;
@@ -133,19 +186,23 @@ export default {
     display: flex;
     flex-direction: column;
     height: 240px;
-    justify-content: space-between;
 }
 .downbutton {
     margin: 0 auto;
 }
 .Tillbetalning {
+    margin-top: 60px;
     width: 160px !important;
     font-size: 18px !important;
     font-weight: 600 !important;
 }
-
+.wwftext {
+    margin-top: 8px;
+    font-size: 12px;
+}
 p {
-    margin: 30px 5px 30px;
+    margin: 40px 5px 30px;
+    font-size: 24px;
 }
 select {
     display: block;
@@ -161,22 +218,10 @@ span {
     width: 100px;
     color: rgb(255, 255, 255);
     border: transparent;
-    border-radius: 100px;
-    background-color: #8a2be2;
+    border-radius: 10px;
+    background-color: #020d74;
 }
 #btn:focus {
-    background-color: #7300df;
-}
-// .clickinfo {
-//     display: flex;
-//     flex-direction: column;
-// }
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
-    .donationPage1 {
-        position: absolute;
-        height: 100%;
-        margin: 25px 0px;
-        width: 100%;
-    }
+    background-color: #3344e4;
 }
 </style>
