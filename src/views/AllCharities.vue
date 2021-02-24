@@ -1,6 +1,5 @@
 <template>
     <div class="charity-container">
-        <h1>Alla <br />Kategorier</h1>
         <Charities />
     </div>
 </template>
@@ -34,7 +33,7 @@ p {
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
-    width: 80vw;
+    width: 100vw;
     height: 100vh;
     top: 0;
     z-index: 1;

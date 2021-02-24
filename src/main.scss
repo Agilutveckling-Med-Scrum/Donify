@@ -1,4 +1,3 @@
-
 // Bootstrap body background
 $body-bg: white;
 
@@ -11,10 +10,26 @@ $theme-colors: (
     'secondary': #8a2be2
 );
 
+@mixin header1 {
+    color: white;
+    font-size: 48.83px;
+}
+@mixin header2 {
+    color: white;
+    font-size: 39px;
+}
+@mixin header3 {
+    color: white;
+    font-size: 31.3px;
+}
+@mixin header4 {
+    color: white;
+    font-size: 25px;
+}
+
 @import '~bootstrap';
 @import '~bootstrap-vue';
 
 #app {
     color: unset;
 }
-
