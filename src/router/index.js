@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Home from '../views/Home.vue'
 import AllCharities from '../views/AllCharities.vue'
+import Valgorenheter1 from '../views/Valgorenheter1.vue'
 import Walkthrough from '../views/Walkthrough.vue'
 
 
@@ -41,12 +42,12 @@ const routes = [
     },
    
    
-    /*{
+    {
 
-        path: '/aboutdonify',
-        name: 'Aboutdonify',
-        component: Aboutdonify
-    },*/
+        path: '/valgorenheter1',
+        name: 'Valgorenheter1',
+        component: Valgorenheter1
+    },
 
 
    
