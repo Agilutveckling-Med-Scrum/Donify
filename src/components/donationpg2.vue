@@ -19,20 +19,29 @@
         <div class="buttons">
             <div class="upbuttons">
                 <label class="m-check ui-margin">
-                    <input
-                        type="radio"
-                        name="remindType"
-                        value="2"
-                    />Banköverföring
-                    <img src="@/assets/bankcard.svg" alt="" />
+                    <div>
+                        <input
+                            type="radio"
+                            name="remindType"
+                            value="2"
+                        />Banköverföring
+                    </div>
+                    <div><img src="@/assets/bankcard.svg" alt="" /></div>
                 </label>
                 <label class="m-check ui-margin">
-                    <input type="radio" name="remindType" value="2" /> Autogiro
+                    <div>
+                        <input
+                            type="radio"
+                            name="remindType"
+                            value="2"
+                        />Autogiro
+                    </div>
                 </label>
                 <label class="m-check ui-margin">
-                    <input type="radio" name="remindType" value="2" />
-                    Swish
-                    <img src="@/assets/swish.svg" alt="" />
+                    <div>
+                        <input type="radio" name="remindType" value="2" />Swish
+                    </div>
+                    <div><img src="@/assets/swish.svg" alt="" /></div>
                 </label>
             </div>
         </div>
@@ -78,9 +87,7 @@ export default {
     font-weight: 800;
     padding: 20px;
 }
-p {
-    margin: 20px 5px 40px;
-}
+
 .wwftext img {
     width: 8px;
     height: 12px;
@@ -90,14 +97,16 @@ p {
     margin-top: 8px;
     font-size: 12px;
 }
+p img {
+    float: right;
+}
 img {
     width: 24px;
     height: 24px;
-    float: right;
     height: 40px;
 }
 .Betalningssätt {
-    margin: 0 auto;
+    margin: 30px auto;
     height: 40px;
     left: 46px;
     top: 119px;
@@ -114,6 +123,7 @@ img {
     height: 140px;
     background: #f8f8f8;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
 }
 .valde {
     font-size: 24px;
@@ -127,7 +137,9 @@ img {
 }
 
 label {
-    margin-top: 50px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 input {
     margin-right: 12px;
@@ -145,7 +157,7 @@ input {
 .betalanu {
     margin: 20px auto;
     border-radius: 8px;
-    width: 300px;
+    width: 340px;
     height: 60px;
     font-size: 24px;
     color: white;
