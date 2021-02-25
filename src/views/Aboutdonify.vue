@@ -2,7 +2,9 @@
   <div class="about">
     <h2 class="heading">Om Donify</h2>
     <div class="container">
-      <img class="balloons" src="../assets/Balloons-small.png" alt="Balloons">
+      <picture>
+      <img class="balloons" src="../assets/helping-hand.png" alt="Balloons">
+      </picture>
       <div class="centered">Give a festive Gift</div>
     </div>
     <h2>Donify är världens mest betrodda plattform online för insamling till välgörenhet</h2>
@@ -15,7 +17,8 @@
     <img class="quote" alt="quote-from-cancerfonden" src="../assets/quote-cancer.png">
     <img class="marie" src="../assets/mariecurie.png">
     </div>
-    <img class="map" src="../assets/world.png">
+    <img class="map" src="../assets/map.png">
+    <div class="locations">
     <div class="circle1">
       <p class="circletx1">Härifrån kan du donera</p>
     </div>
@@ -24,6 +27,7 @@
     </div>
     <div class="circle3">
       <p class="circletx3">Ej verksamma</p>
+    </div>
     </div>
   </div>
 </template>
@@ -45,11 +49,12 @@ p {
   margin: 25px;
   color:rgb(53, 52, 52);
 }
-.sponsors {
-  display:flex;
-  flex-direction:column;
-  justify-content:center; 
-  align-items:center;
+@media screen and (min-width: 720px) {
+  p {
+    margin-right: 100px;
+    margin-left: 100px;
+    
+  }
 }
 .container {
   position: relative;
@@ -64,9 +69,9 @@ p {
   overflow: hidden;
   white-space: nowrap;
   font-family: 'Raleway', san-serif;
-  font-size: 40px;
-  border-right:4px solid red;
-  color: black;
+  font-size: 30px;
+  border-right:4px solid black;
+  color: #8A2BE2;
   width: 14ch;
   text-align: center;
 }
@@ -78,6 +83,11 @@ p {
     width: 14ch;
   }
 }
+@media screen and (min-width: 720px) {
+  .centered {
+    font-size: 40px;
+  }
+}
 h2 {
   font-family: 'Raleway', san-serif;
   font-size: 31.25px;
@@ -86,8 +96,20 @@ h2 {
   justify-content: center;
   color:rgb(53, 52, 52);
 }
+@media screen and (min-width: 720px) {
+  h2 {
+    margin-right: 100px;
+    margin-left: 100px;
+    
+  }
+}
 .heading {
   text-align: center;
+}
+@media screen and (min-width: 721px) {
+  .heading {
+    opacity: 0%;
+  }
 }
 .happyman {
   margin: 30px;
@@ -98,8 +120,20 @@ h2 {
 .marie {
   margin: 30px;
 }
+.sponsors {
+  display:flex;
+  flex-direction:column;
+  justify-content:center; 
+  align-items:center;
+}
+@media screen and (min-width: 720px) {
+  .sponsors {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 .map {
-  margin-top: 30px;
+  margin-top: 50px;
   width: 100%;
   height: auto;
 }
@@ -119,7 +153,6 @@ h2 {
   border-radius: 50%;
   text-align: center;
   margin-left: 40px;
-  margin-bottom: 10px;
   margin-bottom: 0px;
 }
 .circle3 {
@@ -129,7 +162,6 @@ h2 {
   border-radius: 50%;
   text-align: center;
   margin-left: 40px;
-  margin-bottom: 10px;
   margin-bottom: 100px;
 }
 .circletx1 {
@@ -142,4 +174,5 @@ h2 {
 .circletx3 {
   width: 250px;
 }
+
 </style>

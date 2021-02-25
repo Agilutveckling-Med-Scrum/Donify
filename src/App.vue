@@ -9,8 +9,8 @@
                 <router-link to="/aboutdonify" class="link"
                     >Om Donify</router-link
                 >
-                <Login />
-                <!--<router-link to="/login" class="link">Logga in</router-link>-->
+
+                <router-link to="/login" class="link">Logga in</router-link>
             </div>
         </div>
         <MainTabBar v-if="mobileView" />
@@ -18,14 +18,12 @@
     </div>
 </template>
 <script>
-import Login from '@/views/Login.vue'
 import MainTabBar from '@/components/MainTabBar/MainTabBar.vue'
 // @ is an alias to /src
 
 export default {
     name: 'Home',
     components: {
-        Login,
         MainTabBar
     },
 
@@ -114,6 +112,7 @@ img {
     font-weight: bold;
     font-size: 16px;
     color: #2c3e50;
+    margin: 10px;
 }
 
 #nav a:hover {
