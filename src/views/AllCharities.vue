@@ -96,41 +96,42 @@
                     >
                     </b-form-input>
                 </b-input-group>
-
-                <div class="charity-card-container">
-                    <picture>
-                        <img
-                            src="https://images.ctfassets.net/3wjbn0ndwf7t/5wSyFSSZBmguSUqYWSsmG2/04404569bf0120f2472d1aaf07ba673e/Last_Chance_for_Charitable_Donations.jpg"
-                        />
-                        <source media="(min-width: 325px)" srcset="" />
-                    </picture>
-                    <div class="text-div">
-                        <h3>Alla Välgörenheter</h3>
-                        <p>Så glädje genom att ge till välgörenheter</p>
-                        <b-button
-                            variant="primary"
-                            class="mx-auto"
-                            @click="showCharities()"
-                            >Mer</b-button
-                        >
+                <div class="Charity-card-container">
+                    <div class="charity-card-container">
+                        <picture>
+                            <img
+                                src="https://images.ctfassets.net/3wjbn0ndwf7t/5wSyFSSZBmguSUqYWSsmG2/04404569bf0120f2472d1aaf07ba673e/Last_Chance_for_Charitable_Donations.jpg"
+                            />
+                            <source media="(min-width: 325px)" srcset="" />
+                        </picture>
+                        <div class="text-div">
+                            <h3>Alla Välgörenheter</h3>
+                            <p>Så glädje genom att ge till välgörenheter</p>
+                            <b-button
+                                variant="primary"
+                                class="mx-auto"
+                                @click="showCharities()"
+                                >Mer</b-button
+                            >
+                        </div>
                     </div>
-                </div>
-                <div class="charity-card-container">
-                    <picture>
-                        <img
-                            src="https://www.protranslate.net/blog/wp-content/uploads/2020/01/startup-blog.jpg"
-                        />
-                        <source media="(min-width: 325px)" srcset="" />
-                    </picture>
-                    <div class="text-div">
-                        <h3>Alla Start Ups</h3>
-                        <p>Sponsra de senaste banbrytande idéerna</p>
-                        <b-button
-                            variant="primary"
-                            class="mx-auto"
-                            @click="showStartUps()"
-                            >Mer</b-button
-                        >
+                    <div class="charity-card-container">
+                        <picture>
+                            <img
+                                src="https://www.protranslate.net/blog/wp-content/uploads/2020/01/startup-blog.jpg"
+                            />
+                            <source media="(min-width: 325px)" srcset="" />
+                        </picture>
+                        <div class="text-div">
+                            <h3>Alla Start Ups</h3>
+                            <p>Sponsra de senaste banbrytande idéerna</p>
+                            <b-button
+                                variant="primary"
+                                class="mx-auto"
+                                @click="showStartUps()"
+                                >Mer</b-button
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
@@ -238,8 +239,8 @@ picture {
     padding: 10px;
     border: 1px solid #fee;
     border-radius: 25px;
+    margin-bottom: 60px;
 }
-
 .text-div p {
     text-align: center;
     background-color: white;

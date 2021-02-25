@@ -1,6 +1,6 @@
 <template>
     <div class="donationPage2">
-        <div @click="Goback" class="backicon">
+        <div @click="$router.go(-1)" class="backicon">
             <i class="fa fa-angle-left"></i> Tillbaka
         </div>
         <div class="chosedOrg">
@@ -69,12 +69,12 @@ export default {
             this.$router.push({
                 name: 'TackPage'
             })
-        },
-        Goback() {
+        }
+        /* Goback() {
             this.$router.push({
                 name: 'Donationpage1'
             })
-        }
+        } */
     },
     name: 'Donationpage2'
 }
@@ -84,8 +84,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage2 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
     padding: 20px;
+    padding-bottom: 60px;
 }
 
 .wwftext img {
@@ -104,6 +104,9 @@ img {
     width: 24px;
     height: 24px;
     height: 40px;
+}
+.backicon {
+    font-size: 22px;
 }
 .Betalningssätt {
     margin: 30px auto;
@@ -148,6 +151,7 @@ input {
 .upbuttons {
     display: flex;
     flex-direction: column;
+    height: 300px;
 }
 .downinfo {
     display: flex;

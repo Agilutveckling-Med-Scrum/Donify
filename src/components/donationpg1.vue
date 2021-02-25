@@ -15,12 +15,17 @@
         </div>
         <p>Hur mycket vill du donera?</p>
         <div class="slider">
-            <input type="text" v-model="numvalue" v-bind="options" />
-            <select v-model="selected">
-                <option v-for="(item, key) in list" v-bind:key="item">{{
-                    key
-                }}</option>
-            </select>
+            <div>
+                <input type="text" v-model="numvalue" />
+                <select v-model="selected">
+                    <option v-for="(value, key, index) in list" :key="key"
+                        >{{ value }}:{{ key }}:{{ index }}</option
+                    >
+                </select>
+            </div>
+            <div>
+                <input :value="Converted" />
+            </div>
         </div>
 
         <div class="downinfo">
@@ -69,12 +74,12 @@ export default {
     data() {
         return {
             namevalue: '',
-            options: { min: 0, max: 1000 },
             list: '',
             popinfomonth: '',
             popinfoyear: '',
             isShowmonth: false,
-            isShowyear: false
+            isShowyear: false,
+            currencyRate: []
         }
     },
     methods: {
@@ -119,7 +124,12 @@ export default {
                 this.$store.commit('setnumValue', numvalue)
             }
         },
-
+        Converted() {
+            //return this.numvalue * this.list.AUD
+            const currencyRate = []
+            currencyRate.push(this.list)
+            return console.log(this.list)
+        },
         selected: {
             get() {
                 return this.$store.state.selected
@@ -138,13 +148,12 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage1 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
     padding: 20px;
 }
 
 .valde {
     font-size: 24px;
-    font-weight: 900;
+    font-weight: 800;
     height: 80px;
     width: 80px;
     background-color: rgb(255, 255, 255);
@@ -178,7 +187,7 @@ img {
 }
 
 .backicon {
-    font-weight: 600;
+    font-size: 22px;
 }
 .upbuttons {
     display: flex;

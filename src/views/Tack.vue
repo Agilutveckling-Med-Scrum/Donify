@@ -1,7 +1,10 @@
 <template>
     <div class="TackPage">
         <div class="backicon">
-            <div @click="Goback"><i class="fa fa-angle-left"></i> Tillbaka</div>
+            <div @click="$router.go(-1)">
+                <i class="fa fa-angle-left"></i>
+                Tillbaka
+            </div>
             <div @click="Goforward"><i class="fa fa-angle-right"></i></div>
         </div>
         <div class="tack"><p>Tack för din donation!</p></div>
@@ -36,11 +39,6 @@
 export default {
     name: 'TackPage',
     methods: {
-        Goback() {
-            this.$router.push({
-                name: 'Donationpage2'
-            })
-        },
         Goforward() {
             this.$router.push({
                 name: 'Donationpage3'
@@ -54,7 +52,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .TackPage {
     font-family: 'Open Sans', sans-serif;
-    padding: 30px;
+    padding: 20px;
 }
 .tack p {
     font-size: 28px;
@@ -64,6 +62,7 @@ export default {
 .backicon {
     display: flex;
     justify-content: space-between;
+    font-size: 22px;
 }
 .WWF img {
     float: right;
