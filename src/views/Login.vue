@@ -1,9 +1,7 @@
 <template>
-    <div>
-        <b-button v-b-toggle.sidebar-right id="profileButton"
-            ><i class="fa fa-user-circle"
-        /></b-button>
-        <b-sidebar id="sidebar-right" title="Logga in" right shadow>
+    <div id="login">
+
+            <h2>Logga in</h2>
             <div class="px-3 py-2">
                 <form>
                     <label>
@@ -23,7 +21,7 @@
                 <p>Glömt ditt lösenord?</p>
                 <p>Inget konto? Skapa nytt här</p>
             </div>
-        </b-sidebar>
+
     </div>
 </template>
 
@@ -47,6 +45,14 @@ export default {
 </script>
 
 <style scoped>
+#login {
+    margin-top: 50px; 
+     margin-left: 20px; 
+    margin-right: 20px;   
+    border: 2px solid #666666;
+    padding-top: 30px; 
+}
+
 label,
 input {
     display: block;
@@ -60,19 +66,14 @@ input {
     border-radius: 4px;
 }
 
+h2 {
+    margin-left: 20px; 
+    margin-bottom: 20px; 
+}
+
 p {
     cursor: pointer;
     color: #1F9EFF;
     margin-top: 30px; 
-    float: left; 
-}
-
-
-.btn-secondary {
-    background-color: transparent;
-    border-color: transparent;
-    color: black;
-    margin-left: 5px;
 }
 </style>
-
