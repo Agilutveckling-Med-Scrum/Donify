@@ -9,8 +9,9 @@
             <section class="section">
                 <div class="container-fliud">
                     <img src="../pictures/facemask_640.jpg" />
-                    <p>
-
+                    
+</section>
+        </div>
         <div class="container">  
 
             <div class="picture-1"> 
@@ -67,7 +68,7 @@
             </div>
 
 
-        </div>  
+        
 
     <footer id="footer">
       <a href="#" class="fa fa-facebook" />
@@ -82,14 +83,14 @@
   </div>
 
   
- 
+    </div>
 
     
   
 
 
-        </div>
-    </div>
+        
+    
 </template>
 
 

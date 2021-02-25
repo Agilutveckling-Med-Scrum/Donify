@@ -1,5 +1,5 @@
 <template>
-<<<<<<< HEAD
+
     <div class="aboutdonify">
         <div class="container">
             <h2>OmDonify</h2>
@@ -63,7 +63,7 @@
                 </div>
             </div>
         </div>
-=======
+
   <div class="about">
     <h2 class="heading">Om Donify</h2>
     <div class="container">
@@ -94,7 +94,7 @@
   </div>
 </template>
 
-<<<<<<< HEAD
+
 <script>
 export default {
     name: 'Aboutdonify',
@@ -122,18 +122,24 @@ export default {
     }
 }
 </script>
-<style scoped>
+
 .aboutdonify {
     display: flex;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     flex-direction: column;
-=======
+
 <style scoped>
 /* Raleway */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 /* Open sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.aboutdonify {
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex-direction: column;
+}
 
 .balloons {
   width: 100%;
@@ -178,7 +184,7 @@ p {
   100% {
     width: 14ch;
   }
->>>>>>> 429637a34da74f0675b579d5919b7e42d326801b
+
 }
 h2 {
   font-family: 'Raleway', san-serif;
@@ -188,7 +194,7 @@ h2 {
   justify-content: center;
   color:rgb(53, 52, 52);
 }
-<<<<<<< HEAD
+
 
 
 
@@ -211,7 +217,7 @@ body {
     min-height: 100vh;
     display: flex;
     font-weight: 400;
-=======
+}
 .heading {
   text-align: center;
 }
@@ -267,6 +273,6 @@ body {
 }
 .circletx3 {
   width: 250px;
->>>>>>> 429637a34da74f0675b579d5919b7e42d326801b
+
 }
 </style>
