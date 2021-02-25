@@ -1,7 +1,8 @@
+
 <template>
 
-
     <div class="aboutdonify">
+
 
 
         <div class="container">
@@ -9,9 +10,10 @@
             <section class="section">
                 <div class="container-fliud">
                     <img src="../pictures/facemask_640.jpg" />
-                    
+                </div>  
 </section>
-        </div>
+        
+    
         <div class="container">  
 
             <div class="picture-1"> 
@@ -32,7 +34,7 @@
                             Donera nu
                         </button>
                     </div>
-              
+        </div>
             
             <div id="toplist" class="col-lg-4">
                 <h4>De 5 populäraste på Donify</h4>
@@ -46,6 +48,7 @@
 
             <div id="search">
 <h4>Använd sökfunktionen för att hitta specifika donationer</h4>
+          
             </div>
 
 
@@ -64,11 +67,12 @@
                             Läs mer
                         </button>
                     </div>
+                
+            
                 </div>
+
             </div>
-
-
-        
+        </div>
 
     <footer id="footer">
       <a href="#" class="fa fa-facebook" />
@@ -82,15 +86,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </div>
 
-  
-    </div>
-
     
-  
-
-
-        
     
+
+
 </template>
 
 

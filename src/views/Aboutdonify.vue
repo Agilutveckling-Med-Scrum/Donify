@@ -1,5 +1,6 @@
 <template>
 
+
     <div class="aboutdonify">
         <div class="container">
             <h2>OmDonify</h2>
@@ -64,6 +65,7 @@
             </div>
         </div>
 
+
   <div class="about">
     <h2 class="heading">Om Donify</h2>
     <div class="container">
@@ -86,11 +88,11 @@
     </div>
     <div class="circle2">
       <p class="circletx2">Donify-kontor</p>
->>>>>>> 429637a34da74f0675b579d5919b7e42d326801b
     </div>
     <div class="circle3">
       <p class="circletx3">Ej verksamma</p>
     </div>
+  </div>
   </div>
 </template>
 
@@ -123,11 +125,6 @@ export default {
 }
 </script>
 
-.aboutdonify {
-    display: flex;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    flex-direction: column;
 
 <style scoped>
 /* Raleway */
@@ -184,7 +181,6 @@ p {
   100% {
     width: 14ch;
   }
-
 }
 h2 {
   font-family: 'Raleway', san-serif;
@@ -194,10 +190,6 @@ h2 {
   justify-content: center;
   color:rgb(53, 52, 52);
 }
-
-
-
-
 
 .btn-group {
 
@@ -218,6 +210,7 @@ body {
     display: flex;
     font-weight: 400;
 }
+
 .heading {
   text-align: center;
 }
@@ -275,4 +268,5 @@ body {
   width: 250px;
 
 }
+
 </style>
