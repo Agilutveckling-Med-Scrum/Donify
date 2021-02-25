@@ -1,8 +1,8 @@
 <template>
     <div class="charity-root">
-        <h1 class="half-circle-text">Alla <br />Välgörenheter</h1>
+        <h1 class="half-circle-text">Alla <br />Start Ups</h1>
         <p class="half-circle-text-paragraph">
-            Sök eller scrolla ner för att se alla välgröenheter
+            Sök eller scrolla ner för att se alla Start Ups
         </p>
 
         <svg
@@ -13,7 +13,7 @@
         >
             <path
                 d="M422 0C422 32.9618 416.426 65.6008 405.596 96.0536C394.766 126.506 378.893 154.176 358.882 177.484C338.87 200.791 315.114 219.28 288.968 231.894C262.823 244.508 234.8 251 206.5 251C178.2 251 150.177 244.508 124.032 231.894C97.886 219.28 74.1295 200.791 54.1185 177.484C34.1075 154.176 18.2338 126.506 7.40395 96.0535C-3.42593 65.6008 -9 32.9618 -9 -1.52588e-05L206.5 0H422Z"
-                fill="#8A2BE2"
+                fill="#1F9EFF"
             />
         </svg>
         <svg
@@ -29,7 +29,7 @@
                 cy="13.8342"
                 rx="11.5"
                 ry="13.8342"
-                fill="#8A2BE2"
+                fill="#1F9EFF"
             />
         </svg>
         <svg
@@ -40,7 +40,7 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <ellipse cx="59" cy="70.9753" rx="59" ry="70.9753" fill="#8A2BE2" />
+            <ellipse cx="59" cy="70.9753" rx="59" ry="70.9753" fill="#1F9EFF" />
         </svg>
         <svg
             class="MD-Ball-Left"
@@ -50,7 +50,7 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <ellipse cx="47" cy="70.9753" rx="59" ry="70.9753" fill="#8A2BE2" />
+            <ellipse cx="47" cy="70.9753" rx="59" ry="70.9753" fill="#1F9EFF" />
         </svg>
         <svg
             class="MD-Ball-Right2"
@@ -60,7 +60,7 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <ellipse cx="59" cy="70.9753" rx="59" ry="70.9753" fill="#8A2BE2" />
+            <ellipse cx="59" cy="70.9753" rx="59" ry="70.9753" fill="#1F9EFF" />
         </svg>
 
         <div class="grid-container" v-if="charities !== null">
@@ -113,7 +113,7 @@ export default {
     },
     methods: {
         getDonationData() {
-            fetch('http://localhost:3000/allCharities')
+            fetch('http://localhost:3000/allStartUps')
                 .then(response => {
                     return response.json()
                 })
@@ -123,7 +123,7 @@ export default {
                 })
         },
         addFundraiser() {
-            fetch('http://localhost:3000/allCharities', {
+            fetch('http://localhost:3000/allStartUps', {
                 body:
                     '{ "name": "Teststad", "description": "ddd", "img": "htp", "id": "5"}',
                 headers: {
@@ -153,7 +153,7 @@ export default {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-row-gap: 70px;
+    grid-row-gap: 123px;
     margin: 0 auto;
     height: 100vh;
     position: relative;
