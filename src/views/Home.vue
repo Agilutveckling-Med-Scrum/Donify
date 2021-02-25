@@ -1,10 +1,12 @@
 <template>
+
     <div class="aboutdonify">
         <div class="container">  
 
             <div class="picture-1"> 
                 <p class="text">
                   <strong>Aktuellt</strong><br>
+
                         Donec sed odio dui. Etiam porta sem malesuada magna
                         mollis euismod.
                     </p>
@@ -54,16 +56,37 @@
                 </div>
             </div>
 
-        </div>
-    </div>
+
+        </div>  
+
+    <footer id="footer">
+      <a href="#" class="fa fa-facebook" />
+      <a href="#" class="fa fa-twitter" />
+      <a href="#" class="fa fa-instagram" />
+      <a href="#" class="fa fa-linkedin" />
+    </footer>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </div>
+
+  
 </template>
+
 
 <script>
 export default {
     name: 'Home',
     methods: {
         Todonera() {
+
+            this.$router.push({
+                name: 'Donationpg1'
+            })
+
             this.$router.push('/all')
+
         }
     },
     data: function() {
@@ -80,7 +103,12 @@ export default {
 }
 </script>
 
-<style scoped>
+
+ 
+<style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
 .picture-1 {
   margin-top: 40px; 
 position: relative;
@@ -105,6 +133,7 @@ color: white;
   bottom: 2px;
   left: 10px;
 }
+
 
 .aboutdonify {
     display: flex;
@@ -135,6 +164,53 @@ h4 {
     margin-bottom: 60px;
 }
 
+
+
+#readmore {
+    text-align: right;
+}
+
+
+
+
+ select {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+#footer {
+
+    background-color: grey;
+    color: white;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding: 10px 10px ;
+    bottom: 1em;
+    width: 70%;
+}
+
+#footer a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5em;
+    color: white;
+}
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .aboutdonify{
+      flex-direction: column;
+        position: absolute;
+        height: 100%;
+        margin: 25px 0px;
+        width: 100%;
+    }
+}
 #search {
 margin-top: 50px; 
 margin-bottom: 50px; 
@@ -150,4 +226,5 @@ margin-bottom: 50px;
 #news {
     margin-bottom: 70px;
 }
+
 </style>

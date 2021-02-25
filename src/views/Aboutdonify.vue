@@ -28,6 +28,7 @@
   </div>
 </template>
 
+
 <style scoped>
 /* Raleway */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
@@ -86,6 +87,7 @@ h2 {
   justify-content: center;
   color:rgb(53, 52, 52);
 }
+
 .heading {
   text-align: center;
 }

@@ -3,8 +3,21 @@ import VueRouter from 'vue-router'
 
 import Home from '../views/Home.vue'
 import AllCharities from '../views/AllCharities.vue'
+import Valgorenheter1 from '../views/Valgorenheter1.vue'
 import Walkthrough from '../views/Walkthrough.vue'
+
+
+
+//import Aboutdonify from '../views/Aboutdonify.vue'
+//import Login from '../views/Login.vue'
+
+//import Aboutdonify from '../views/Aboutdonify.vue'
+//import Login from '../views/Login.vue'
+
+//import Aboutdonify from '../views/Aboutdonify.vue'
+
 import Aboutdonify from '../views/Aboutdonify.vue'
+
 import Login from '../views/Login.vue'
 import TackPage from '../views/Tack.vue'
 
@@ -22,6 +35,26 @@ const routes = [
         name: 'Home',
         component: Home
     },
+
+
+    {
+        path: '/home',
+        name: 'Home',
+        component: Home
+    },
+   
+   
+    {
+
+        path: '/valgorenheter1',
+        name: 'Valgorenheter1',
+        component: Valgorenheter1
+    },
+
+
+   
+   
+
 
     {
         path: '/walkthrough',
