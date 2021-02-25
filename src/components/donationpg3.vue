@@ -49,6 +49,7 @@ export default {
     font-weight: 800;
     font-size: 20px;
 }
+
 .info {
     display: flex;
     flex-direction: column;
