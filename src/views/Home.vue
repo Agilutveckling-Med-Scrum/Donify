@@ -1,16 +1,6 @@
 <template>
 
-
     <div class="aboutdonify">
-
-
-        <div class="container">
-            <h2>Aktuellt</h2>
-            <section class="section">
-                <div class="container-fliud">
-                    <img src="../pictures/facemask_640.jpg" />
-                    <p>
-
         <div class="container">  
 
             <div class="picture-1"> 
@@ -82,14 +72,6 @@
   </div>
 
   
- 
-
-    
-  
-
-
-        </div>
-    </div>
 </template>
 
 
