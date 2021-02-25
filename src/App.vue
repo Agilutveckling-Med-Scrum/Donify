@@ -9,7 +9,6 @@
                 <router-link to="/aboutdonify" class="link"
                     >Om Donify</router-link
                 >
-
                 <router-link to="/login" class="link">Logga in</router-link>
             </div>
         </div>
@@ -17,9 +16,9 @@
         <router-view />
     </div>
 </template>
+
 <script>
 import MainTabBar from '@/components/MainTabBar/MainTabBar.vue'
-// @ is an alias to /src
 
 export default {
     name: 'Home',
@@ -110,9 +109,9 @@ img {
 
 .link {
     font-weight: bold;
-    font-size: 16px;
     color: #2c3e50;
-    margin: 10px;
+
+    margin: 20px; 
 }
 
 #nav a:hover {
@@ -123,14 +122,4 @@ img {
     display: flex;
     align-items: center;
 }
-
-/*TODO: fixa så att länkarna ändrar färg när de är aktiva */
-
-/* #nav a:active {
-  color: green; 
-} */
-
-/* .link.router-link-exact-active {
-  color: #42b983;
-} */
 </style>
