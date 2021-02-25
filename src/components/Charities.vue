@@ -1,9 +1,10 @@
 <template>
     <div class="charity-root">
-        <h1 class="half-circle-text">Alla <br />Kategorier</h1>
+        <h1 class="half-circle-text">Alla <br />Välgörenheter</h1>
         <p class="half-circle-text-paragraph">
-            Alla välgörenheter
+            Sök eller scrolla ner för att se alla välgröenheter
         </p>
+
         <svg
             id="purple-half-circle"
             viewBox="0 0 414 251"
@@ -63,6 +64,18 @@
         </svg>
 
         <div class="grid-container" v-if="charities !== null">
+            <b-input-group size="lg" class=" h5 mb-2">
+                <b-icon icon="search" id="search-icon"></b-icon>
+                <b-form-input
+                    size="lg"
+                    id="search"
+                    type="search"
+                    v-model="search"
+                    placeholder="Sök..."
+                >
+                </b-form-input>
+            </b-input-group>
+
             <div
                 class="charity-card-container"
                 v-for="charity in charities"
@@ -126,7 +139,8 @@ export default {
     },
     data() {
         return {
-            charities: null
+            charities: null,
+            search: ''
         }
     }
 }
@@ -204,13 +218,25 @@ picture {
     left: 50%;
     transform: translate(-50%, 0);
     color: white;
-    font-size: 1.4em;
+    font-size: 1.2em;
+    display: block;
+}
+#search {
+    border-radius: 37px;
+    padding: 20px;
+    border: 1px solid black;
+    outline: none;
+}
+
+#search-icon {
+    position: absolute;
+    top: 13.5px;
+    right: 25px;
+    z-index: 2;
 }
 
 //Purple Balls
 #purple-half-circle {
-    top: 0;
-    left: 0;
     margin-bottom: 123px;
 }
 
@@ -222,19 +248,19 @@ picture {
 
 .MD-Ball-Right {
     position: absolute;
-    top: 76%;
+    top: 96.5%;
     right: 0%;
 }
 
 .MD-Ball-Right2 {
     position: absolute;
-    top: 130%;
+    top: 148%;
     right: 0%;
 }
 
 .MD-Ball-Left {
     position: absolute;
-    top: 82%;
+    top: 109%;
     left: 0%;
 }
 
@@ -244,12 +270,12 @@ picture {
     .half-circle-text {
         top: 2.8%;
         left: 50%;
-        font-size: 2.552em;
+        font-size: 2.352em;
     }
 
     .half-circle-text-paragraph {
-        top: 16.2%;
-        font-size: 1em;
+        top: 15.2%;
+        font-size: 0.9em;
     }
 
     .XS-Small-Ball-Right {
@@ -261,12 +287,12 @@ picture {
     .half-circle-text {
         top: 2.8%;
         left: 50%;
-        font-size: 3em;
+        font-size: 2.7em;
     }
 
     .half-circle-text-paragraph {
-        top: 18.2%;
-        font-size: 1.3em;
+        top: 16.5%;
+        font-size: 1em;
     }
 
     .XS-Small-Ball-Right {
