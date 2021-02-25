@@ -19,7 +19,6 @@
 
 <script>
 import MainTabBar from '@/components/MainTabBar/MainTabBar.vue'
-// @ is an alias to /src
 
 export default {
     name: 'Home',
@@ -122,14 +121,4 @@ img {
     display: flex;
     align-items: center;
 }
-
-/*TODO: fixa så att länkarna ändrar färg när de är aktiva */
-
-/* #nav a:active {
-  color: green; 
-} */
-
-/* .link.router-link-exact-active {
-  color: #42b983;
-} */
 </style>
