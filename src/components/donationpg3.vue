@@ -58,12 +58,12 @@ export default {
 }
 
 img {
-    height: 300px;
-    width: 440px;
+    height: 240px;
+    width: 340px;
 }
 .personalInfo {
     display: flex;
-    height: 400px;
+    height: 300px;
     flex-direction: column;
     justify-content: space-evenly;
 }

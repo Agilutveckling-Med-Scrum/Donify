@@ -74,9 +74,10 @@ export default {
     margin-top: 10px;
 }
 .bearcontainer img {
-    display: block;
     margin: 30px auto;
-    width: 340px;
+    width: 280px;
+    vertical-align: middle;
+    margin-bottom: 6px;
 }
 .line {
     border: 1px solid rgb(61, 60, 60);
@@ -88,7 +89,9 @@ p {
 }
 .wildlife p {
     text-align: justify;
-    padding: 0 10px 0 10px;
+    padding: 0 8px 0 8px;
+    font-size: 12px;
+    line-height: 12px;
 }
 .container {
     display: flex;
