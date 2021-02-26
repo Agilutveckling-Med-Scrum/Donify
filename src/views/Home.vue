@@ -106,7 +106,7 @@ export default {
 
  
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 
 .aboutdonify {
     display: flex;
@@ -173,8 +173,17 @@ img {
 }
 
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+@media screen and (min-width: 375px) and (max-width: 812px) {
     .aboutdonify{
+      flex-direction: column;
+        position: absolute;
+        height: 100%;
+        margin: 25px 0px;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 813px) and (max-width: 980px) {
+  .aboutdonify{
       flex-direction: column;
         position: absolute;
         height: 100%;

@@ -33,9 +33,19 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+@media screen and (min-width: 375px) and (max-width: 812px) {
 .slider {
     width: 100%;
     margin: 0 auto;
+}
+}
+@media screen and (min-width:813px) and (max-width: 980px) {
+   .slider {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
 }
 p {
     text-align: center;

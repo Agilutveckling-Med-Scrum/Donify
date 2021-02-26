@@ -90,6 +90,9 @@ export default {}
 </script>
 
 <style lang="scss">
+
+@media  screen and (min-width: 375px) and (max-width: 812px) {
+    
 .questions-container {
     position: absolute;
     width: 100vw;
@@ -98,7 +101,17 @@ export default {}
     z-index: 1;
     background-color: blueviolet;
 }
-
+}
+@media screen and (min-width:813px) and (max-width: 980px) {
+    .questions-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+    background-color: blueviolet;
+}
+}
 #donify {
     position: absolute;
     top: 50%;

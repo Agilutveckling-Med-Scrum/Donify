@@ -97,4 +97,18 @@ p {
     display: flex;
     flex-direction: column;
 }
+@media screen and (min-width: 375px) and (max-width: 812px) {
+    .TackPage {
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px;
+}
+
+}
+@media screen and (min-width:813px) and (max-width: 980px) {
+    .TackPage {
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px;
+}
+
+}
 </style>

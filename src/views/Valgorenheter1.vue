@@ -1,6 +1,6 @@
 
 <template>
-  <div class="valgorenheter-container">
+   <div class="grid-container">
         <h1>Välgörenheter</h1>
         <div class="search-wrapper">
         <input type="text" v-model="search" placeholder="Search Charity.."/>
@@ -9,7 +9,7 @@
       <button
                         type="button"
                         class="btn btn-primary btn-sm"
-                        @click="$router.push('/donationpg1')">Donera 
+                        @click="$router.push('/all')">Donera 
                     </button>
         
     </div>

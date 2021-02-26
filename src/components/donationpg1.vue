@@ -171,12 +171,21 @@ span {
 //     display: flex;
 //     flex-direction: column;
 // }
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+@media screen and (min-width: 375px) and (max-width: 812px) {
     .donationPage1 {
         position: absolute;
         height: 100%;
         margin: 25px 0px;
         width: 100%;
     }
+}
+@media screen and (min-width:813px) and (max-width: 980px) {
+  .donationPage1 {
+        position: absolute;
+        height: 100%;
+        margin: 25px 0px;
+        width: 100%;
+    }
+
 }
 </style>

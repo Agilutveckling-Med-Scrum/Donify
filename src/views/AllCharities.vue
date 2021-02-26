@@ -39,4 +39,30 @@ p {
     top: 0;
     z-index: 1;
 }
+@media screen and (min-width: 375px) and (max-width: 812px) {
+    .charity-container {
+     display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    width: 80vw;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+}
+
+}
+@media screen and (min-width:813px) and (max-width: 980px) {
+  .charity-container {
+     display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    width: 80vw;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+}
+
+}
 </style>
