@@ -153,7 +153,7 @@ export default {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-row-gap: 123px;
+    grid-row-gap: 70px;
     margin: 0 auto;
     height: 100vh;
     position: relative;

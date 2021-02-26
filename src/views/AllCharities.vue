@@ -154,11 +154,13 @@ export default {
             this.charities = false
             this.startUps = true
             this.categories = false
+            window.scrollTo(0, 0)
         },
         showCharities() {
             this.charities = true
             this.startUps = false
             this.categories = false
+            window.scrollTo(0, 0)
         }
     },
     data() {
