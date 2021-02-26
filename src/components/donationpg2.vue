@@ -84,8 +84,10 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage2 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
     padding: 20px;
+}
+.backicon {
+    font-size: 22px;
 }
 
 .wwftext img {

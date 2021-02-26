@@ -15,12 +15,15 @@
         </div>
         <p>Hur mycket vill du donera?</p>
         <div class="slider">
-            <input type="text" v-model="numvalue" v-bind="options" />
-            <select v-model="selected">
-                <option v-for="(item, key) in list" v-bind:key="item">{{
-                    key
-                }}</option>
-            </select>
+            <div>
+                <input type="text" v-model="numvalue" />
+                <select v-model="selected">
+                    <option v-for="(item, key) in list" :key="item">{{
+                        key
+                    }}</option>
+                </select>
+            </div>
+            <div><input :value="convertedNum()" />EUR</div>
         </div>
 
         <div class="downinfo">
@@ -69,7 +72,7 @@ export default {
     data() {
         return {
             namevalue: '',
-            options: { min: 0, max: 1000 },
+
             list: '',
             popinfomonth: '',
             popinfoyear: '',
@@ -83,7 +86,16 @@ export default {
                 .get('https://api.exchangeratesapi.io/latest')
                 .then(response => {
                     this.list = response.data.rates
+
+                    //console.log(Object.values(this.list)[0])
                 })
+        },
+        convertedNum() {
+            for (let i = 0; i < Object.keys(this.list).length; i++) {
+                if (this.selected == Object.keys(this.list)[i]) {
+                    return this.numvalue / Object.values(this.list)[i]
+                }
+            }
         },
         Topay() {
             this.$router.push({
@@ -138,7 +150,6 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage1 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
     padding: 20px;
 }
 
@@ -178,7 +189,7 @@ img {
 }
 
 .backicon {
-    font-weight: 600;
+    font-size: 22px;
 }
 .upbuttons {
     display: flex;

@@ -2,7 +2,7 @@
   <div id="userpage">
     <h2>Min sida</h2>
 
-
+<div id="info-data">
     <div id="info">
     <h4>Insamlade donationer:</h4>
     <h4 style="color:#1F9EFF"><strong>23 750 SEK</strong></h4>
@@ -49,6 +49,7 @@
 
     <b-button variant="primary" class="mx-auto" id="btn-2" >Spara ändringar</b-button>
    </form>
+   </div>
    </div>
 
 
@@ -137,4 +138,20 @@ h4 {
   margin-bottom: 100px; 
 }
 
+
+@media screen and (min-width: 720px) {
+#userpage {
+ display: flex; 
+   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#info {
+  padding: 50px; 
+}
+#info-data {
+  display: flex; 
+  flex-direction: row;
+}
+}
 </style>
