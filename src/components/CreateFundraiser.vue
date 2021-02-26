@@ -176,8 +176,18 @@
                     stroke-width="5"
                 />
             </svg>
-            <h2>Vad är namnet på din startup/insamling?</h2>
-            <input type="text" value="Carpe Diem" />
+            <div class="fundraise-text-container">
+                <h2>Vad är namnet på din startup/insamling?</h2>
+                <input type="text" placeholder="Carpe Diem INC" />
+                <h2>Beskriv kortfattat vad din insamling handlar om</h2>
+                <textarea
+                    name=""
+                    placeholder="We help children in Denmark find intrest in programming..."
+                    id=""
+                    cols="30"
+                    rows="10"
+                ></textarea>
+            </div>
         </div>
     </div>
 </template>
@@ -186,16 +196,41 @@
 export default {}
 </script>
 
-<style>
+<style scoped>
 input {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-    margin-bottom: 40px;
+    box-shadow: 0px 13px 2px rgba(0, 0, 0, 0.48);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    width: 75%;
+    outline: 0;
+    margin: 20px 0;
+}
+
+h2 {
+    color: white;
+    font-size: 31.3px;
+}
+
+textarea {
+    box-shadow: 0px 13px 2px rgba(0, 0, 0, 0.48);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    width: 75%;
+    outline: 0;
+}
+
+.fundraise-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .root-fundraiser {
     background-color: #1f9eff;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
 }
 
 #make-someone-happy {
