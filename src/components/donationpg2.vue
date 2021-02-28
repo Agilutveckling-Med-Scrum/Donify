@@ -26,7 +26,9 @@
                             value="2"
                         />Banköverföring
                     </div>
-                    <div><img src="@/assets/bankcard.svg" alt="" /></div>
+                    <div class="Img">
+                        <img src="@/assets/bankcard.svg" alt="" />
+                    </div>
                 </label>
                 <label class="m-check ui-margin">
                     <div>
@@ -41,7 +43,9 @@
                     <div>
                         <input type="radio" name="remindType" value="2" />Swish
                     </div>
-                    <div><img src="@/assets/swish.svg" alt="" /></div>
+                    <div class="Img">
+                        <img src="@/assets/swish.svg" alt="" />
+                    </div>
                 </label>
             </div>
         </div>
@@ -155,6 +159,7 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px;
 }
 .betalanu {
     margin: 20px auto;
@@ -165,5 +170,24 @@ input {
     color: white;
     font-weight: 600;
     background-color: #020d74;
+}
+@media (min-width: 980px) {
+    label {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .Img img {
+        margin-left: 60px;
+    }
+    img {
+        width: 24px;
+        height: 24px;
+        height: 40px;
+    }
+    p img {
+        float: left;
+        margin-right: 10px;
+    }
 }
 </style>
