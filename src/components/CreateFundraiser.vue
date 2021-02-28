@@ -4,7 +4,7 @@
             <svg
                 id="Airplane-container"
                 width="89"
-                height="44"
+                height="100"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
@@ -286,7 +286,7 @@
                     v-model="checked.startUp"
                 />
                 <label for="StartUps-check">Start Ups</label>
-                <b-button href="#" @click="addFundraiser()"
+                <b-button href="#" v-on:click="addFundraiser"
                     >Lämna In Ansökan</b-button
                 >
                 <span v-if="error">Fyll i alla formulär</span>
@@ -334,32 +334,50 @@ export default {
                         delay: 2
                     },
                     { x: 1000, duration: 25 }
-                ).fromTo(
-                    '#cloud1 ',
-                    {
-                        x: -350
-                    },
-                    { x: 1000, duration: 80 },
-                    '<'
                 )
+                //.fromTo(
+                //    '#cloud1 ',
+                //    {
+                //        x: -350
+                //    },
+                //    { x: 1000, duration: 80 },
+                //    '<'
+                //)
             }
             if (window.innerWidth < 650) {
-                let tl = gsap.timeline({ repeat: -1 })
-                tl.fromTo(
-                    '#Airplane ',
-                    {
-                        x: -50,
-                        delay: 2
-                    },
-                    { x: 700, duration: 18 }
-                ).fromTo(
-                    '#cloud1 ',
-                    {
-                        x: -350
-                    },
-                    { x: 700, duration: 70, scale: 1 },
-                    '<'
-                )
+                //let tl = gsap.timeline({ repeat: -1 })
+                let plane = gsap.timeline({ repeat: -1, delay: 2 })
+                //tl.fromTo(
+                //    '#cloud1 ',
+                //    {
+                //        x: -350
+                //    },
+                //    {
+                //        x: 700,
+                //        duration: 70,
+                //        scale: 1,
+                //        opacity: 0.3,
+                //        repeat: -1
+                //    },
+                //    '1'
+                //)
+                plane
+                    .fromTo(
+                        '#Airplane ',
+                        {
+                            x: -100,
+                            delay: 2
+                        },
+                        { x: 700, duration: 18, color: 'red' }
+                    )
+                    .fromTo(
+                        '#Airplane ',
+                        {
+                            x: -100,
+                            delay: 2
+                        },
+                        { x: 850, y: 74, duration: 15, rotation: 10 }
+                    )
             }
         },
 
@@ -389,7 +407,6 @@ export default {
                 })
         },
         addFundraiser() {
-            alert()
             if (
                 this.checked.välgörenhet === true &&
                 this.checked.startUp === true
@@ -514,14 +531,14 @@ input[type='checkbox'] {
     gap: 15px;
 }
 
-a[role='button'] {
+/*This is the button on the bottom*/
+a {
     background-color: white;
     width: 75%;
     border-radius: 100px;
     border: none;
     color: #1f9eff;
     font-size: 25px;
-    pointer-events: none;
     padding: 10px;
     box-shadow: 0px 7.5px 2px rgba(0, 0, 0, 0.48);
     font-weight: 900;

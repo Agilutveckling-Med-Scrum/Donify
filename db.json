@@ -55,6 +55,12 @@
       "description": "organiszation",
       "img": "http://pigment.github.io/fake-logos/logos/small/color/fast-banana.png",
       "id": "4"
+    },
+    {
+      "name": "Grupp 7",
+      "description": "Swisha mig tack",
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/crofts-accountants.svg",
+      "id": "5"
     }
   ],
   "randomLogos": [
