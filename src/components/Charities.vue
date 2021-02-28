@@ -121,20 +121,6 @@ export default {
                     this.charities = result
                     console.log(result)
                 })
-        },
-        addFundraiser() {
-            fetch('http://localhost:3000/allCharities', {
-                body:
-                    '{ "name": "Teststad", "description": "ddd", "img": "htp", "id": "5"}',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                method: 'POST'
-            })
-                .then(response => response.json())
-                .then(result => {
-                    console.log(result)
-                })
         }
     },
     data() {

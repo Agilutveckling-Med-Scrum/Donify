@@ -2,6 +2,63 @@
     <div class="root-fundraiser">
         <div class="svgs">
             <svg
+                id="Airplane-container"
+                width="89"
+                height="44"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g id="Airplane">
+                    <g id="Group">
+                        <path
+                            id="Vector"
+                            d="M85.9153 28.7299l-3.3054 1.5485a38.021 38.021 0 01-16.1288 3.5906h-36.807a14.585 14.585 0 01-5.8835-1.2394L4.9774 24.3359C2.3157 23.1626.598 20.5282.598 17.6194v-1.638c0-2.2191 1.799-4.0181 4.018-4.0181h64.1862a24.9532 24.9532 0 0116.51 6.2426l1.8749 1.6543a5.3582 5.3582 0 01-1.2719 8.8697z"
+                            fill="#fff"
+                        />
+                        <path
+                            id="Vector_2"
+                            d="M86.6902 24.6502l-3.3053 1.5484a38.0198 38.0198 0 01-16.1288 3.5906h-36.807c-2.026 0-4.0297-.422-5.8836-1.2394l-18.813-8.2935c-2.6412-1.1643-4.3508-3.7677-4.3768-6.6499a3.9992 3.9992 0 00-.7776 2.375v1.638c0 2.9088 1.7176 5.5432 4.3793 6.7165l18.8132 8.2937a14.5884 14.5884 0 005.8836 1.2394h36.807a38.0216 38.0216 0 0016.1287-3.5906l3.3054-1.5485a5.3578 5.3578 0 003.0849-4.8519c0-.3801-.0407-.7556-.1189-1.121-.5333.8043-1.2818 1.4673-2.1911 1.8932z"
+                            fill="#B8C9EA"
+                        />
+                        <path
+                            id="Vector_3"
+                            d="M70.7055 19.9052l2.5665 1.8859a4.6201 4.6201 0 002.7354.8969h12.8568a5.3574 5.3574 0 00-1.6779-2.8277l-1.875-1.6543a24.9061 24.9061 0 00-.9371-.7858h-12.854c-1.3291 0-1.8859 1.6979-.8147 2.485z"
+                            fill="#6A61B2"
+                        />
+                        <path
+                            id="Vector_4"
+                            d="M23.702 43.4184h4.633c1.642 0 3.2613-.3816 4.7307-1.1144l25.9052-12.9219c.5862-.2924.3781-1.1758-.2769-1.1758H35.6884c-.4961 0-.9703.2048-1.3105.566L22.7216 41.1482c-.8094.8594-.2001 2.2702.9804 2.2702z"
+                            fill="#E27F86"
+                        />
+                        <path
+                            id="Vector_5"
+                            d="M1.0636 26.2369h2.5607c.7302 0 1.451-.1652 2.1083-.4833l8.8759-4.2944c1.1676-.5649.7652-2.3201-.5318-2.3201H5.9484a2.2428 2.2428 0 00-1.6886.7668L.2644 24.4765c-.6.6865-.1127 1.7604.7992 1.7604z"
+                            fill="#E27F86"
+                        />
+                        <path
+                            id="Vector_6"
+                            d="M4.7937 0H7.981a6.6876 6.6876 0 014.7873 2.018l9.7006 9.9454H8.511L3.9805 1.2257C3.735.6439 4.162 0 4.7937 0z"
+                            fill="#E27F86"
+                        />
+                        <g id="Group_2" fill="#6A61B2">
+                            <path
+                                id="Vector_7"
+                                d="M55.4736 19.8063v.4954c0 1.3178 1.0684 2.3861 2.3862 2.3861h2.5293c1.3178 0 2.3862-1.0683 2.3862-2.3861v-.4954c0-1.3178-1.0684-2.3861-2.3862-2.3861h-2.5293c-1.3178 0-2.3862 1.0683-2.3862 2.3861z"
+                            />
+                            <path
+                                id="Vector_8"
+                                d="M41.1719 19.8063v.4954c0 1.3178 1.0683 2.3861 2.3861 2.3861h2.5294c1.3178 0 2.3861-1.0683 2.3861-2.3861v-.4954c0-1.3178-1.0683-2.3861-2.3861-2.3861H43.558c-1.3178 0-2.3861 1.0683-2.3861 2.3861z"
+                            />
+                            <path
+                                id="Vector_9"
+                                d="M26.8696 19.8063v.4954c0 1.3178 1.0684 2.3861 2.3862 2.3861h2.5293c1.3178 0 2.3862-1.0683 2.3862-2.3861v-.4954c0-1.3178-1.0684-2.3861-2.3862-2.3861h-2.5293c-1.3178 0-2.3862 1.0683-2.3862 2.3861z"
+                            />
+                        </g>
+                    </g>
+                </g>
+            </svg>
+
+            <svg
                 id="donify"
                 width="220"
                 height="119"
@@ -178,22 +235,201 @@
             </svg>
             <div class="fundraise-text-container">
                 <h2>Vad är namnet på din startup/insamling?</h2>
-                <input type="text" placeholder="Carpe Diem INC" />
+                <input
+                    v-model="name"
+                    type="text"
+                    placeholder="Carpe Diem INC"
+                />
                 <h2>Beskriv kortfattat vad din insamling handlar om</h2>
                 <textarea
                     name=""
-                    placeholder="We help children in Denmark find intrest in programming..."
+                    placeholder="We help children in Denmark find interests in programming..."
                     id=""
                     cols="30"
                     rows="10"
+                    v-model="textarea"
                 ></textarea>
+
+                <input
+                    type="checkbox"
+                    id="välgörenheter-check"
+                    v-model="checked.välgörenhet"
+                />
+                <label for="välgrörenheter-check">Välgörenheter</label>
+                <input
+                    type="checkbox"
+                    id="StartUps-check"
+                    v-model="checked.startUp"
+                />
+                <label for="StartUps-check">Start Ups</label>
+                <b-button href="#" @click="addFundraiser()"
+                    >Lämna In Ansökan</b-button
+                >
+                <span v-if="error">Fyll i alla formulär</span>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-export default {}
+import { gsap } from 'gsap'
+import { CSSPlugin } from 'gsap/CSSPlugin'
+gsap.registerPlugin(CSSPlugin)
+export default {
+    data() {
+        return {
+            name: '',
+            textarea: '',
+            checked: {
+                välgörenhet: false,
+                startUp: false
+            },
+            randomImage: '',
+            id: {
+                allCharities: null,
+                allStartUps: null
+            },
+            error: false
+        }
+    },
+    created() {
+        this.getRandomImageAndId()
+    },
+    mounted() {
+        this.airplaneAnimation()
+    },
+
+    methods: {
+        airplaneAnimation() {
+            if (window.innerWidth < 950 && window.innerWidth > 650) {
+                let tl = gsap.timeline({ repeat: -1 })
+                tl.fromTo(
+                    '#Airplane ',
+                    {
+                        x: -50
+                    },
+                    { x: 1000, duration: 25 }
+                )
+            }
+            if (window.innerWidth < 650) {
+                let tl = gsap.timeline({ repeat: -1 })
+                tl.fromTo(
+                    '#Airplane ',
+                    {
+                        x: -50
+                    },
+                    { x: 700, duration: 18 }
+                )
+            }
+        },
+
+        getRandomImageAndId() {
+            let randomInt = Math.floor(Math.random() * 10)
+            fetch('http://localhost:3000/randomLogos')
+                .then(response => {
+                    return response.json()
+                })
+                .then(result => {
+                    this.randomImage = result[randomInt].img
+                })
+            //ID Number FETCH
+            fetch('http://localhost:3000/allCharities')
+                .then(response => {
+                    return response.json()
+                })
+                .then(result => {
+                    this.id.allCharities = result.length + 1
+                })
+            fetch('http://localhost:3000/allStartUps')
+                .then(response => {
+                    return response.json()
+                })
+                .then(result => {
+                    this.id.allStartUps = result.length + 1
+                })
+        },
+        addFundraiser() {
+            alert()
+            if (
+                this.checked.välgörenhet === true &&
+                this.checked.startUp === true
+            ) {
+                fetch('http://localhost:3000/allCharities', {
+                    body: `{ "name": "${this.name}", "description": "${this.textarea}", "img": "${this.randomImage}", "id": "${this.id.allCharities}"}`,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'POST'
+                })
+                    .then(response => response.json())
+                    .then(result => {
+                        console.log(result)
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
+                // Second Post
+                fetch('http://localhost:3000/allStartUps', {
+                    body: `{ "name": "${this.name}", "description": "${this.textarea}", "img": "${this.randomImage}", "id": "${this.id.allStartUps}"}`,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'POST'
+                })
+                    .then(response => response.json())
+                    .then(result => {
+                        console.log(result)
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
+            }
+
+            //One Checkbox Checked = Charities
+            if (
+                this.checked.välgörenhet === true &&
+                this.checked.startUp === false
+            ) {
+                fetch('http://localhost:3000/allCharities', {
+                    body: `{ "name": "${this.name}", "description": "${this.textarea}", "img": "${this.randomImage}", "id": "${this.id.allCharities}"}`,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'POST'
+                })
+                    .then(response => response.json())
+                    .then(result => {
+                        console.log(result)
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
+            }
+            //One Checkbox Checked = allStartUps
+            if (
+                this.checked.välgörenhet === false &&
+                this.checked.startUp === true
+            ) {
+                fetch('http://localhost:3000/allStartUps', {
+                    body: `{ "name": "${this.name}", "description": "${this.textarea}", "img": "${this.randomImage}", "id": "${this.id.allStartUps}"}`,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'POST'
+                })
+                    .then(response => response.json())
+                    .then(result => {
+                        console.log(result)
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
+            } else {
+                this.error = true
+            }
+        }
+    }
+}
 </script>
 
 <style scoped>
@@ -210,6 +446,7 @@ input {
 h2 {
     color: white;
     font-size: 31.3px;
+    margin-top: 65px;
 }
 
 textarea {
@@ -219,18 +456,40 @@ textarea {
     border: 1px solid white;
     width: 75%;
     outline: 0;
+    resize: none;
+}
+
+input[type='checkbox'] {
+    box-shadow: none;
+    height: 40px;
+    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.48);
 }
 
 .fundraise-text-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+a[role='button'] {
+    background-color: white;
+    width: 75%;
+    border-radius: 100px;
+    border: none;
+    color: #1f9eff;
+    font-size: 25px;
+    pointer-events: none;
+    padding: 10px;
+    box-shadow: 0px 7.5px 2px rgba(0, 0, 0, 0.48);
+    font-weight: 900;
 }
 
 .root-fundraiser {
     background-color: #1f9eff;
     width: 100vw;
-    height: 200vh;
+    height: 300vh;
 }
 
 #make-someone-happy {
@@ -252,7 +511,7 @@ textarea {
 }
 
 .svgs {
-    margin-top: 100;
+    margin-top: 120;
     position: relative;
     width: 100vw;
 }
@@ -263,5 +522,20 @@ svg {
 
 #clouds {
     position: absolute;
+}
+
+/* ANIMATIONS */
+
+#Airplane-container {
+    position: absolute;
+    margin-top: 200px;
+}
+
+/* Media Queries */
+
+@media (max-width: 409px) {
+    h2 {
+        font-size: 28.3px;
+    }
 }
 </style>
