@@ -163,7 +163,7 @@ export default {
     border-radius: 100px;
     line-height: 80px;
 }
-img {
+.wwftext img {
     width: 8px;
     height: 12px;
     margin-right: 3px;
@@ -205,7 +205,7 @@ img {
     margin: 0 auto;
 }
 .Tillbetalning {
-    margin-top: 60px;
+    margin-top: 90px;
     width: 160px !important;
     font-size: 18px !important;
     font-weight: 600 !important;
@@ -214,8 +214,9 @@ img {
     margin-top: 8px;
     font-size: 12px;
 }
+
 p {
-    margin: 40px 5px 30px;
+    margin: 60px 5px 30px;
     font-size: 24px;
 }
 select {
