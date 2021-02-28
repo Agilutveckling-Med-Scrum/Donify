@@ -15,7 +15,7 @@
         </div>
         <p>Hur mycket vill du donera?</p>
         <div class="slider">
-            <div>
+            <div class="inputednum">
                 <input type="text" v-model="numvalue" />
                 <select v-model="selected">
                     <option v-for="(item, key) in list" :key="item">{{
@@ -23,7 +23,9 @@
                     }}</option>
                 </select>
             </div>
-            <div><input :value="convertedNum()" />EUR</div>
+            <div class="convertednum">
+                <input :value="convertedNum()" /><span>SEK</span>
+            </div>
         </div>
 
         <div class="downinfo">
@@ -93,7 +95,10 @@ export default {
         convertedNum() {
             for (let i = 0; i < Object.keys(this.list).length; i++) {
                 if (this.selected == Object.keys(this.list)[i]) {
-                    return this.numvalue / Object.values(this.list)[i]
+                    return (
+                        (this.numvalue / Object.values(this.list)[i]) *
+                        Object.values(this.list)[9]
+                    ).toFixed(2)
                 }
             }
         },
@@ -172,7 +177,12 @@ export default {
     margin: 40px;
     height: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+}
+.convertednum {
+    display: flex;
+    align-items: center;
 }
 .chosedOrg {
     margin-top: 30px;
@@ -187,7 +197,9 @@ export default {
     background-size: 100% 100%; */
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
-
+.inputednum {
+    display: flex;
+}
 .backicon {
     font-size: 22px;
 }
