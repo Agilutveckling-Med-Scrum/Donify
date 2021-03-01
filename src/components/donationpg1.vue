@@ -1,6 +1,6 @@
 <template>
     <div class="donationPage1">
-        <div @click="Goback" class="backicon">
+        <div @click="$router.go(-1)" class="backicon">
             <i class="fa fa-angle-left"></i> Tillbaka
         </div>
         <div class="chosedOrg">
@@ -44,8 +44,12 @@
                         Varje år
                     </button>
                 </div>
-                <span v-show="isShowmonth">{{ popinfomonth }}</span>
-                <span v-show="isShowyear">{{ popinfoyear }}</span>
+                <span class="options" v-show="isShowmonth">{{
+                    popinfomonth
+                }}</span>
+                <span class="options" v-show="isShowyear">{{
+                    popinfoyear
+                }}</span>
                 <div class="downbutton">
                     <button
                         id="btn"
@@ -105,11 +109,6 @@ export default {
         Topay() {
             this.$router.push({
                 name: 'Donationpage2'
-            })
-        },
-        Goback() {
-            this.$router.push({
-                name: 'Home'
             })
         },
         reset() {
@@ -223,6 +222,7 @@ export default {
 }
 .downbutton {
     margin: 0 auto;
+    padding-bottom: 80px;
 }
 .Tillbetalning {
     margin-top: 90px;
@@ -256,6 +256,11 @@ select {
 }
 span {
     margin-right: 10px;
+    font-size: 22px;
+}
+.options {
+    margin: 0 auto;
+    margin-top: 30px;
 }
 #btn {
     font-size: 14px;
@@ -268,7 +273,7 @@ span {
     background-color: #020d74;
 }
 #btn:focus {
-    background-color: #3344e4;
+    background-color: #010d99;
 }
 @media (min-width: 780px) {
     .upbuttons {

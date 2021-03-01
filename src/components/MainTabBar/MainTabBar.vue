@@ -13,7 +13,7 @@
             />
             <div slot="item-text">Home</div>
         </tab-bar-item>
-        <tab-bar-item path="/donate">
+        <tab-bar-item path="/all">
             <img
                 slot="item-icon"
                 src="../../assets/img/tabbar/category.svg"
@@ -26,7 +26,9 @@
             />
             <div slot="item-text">Category</div>
         </tab-bar-item>
-        <tab-bar-item path="/login">
+
+        <tab-bar-item path="/info">
+
             <img
                 slot="item-icon"
                 src="../../assets/img/tabbar/profile.svg"

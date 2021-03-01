@@ -55,7 +55,7 @@
                 </p>
             </div>
 
-            <div>
+            <div  @click="Goback" class="backicon">
                 <input type="checkbox" id="faq-4" />
                 <h2 class="loggaut"><label for="faq-4">Logga ut</label></h2>
             </div>
