@@ -249,14 +249,13 @@ p {
 }
 select {
     display: block;
-    margin: 0 auto;
     border: none;
     appearance: none;
     background: transparent;
     outline: none;
 }
 span {
-    margin: 0 auto;
+    margin-right: 10px;
 }
 #btn {
     font-size: 14px;
@@ -288,9 +287,5 @@ span {
         display: flex;
         justify-content: space-between;
     }
-}
-.donationPage1 {
-    margin: 0;
-    padding: 0;
 }
 </style>
