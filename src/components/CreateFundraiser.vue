@@ -236,6 +236,7 @@
                 />
             </svg>
             <svg
+                class="cloud1-container"
                 width="78"
                 height="46"
                 viewBox="0 0 100 100"
@@ -294,7 +295,6 @@
                         />
                     </g>
                 </svg>
-
                 <input
                     type="checkbox"
                     id="välgörenheter-check"
@@ -349,7 +349,7 @@ export default {
             if (window.innerWidth < 950 && window.innerWidth > 650) {
                 let tl = gsap.timeline({ repeat: -1 })
                 tl.fromTo(
-                    '#Airplane ',
+                    '#Airplane',
                     {
                         x: -50,
                         delay: 2
@@ -365,25 +365,24 @@ export default {
                 )
             }
             if (window.innerWidth < 650) {
-                //let tl = gsap.timeline({ repeat: -1 })
+                let tl = gsap.timeline({ repeat: -1 })
                 let plane = gsap.timeline({ repeat: -1, delay: 2 })
-                //tl.fromTo(
-                //    '.cloud1 ',
-                //    {
-                //        x: -350
-                //    },
-                //    {
-                //        x: 700,
-                //        duration: 70,
-                //        scale: 1,
-                //        opacity: 0.3,
-                //        repeat: -1
-                //    },
-                //    '1'
-                //)
+                tl.fromTo(
+                    '.cloud1 ',
+                    {
+                        x: -350
+                    },
+                    {
+                        x: 700,
+                        duration: 70,
+                        scale: 1,
+                        opacity: 0.3,
+                        repeat: -1
+                    }
+                )
                 plane
                     .fromTo(
-                        '#Airplane ',
+                        '#Airplane',
                         {
                             x: -100,
                             delay: 2
@@ -391,7 +390,7 @@ export default {
                         { x: 700, duration: 18, color: 'red' }
                     )
                     .fromTo(
-                        '#Airplane ',
+                        '#Airplane',
                         {
                             x: -100,
                             delay: 2
@@ -611,7 +610,10 @@ svg {
 .cloud1 {
     position: absolute;
     fill: white;
-    margin-top: 25px;
+}
+
+.cloud1-container {
+    margin-top: 15px;
 }
 
 /* Media Queries */
