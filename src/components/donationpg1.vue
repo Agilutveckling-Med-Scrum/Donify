@@ -199,6 +199,14 @@ export default {
 }
 .inputednum {
     display: flex;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #f1f4f4;
+}
+
+.inputednum input {
+    background-color: #f1f4f4;
 }
 .backicon {
     font-size: 22px;
@@ -226,14 +234,26 @@ export default {
     margin-top: 8px;
     font-size: 12px;
 }
-
+.downinfo p {
+    margin: 80px 5px 30px;
+}
+input {
+    border: none;
+    font-size: 20px;
+    font-weight: 800;
+    outline: none;
+}
 p {
-    margin: 60px 5px 30px;
+    margin: 50px 5px 30px;
     font-size: 24px;
 }
 select {
     display: block;
     margin: 0 auto;
+    border: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
 }
 span {
     margin: 0 auto;
@@ -250,5 +270,27 @@ span {
 }
 #btn:focus {
     background-color: #3344e4;
+}
+@media (min-width: 780px) {
+    .upbuttons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+}
+@media (min-width: 380px) {
+    .inputednum {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+    }
+    .convertednum {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.donationPage1 {
+    margin: 0;
+    padding: 0;
 }
 </style>
