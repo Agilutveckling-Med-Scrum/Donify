@@ -8,8 +8,7 @@
 </template>
 
 <script>
-import VueSlider from 'vue-slider-component'
-import 'vue-slider-component/theme/material.css'
+
 
 export default {
     components: {
