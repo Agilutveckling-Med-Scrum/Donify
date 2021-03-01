@@ -253,7 +253,7 @@
                 ></textarea>
 
                 <svg
-                    id="cloud1"
+                    id="Cloud"
                     width="78"
                     height="46"
                     viewBox="0 0 78 46"
@@ -327,6 +327,7 @@ export default {
         airplaneAnimation() {
             if (window.innerWidth < 950 && window.innerWidth > 650) {
                 let tl = gsap.timeline({ repeat: -1 })
+                //let cloud = gsap.timeline({ repeat: 1 })
                 tl.fromTo(
                     '#Airplane ',
                     {
@@ -335,13 +336,13 @@ export default {
                     },
                     { x: 1000, duration: 25 }
                 )
-                //.fromTo(
-                //    '#cloud1 ',
+
+                //cloud.fromTo(
+                //    '#Cloud',
                 //    {
-                //        x: -350
+                //        x: -50
                 //    },
-                //    { x: 1000, duration: 80 },
-                //    '<'
+                //    { x: 1000, duration: 80 }
                 //)
             }
             if (window.innerWidth < 650) {
@@ -588,7 +589,7 @@ svg {
     position: absolute;
     margin-top: 200px;
 }
-#cloud1 {
+#Cloud {
     fill: white;
     margin-top: 25px;
 }
