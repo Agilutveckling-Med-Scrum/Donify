@@ -15,7 +15,7 @@
         </div>
         <p>Hur mycket vill du donera?</p>
         <div class="slider">
-            <div>
+            <div class="inputednum">
                 <input type="text" v-model="numvalue" />
                 <select v-model="selected">
                     <option v-for="(item, key) in list" :key="item">{{
@@ -23,7 +23,9 @@
                     }}</option>
                 </select>
             </div>
-            <div><input :value="convertedNum()" />EUR</div>
+            <div class="convertednum">
+                <input :value="convertedNum()" /><span>SEK</span>
+            </div>
         </div>
 
         <div class="downinfo">
@@ -93,7 +95,10 @@ export default {
         convertedNum() {
             for (let i = 0; i < Object.keys(this.list).length; i++) {
                 if (this.selected == Object.keys(this.list)[i]) {
-                    return this.numvalue / Object.values(this.list)[i]
+                    return (
+                        (this.numvalue / Object.values(this.list)[i]) *
+                        Object.values(this.list)[9]
+                    ).toFixed(2)
                 }
             }
         },
@@ -172,7 +177,12 @@ export default {
     margin: 40px;
     height: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+}
+.convertednum {
+    display: flex;
+    align-items: center;
 }
 .chosedOrg {
     margin-top: 30px;
@@ -187,7 +197,17 @@ export default {
     background-size: 100% 100%; */
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
+.inputednum {
+    display: flex;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #f1f4f4;
+}
 
+.inputednum input {
+    background-color: #f1f4f4;
+}
 .backicon {
     font-size: 22px;
 }
@@ -214,17 +234,28 @@ export default {
     margin-top: 8px;
     font-size: 12px;
 }
-
+.downinfo p {
+    margin: 80px 5px 30px;
+}
+input {
+    border: none;
+    font-size: 20px;
+    font-weight: 800;
+    outline: none;
+}
 p {
-    margin: 60px 5px 30px;
+    margin: 50px 5px 30px;
     font-size: 24px;
 }
 select {
     display: block;
-    margin: 0 auto;
+    border: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
 }
 span {
-    margin: 0 auto;
+    margin-right: 10px;
 }
 #btn {
     font-size: 14px;
@@ -238,5 +269,23 @@ span {
 }
 #btn:focus {
     background-color: #3344e4;
+}
+@media (min-width: 780px) {
+    .upbuttons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+}
+@media (min-width: 380px) {
+    .inputednum {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+    }
+    .convertednum {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 </style>
