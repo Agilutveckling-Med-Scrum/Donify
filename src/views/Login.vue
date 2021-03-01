@@ -100,11 +100,11 @@ export default {
                     this.email == this.loginData[n].email &&
                     this.password == this.loginData[n].password
                 ) {
-                    error = false
+                    error = true 
                     this.$router.push({
                         name: 'Userpage'
                     })
-                } else if (error == true) {
+                } else if (error == false) {
                     alert('Fel användarnamn eller lösenord')
                     n = this.loginData.length
                 }
@@ -116,12 +116,7 @@ export default {
             if (!this.$v.$invalid) {
                 console.log(`Email: ${this.email}, Password: ${this.password}`)
             }
-        },
-        userpage() {
-            this.$router.push({
-                name: 'Userpage'
-            })
-        }
+        },      
     },
     name: 'Login'
 }
