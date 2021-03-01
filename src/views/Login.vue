@@ -1,29 +1,20 @@
 <template>
     <div id="login">
-
-            <h2>Logga in</h2>
-             <form @submit.prevent="submitForm">
+        <h2>Logga in</h2>
+        <form @submit.prevent="submitForm">
             <div class="px-3 py-2">
-                    <label>
-                        Användarnamn
-                        </label>
-                        <input type="email" name="email"  v-model="email" class="form-control" placeholder="E-postadress" />
-                     <span
+                <label>Användarnamn</label>
+                <input type="email" v-model="email" class="form-control" placeholder="E-postadress" />
+                <span
                 v-if="(!$v.email.required || !$v.email.email) && $v.email.$dirty"
                 class="text-danger"
                 >Giltig e-post krävs!</span>
-                </div>
+            </div>
 
             <div class="px-3 py-2">
-                    <label>
-                        Lösenord
-                         </label>
-                        <input type="password" name="password"
-                            v-model="password"
-                            class="form-control"
-                            placeholder="Lösenord"
-                        />
-                        <span
+                <label>Lösenord</label>
+                <input type="password" v-model="password" class="form-control" placeholder="Lösenord"/>
+                <span
                 v-if="!$v.password.required && $v.password.$dirty"
                 class="text-danger"
                 >Lösenord krävs!</span>
@@ -31,17 +22,14 @@
                 v-if="(!$v.password.minLength || !$v.password.maxLength) && $v.password.$dirty"
                 class="text-danger"
                 >Lösenordet måste vara mellan {{ $v.password.$params.minLength.min}} och {{ $v.password.$params.maxLength.max}} tecken!</span>
-                        </div>
-                   
-                    <b-button variant="primary" class="mx-auto" @click="login" >Logga in </b-button> 
-                </form>
-                <p>Glömt ditt lösenord?</p>
-                <p>Inget konto? Skapa nytt här</p>
-        
-
+            </div>
+            
+        <b-button type="submit" variant="primary" @click="login" class="mx-auto">Logga in </b-button> 
+        </form>
+        <p>Glömt ditt lösenord?</p>
+        <p>Inget konto? Skapa nytt här</p>
     </div>
 </template>
-
 
 <script>
 import {
@@ -51,9 +39,8 @@ import {
     email
 } from 'vuelidate/lib/validators'
 export default {
-    data() {
-        return {
-            loginData:   [ {
+    data: () => ({
+         loginData:   [ {
                 email: 'johanna@gmail.com',
                 password: 'johanna'
             },
@@ -65,17 +52,18 @@ export default {
                 email: 'carel@gmail.com',
                 password: 'heeej3'
             }],
-            validations: {
-                email: {
-                    required,
-                    email
-                },
-                password: {
-                    required,
-                    maxLength: maxLength(12),
-                    minLength: minLength(6)
-                }
-            },
+        email: '',
+        password: '',
+    }),
+    validations: {
+        email: {
+            required,
+            email
+        },
+        password: {
+            required,
+            maxLength: maxLength(12),
+            minLength: minLength(6)
         }
     },
     methods: {
@@ -97,18 +85,25 @@ export default {
             }
         }
     },
-    submitForm() {
-        this.$v.$touch()
+        submitForm() {
+            this.$v.$touch()
 
-        if (!this.$v.$invalid) {
-            console.log(
-                `Email: ${this.email}, Password: ${this.password}`
-            )
+            if (!this.$v.$invalid) {
+                console.log(
+                    `Email: ${this.email}, Password: ${this.password}`
+                )
+            }
+        },
+        userpage() {
+            this.$router.push({
+                name: 'Userpage'
+            })
         }
     },
-    name: 'Login',
+    name: 'Login'
 }
 </script>
+
 
 <style scoped>
 #login {
