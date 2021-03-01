@@ -2,11 +2,14 @@
     <div class="aboutdonify">
         <div class="container">  
 
+            <img src="../assets/logo.png"
+            />
+
             <div class="picture-1"> 
                 <p class="text">
                   <strong>Aktuellt</strong><br>
-                        Donec sed odio dui. Etiam porta sem malesuada magna
-                        mollis euismod.
+
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim amet, sagittis, vivamus lorem faucibus. Sed molestie pharetra massa rhoncus dolor tellus bibendum eleifend.
                     </p>
                     </div>
                     <h4 id="text-under">make someone happy!</h4>
@@ -21,7 +24,7 @@
                     </div>
               
             
-            <div id="toplist" class="col-lg-4">
+            <div id="toplist">
                 <h4>De 5 populäraste på Donify</h4>
                  <p
                         v-for="popular in toplist"
@@ -36,14 +39,11 @@
             </div>
 
 
-            <div id="news" class="row">
-                <div class="col-lg-4">
+            <div id="news" >
                   <div class="picture-2">
-                    
                     <p class="text">
                       <strong>Nyheter</strong><br>
-                        Donec sed odio dui. Etiam porta sem malesuada magna
-                        mollis euismod. Donec sed odio dui.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim amet, sagittis, vivamus lorem faucibus. Sed molestie pharetra massa rhoncus dolor tellus bibendum eleifend.
                     </p>
                     </div>
                     <div id="btn-2">
@@ -51,19 +51,38 @@
                             Läs mer
                         </button>
                     </div>
-                </div>
+                
             </div>
+        </div>  
 
-        </div>
-    </div>
+    <footer id="footer">
+      <a href="#" class="fa fa-facebook" />
+      <a href="#" class="fa fa-twitter" />
+      <a href="#" class="fa fa-instagram" />
+      <a href="#" class="fa fa-linkedin" />
+    </footer>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </div>
+
+  
 </template>
+
 
 <script>
 export default {
     name: 'Home',
     methods: {
         Todonera() {
+
+            this.$router.push({
+                name: 'Donationpg1'
+            })
+
             this.$router.push('/all')
+
         }
     },
     data: function() {
@@ -80,11 +99,14 @@ export default {
 }
 </script>
 
-<style scoped>
+
+<style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 .picture-1 {
   margin-top: 40px; 
 position: relative;
-padding-top: 250px; 
+padding-top: 300px; 
 width: 100%;
 background: linear-gradient(to top, white, transparent), url("../pictures/facemask_640.jpg"); 
 background-size: cover; 
@@ -93,7 +115,7 @@ background-size: cover;
 .picture-2 {
   margin-top: 20px; 
 position: relative;
-padding-top: 250px; 
+padding-top: 300px; 
 width: 100%;
 background: linear-gradient(to top, black, transparent), url("../pictures/wwf_640.jpg"); 
 background-size: cover; 
@@ -117,6 +139,11 @@ color: white;
     text-align: center; 
 }
 
+img{
+    margin-top: 30px; 
+    margin-left: 10px; 
+}
+
 h4 {
    margin-top: 20px;
   margin-bottom: 20px;
@@ -132,7 +159,16 @@ h4 {
 #btn-2 {
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
+}
+
+#readmore {
+    text-align: right;
+}
+
+ select {
+    display: block;
+    margin: 0 auto;
 }
 
 #search {
@@ -149,5 +185,63 @@ margin-bottom: 50px;
 
 #news {
     margin-bottom: 70px;
+}
+
+#footer {
+    background-color: grey;
+    color: white;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    padding: 10px 10px ;
+    bottom: 1em;
+    width: 70%;
+}
+
+#footer a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5em;
+    color: white;
+}
+
+
+// Media Queries
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .aboutdonify{
+      flex-direction: column;
+        position: absolute;
+        height: 100%;
+        margin: 25px 0px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 720px) {
+.picture-1, .picture-2 {
+    padding-top: 400px; 
+}
+img {
+    display: none; 
+    }
+}
+
+@media screen and (min-width: 980px) {
+.picture-1 {
+    padding-top: 600px; 
+    background: linear-gradient(to top, white, transparent), url("../pictures/facemask_1920.jpg"); 
+    background-size: cover; 
+}
+.picture-2 {
+    padding-top: 600px; 
+    background: linear-gradient(to top, black, transparent), url("../pictures/wwf_1920.jpg"); 
+    background-size: cover; 
+}
+#toplist {
+    flex-direction: row;
+    }
 }
 </style>
