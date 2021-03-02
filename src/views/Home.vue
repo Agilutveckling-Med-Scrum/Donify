@@ -194,7 +194,7 @@ margin-bottom: 50px;
     position: fixed;
     padding: 10px 10px ;
     bottom: 0;
-    width: 900px;
+    width: 100%;
 }
 }
 #footer a {
