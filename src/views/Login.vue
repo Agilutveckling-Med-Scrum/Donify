@@ -116,7 +116,7 @@ export default {
             if (!this.$v.$invalid) {
                 console.log(`Email: ${this.email}, Password: ${this.password}`)
             }
-        },      
+        }       
     },
     name: 'Login'
 }
