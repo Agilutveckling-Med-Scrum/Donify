@@ -6,8 +6,6 @@ import AllCharities from '../views/AllCharities.vue'
 import Valgorenheter1 from '../views/Valgorenheter1.vue'
 import Walkthrough from '../views/Walkthrough.vue'
 
-
-
 //import Aboutdonify from '../views/Aboutdonify.vue'
 //import Login from '../views/Login.vue'
 
@@ -19,6 +17,7 @@ import Walkthrough from '../views/Walkthrough.vue'
 import Aboutdonify from '../views/Aboutdonify.vue'
 
 import Login from '../views/Login.vue'
+import TackPage from '../views/Tack.vue'
 
 import Donationpage1 from '../components/donationpg1.vue'
 import Donationpage2 from '../components/donationpg2.vue'
@@ -40,18 +39,12 @@ const routes = [
         name: 'Home',
         component: Home
     },
-   
-   
-    {
 
+    {
         path: '/valgorenheter1',
         name: 'Valgorenheter1',
         component: Valgorenheter1
     },
-
-
-   
-   
 
     {
         path: '/walkthrough',
@@ -88,19 +81,21 @@ const routes = [
         path: '/donate',
         name: 'Donationpage1',
         component: Donationpage1
-        
     },
     {
         path: '/pay',
         name: 'Donationpage2',
         component: Donationpage2
-        
     },
     {
         path: '/info',
         name: 'Donationpage3',
         component: Donationpage3
-        
+    },
+    {
+        path: '/tack',
+        name: 'TackPage',
+        component: TackPage
     }
 ]
 

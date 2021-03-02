@@ -89,10 +89,7 @@
 export default {}
 </script>
 
-<style lang="scss">
-
-@media  screen and (min-width: 375px) and (max-width: 812px) {
-    
+<style scoped lang="scss">
 .questions-container {
     position: absolute;
     width: 100vw;
@@ -100,17 +97,6 @@ export default {}
     top: 0;
     z-index: 1;
     background-color: blueviolet;
-}
-}
-@media screen and (min-width:813px) and (max-width: 980px) {
-    .questions-container {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    z-index: 1;
-    background-color: blueviolet;
-}
 }
 #donify {
     position: absolute;
@@ -120,13 +106,11 @@ export default {}
     width: 80%;
     height: 100%;
 }
-
 /* #donify path:nth-child(1) {
   stroke-dasharray: 989px;
   stroke-dashoffset: 989px;
   animation: line-anim 2s ease forwards;
 } */
-
 /* D */
 #donify path:nth-child(2) {
     stroke-dasharray: 989px;
@@ -145,7 +129,6 @@ export default {}
     stroke-dashoffset: 628px;
     animation: line-anim 2s ease forwards;
 }
-
 /* if */
 #donify path:nth-child(5) {
     stroke-dasharray: 1076px;
@@ -174,7 +157,6 @@ export default {}
   stroke-dashoffset: 605px;
   animation: line-anim 2s ease forwards;
 } */
-
 @keyframes line-anim {
     to {
         stroke-dashoffset: 0;

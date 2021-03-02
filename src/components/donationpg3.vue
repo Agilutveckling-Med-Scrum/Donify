@@ -1,17 +1,65 @@
 <template>
     <div class="donationPage3">
         <div class="info">
-            <p>Idag donerade du</p>
+            <div class="mittkonto"><P>Mitt Konto</P></div>
+            <p>Idag donerade du <i class="fa fa-bell"></i></p>
             <p>
                 <strong
                     >{{ this.$store.state.numvalue }}
                     {{ this.$store.state.selected }}</strong
                 >
             </p>
-            <p>till <button class="vald">WWF</button></p>
+            <img src="@/assets/children.jpg" alt="" />
         </div>
-        <div class="meddelande">Meddelande från WWF</div>
-        <button id="btn" type="button" @click="Tohome">Till startsidan</button>
+        <div class="personalInfo">
+            <!--   <div class="item">
+                Min donatehistorik<i class="fa fa-angle-down"></i>
+            </div>
+            <div class="item">
+                Kontakta oss<i @onClick="Click" class="fa fa-angle-down"></i>
+            </div>
+            <div class="item">Om Donify<i class="fa fa-angle-down"></i></div>
+            <div class="item">Logga ut<i class="fa fa-angle-down"></i></div>
+ -->
+            <div>
+                <input type="checkbox" id="faq-1" />
+                <h2><label for="faq-1">Min donatehistorik</label></h2>
+                <p class="q-paragraph">
+                    <ul>
+                        <li>uppnå sina mål med hjälp
+                    av användarnas ekonomiska stöd.</li>
+                    </ul>
+                   
+                </p>
+            </div>
+
+            <div>
+                <input type="checkbox" id="faq-2" />
+                <h2><label for="faq-2">Kontakta Oss</label></h2>
+                <p class="q-paragraph">
+                    You can send email to us : Donify@gmail.com <br />
+                    Or you can call us : 077-7878787
+                </p>
+            </div>
+            <div>
+                <input type="checkbox" id="faq-3" />
+                <h2><label for="faq-3">Om Donify</label></h2>
+                <p class="q-paragraph">
+                    Donify hjälper organisationer att uppnå sina mål med hjälp
+                    av användarnas ekonomiska stöd. Donationstjänsten kan hjälpa
+                    samt stötta slutkunder i den breda skalan. Allt från att
+                    hjälpa samhällets mest utsatta med medicin, till ett
+                    nystartat företag att uppnå sin dröm. Donify samarbetar tätt
+                    med välkända välgörenhetsorganisationer och stämmer
+                    regelbundet av hur donationerna kommer till nytta.
+                </p>
+            </div>
+
+            <div  @click="Goback" class="backicon">
+                <input type="checkbox" id="faq-4" />
+                <h2 class="loggaut"><label for="faq-4">Logga ut</label></h2>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -32,69 +80,97 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage3 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
     padding: 20px;
-    background: #f7f2fc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 60px;
 }
-
+.mittkonto {
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+}
 .info {
     display: flex;
-    height: 300px;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-top: 30px;
 }
-.meddelande {
-    height: 280px;
-    border-radius: 5%;
-    background-color: #ffffff;
-    padding: 20px 20px;
+img {
+    height: 240px;
+    width: 340px;
 }
-.vald {
-    font-size: 24px;
-    font-weight: 900;
-    height: 80px;
-    width: 80px;
-    background-color: #ffffff;
-    border: transparent;
-    border-radius: 100px;
+.personalInfo {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
 }
-strong {
-    font-size: 30px;
+.item {
+    display: flex;
+    justify-content: space-between;
 }
-#btn {
-    width: 150px;
-    height: 40px;
+input[type='checkbox'] {
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+h2 {
     font-size: 18px;
-    font-weight: 600;
-    display: block;
-    margin: 40px auto;
-    color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 100px;
-    background-color: #8a2be2;
-    box-shadow: 0px 2px 0px #6f01d6;
+    color: #000;
 }
-
-#btn:focus {
-    box-shadow: 0 0 #ba8cb5;
-    background-color: #9d55e0;
+label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
 }
-@media screen and (min-width: 375px) and (max-width: 812px) {
-    .donationPage3 {
-        position: absolute;
-        height: 100%;
-        margin: 25px 0px;
-        width: 100%;
+label::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 10px;
+    border-left: 8px solid #020202;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    margin-top: -8px;
+}
+input[type='checkbox']:checked ~ h2 label::before {
+    border-left: 8px solid transparent;
+    border-top: 8px solid black;
+    border-right: 8px solid transparent;
+    margin-left: -4px;
+    margin-top: -4px;
+}
+.q-paragraph {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 30px;
+    transition: max-height 0.4s ease;
+    font-family: 'Raleway', 'sans-serif';
+}
+input[type='checkbox']:checked ~ h2 ~ p {
+    max-height: 50px;
+}
+.loggaut :hover {
+    color: #020d74;
+}
+@media (min-width: 380px) {
+    .item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    i {
+        padding-left: 20px;
     }
 }
-@media screen and (min-width:813px) and (max-width: 980px) {
-  .donationPage3 {
-        position: absolute;
-        height: 100%;
-        margin: 25px 0px;
-        width: 100%;
+@media (min-width: 780px) {
+    img {
+        height: 440px;
+        width: 640px;
     }
-
 }
 </style>

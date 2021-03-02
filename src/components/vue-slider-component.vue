@@ -11,9 +11,7 @@
 
 
 export default {
-    components: {
-        VueSlider
-    },
+    
     data() {
         return {
             options: { min: 0, max: 1000 }

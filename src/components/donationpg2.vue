@@ -1,12 +1,52 @@
 <template>
     <div class="donationPage2">
-        <p>Du har valt: <button class="vald">WWF</button></p>
-        <p class="Betalningssätt">Betalningssätt:</p>
+        <div @click="$router.go(-1)" class="backicon">
+            <i class="fa fa-angle-left"></i> Tillbaka
+        </div>
+        <div class="chosedOrg">
+            <div><span> Du har valt: </span></div>
+            <div class="valde"><span> WWF</span></div>
+        </div>
+        <div class="wwftext">
+            <img src="@/assets/Vector.png" alt="" />WWF hjälper organisationer
+            att uppnå sina mål med hjälp av användarnas ekonomiska stöd.
+            Donationstjänsten kan hjälpa samt stötta slutkunder i den breda
+            skalan.
+        </div>
+        <div class="Betalningssätt">
+            <p>Betalningssätt:<img src="@/assets/info.svg" alt="" /></p>
+        </div>
         <div class="buttons">
             <div class="upbuttons">
-                <button id="btn">Banköverföring</button>
-                <button id="btn">Autogiro</button>
-                <button id="btn">Swish</button>
+                <label class="m-check ui-margin">
+                    <div>
+                        <input
+                            type="radio"
+                            name="remindType"
+                            value="2"
+                        />Banköverföring
+                    </div>
+                    <div class="Img">
+                        <img src="@/assets/bankcard.svg" alt="" />
+                    </div>
+                </label>
+                <label class="m-check ui-margin">
+                    <div>
+                        <input
+                            type="radio"
+                            name="remindType"
+                            value="2"
+                        />Autogiro
+                    </div>
+                </label>
+                <label class="m-check ui-margin">
+                    <div>
+                        <input type="radio" name="remindType" value="2" />Swish
+                    </div>
+                    <div class="Img">
+                        <img src="@/assets/swish.svg" alt="" />
+                    </div>
+                </label>
             </div>
         </div>
 
@@ -31,7 +71,7 @@ export default {
     methods: {
         Paynow() {
             this.$router.push({
-                name: 'Donationpage3'
+                name: 'TackPage'
             })
         }
     },
@@ -43,73 +83,105 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage2 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
     padding: 20px;
-    background: #f7f2fc;
 }
-p {
-    margin: 20px 5px 40px;
+.backicon {
+    font-size: 22px;
+}
+.wwftext img {
+    width: 8px;
+    height: 12px;
+    margin: 5px 3px;
+}
+.wwftext {
+    margin-top: 8px;
+    font-size: 12px;
+}
+p img {
+    float: right;
+}
+img {
+    width: 24px;
+    height: 24px;
+    height: 40px;
 }
 .Betalningssätt {
-    padding-left: 20px;
+    margin: 30px auto;
+    height: 40px;
+    left: 46px;
+    top: 119px;
+    background: #f8f8f8;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    line-height: 40px;
 }
-
-.vald {
+.chosedOrg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 140px;
+    background: #f8f8f8;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+}
+.valde {
     font-size: 24px;
     font-weight: 900;
     height: 80px;
     width: 80px;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     border: transparent;
     border-radius: 100px;
+    line-height: 80px;
 }
-#btn {
-    width: 150px;
-    height: 40px;
-    margin: 20px auto;
-    font-size: 14px;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    border: transparent;
-    border-radius: 100px;
-    background-color: #8a2be2;
-    box-shadow: 0px 2px 0px #6f01d6;
+span {
+    font-size: 22px;
 }
-
-#btn:focus {
-    box-shadow: 0 0 #ba8cb5;
-    background-color: #9d55e0;
+label {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+input {
+    margin-right: 12px;
 }
 .upbuttons {
     display: flex;
     flex-direction: column;
-    margin-bottom: 100px;
 }
 .downinfo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px;
 }
 .betalanu {
-    width: 160px !important;
-    font-size: 18px !important;
-    font-weight: 600 !important;
+    margin: 20px auto 60px;
+    border-radius: 8px;
+    width: 340px;
+    height: 60px;
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+    background-color: #020d74;
 }
-@media screen and (min-width: 375px) and (max-width: 812px) {
-    .donationPage2 {
-        position: absolute;
-        height: 100%;
-        margin: 25px 0px;
-        width: 100%;
+@media (min-width: 980px) {
+    label {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
-}
-@media screen and (min-width:813px) and (max-width: 980px) {
-   .donationPage2 {
-        position: absolute;
-        height: 100%;
-        margin: 25px 0px;
-        width: 100%;
+    .Img img {
+        margin-left: 60px;
     }
-
+    img {
+        width: 24px;
+        height: 24px;
+        height: 40px;
+    }
+    p img {
+        float: left;
+        margin-right: 10px;
+    }
 }
 </style>
