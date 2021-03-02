@@ -145,29 +145,11 @@ h4 {
 }
 
 
-<<<<<<< HEAD
-
-@media screen and (min-width: 720px) {
-#userpage {
- display: flex; 
-   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-#info {
-  padding: 50px; 
-}
-#info-data {
-  display: flex; 
-  flex-direction: row;
-}
-=======
 @media screen and (min-width:813px) and (max-width: 980px) {
 #userpage {
   margin-top: 50px; 
   margin-left: 20px; 
 }
 
->>>>>>> priyas
 }
 </style>

@@ -11,9 +11,9 @@
                 src="../../assets/img/tabbar/home_active.svg"
                 alt=""
             />
-            <div slot="item-text">Home</div>
+            <div slot="item-text">Hem</div>
         </tab-bar-item>
-        <tab-bar-item path="/donate">
+        <tab-bar-item path="/all">
             <img
                 slot="item-icon"
                 src="../../assets/img/tabbar/category.svg"
@@ -24,9 +24,11 @@
                 src="../../assets/img/tabbar/category_active.svg"
                 alt=""
             />
-            <div slot="item-text">Category</div>
+            <div slot="item-text">Välgörenheter</div>
         </tab-bar-item>
-        <tab-bar-item path="/login">
+
+        <tab-bar-item path="/info">
+
             <img
                 slot="item-icon"
                 src="../../assets/img/tabbar/profile.svg"
@@ -37,7 +39,7 @@
                 src="../../assets/img/tabbar/profile_active.svg"
                 alt=""
             />
-            <div slot="item-text">My</div>
+            <div slot="item-text">Logga in</div>
         </tab-bar-item>
         <tab-bar-item path="/aboutdonify">
             <img
@@ -50,7 +52,7 @@
                 src="../../assets/img/tabbar/hamburg_active.svg"
                 alt=""
             />
-            <div slot="item-text">Info</div>
+            <div slot="item-text">Om Donify</div>
         </tab-bar-item>
     </tab-bar>
 </template>

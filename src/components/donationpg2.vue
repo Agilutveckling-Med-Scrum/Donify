@@ -162,6 +162,7 @@ input {
     width: 340px;
     height: 60px;
     font-size: 24px;
+
     color: white;
     font-weight: 600;
     background-color: #020d74;

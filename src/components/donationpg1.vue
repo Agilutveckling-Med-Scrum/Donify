@@ -108,11 +108,6 @@ export default {
                 name: 'Donationpage2'
             })
         },
-        Goback() {
-            this.$router.push({
-                name: 'Home'
-            })
-        },
         reset() {
             this.isShowmonth = false
             this.isShowyear = false

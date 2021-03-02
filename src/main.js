@@ -8,6 +8,8 @@ import './registerServiceWorker'
 //import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import './main.scss'
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
