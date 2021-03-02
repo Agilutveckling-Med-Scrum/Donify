@@ -27,8 +27,7 @@
             <div slot="item-text">Category</div>
         </tab-bar-item>
 
-        <tab-bar-item path="/info">
-
+        <tab-bar-item path="/userpage">
             <img
                 slot="item-icon"
                 src="../../assets/img/tabbar/profile.svg"

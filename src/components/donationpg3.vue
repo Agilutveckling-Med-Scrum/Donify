@@ -168,7 +168,7 @@ input[type='checkbox']:checked ~ h2 ~ p {
         align-items: center;
     }
     i {
-        padding-left: 20px;
+        padding-left: 10px;
     }
 }
 @media (min-width: 780px) {
