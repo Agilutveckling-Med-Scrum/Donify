@@ -25,9 +25,11 @@
                 <input type="checkbox" id="faq-1" />
                 <h2><label for="faq-1">Min donatehistorik</label></h2>
                 <p class="q-paragraph">
-                    Donify hjälper organisationer att uppnå sina mål med hjälp
-                    av användarnas ekonomiska stöd. Donationstjänsten kan hjälpa
-                    samt stötta slutkunder i den breda skalan.
+                    <ul>
+                        <li>uppnå sina mål med hjälp
+                    av användarnas ekonomiska stöd.</li>
+                    </ul>
+                   
                 </p>
             </div>
 
@@ -53,7 +55,7 @@
                 </p>
             </div>
 
-            <div>
+            <div  @click="Goback" class="backicon">
                 <input type="checkbox" id="faq-4" />
                 <h2 class="loggaut"><label for="faq-4">Logga ut</label></h2>
             </div>
@@ -82,6 +84,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-bottom: 60px;
 }
 .mittkonto {
     text-align: center;

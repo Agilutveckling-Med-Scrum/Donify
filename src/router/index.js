@@ -6,14 +6,7 @@ import AllCharities from '../views/AllCharities.vue'
 //import Valgorenheter1 from '../views/Valgorenheter1.vue'
 import Walkthrough from '../views/Walkthrough.vue'
 
-//import Aboutdonify from '../views/Aboutdonify.vue'
-//import Login from '../views/Login.vue'
-
-//import Aboutdonify from '../views/Aboutdonify.vue'
-//import Login from '../views/Login.vue'
-
 import Aboutdonify from '../views/Aboutdonify.vue'
-
 import Login from '../views/Login.vue'
 import Userpage from '../components/Userpage.vue'
 import TackPage from '../views/Tack.vue'

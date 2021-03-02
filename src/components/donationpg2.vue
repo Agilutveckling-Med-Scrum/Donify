@@ -1,6 +1,6 @@
 <template>
     <div class="donationPage2">
-        <div @click="Goback" class="backicon">
+        <div @click="$router.go(-1)" class="backicon">
             <i class="fa fa-angle-left"></i> Tillbaka
         </div>
         <div class="chosedOrg">
@@ -73,11 +73,6 @@ export default {
             this.$router.push({
                 name: 'TackPage'
             })
-        },
-        Goback() {
-            this.$router.push({
-                name: 'Donationpage1'
-            })
         }
     },
     name: 'Donationpage2'
@@ -141,6 +136,9 @@ img {
     border-radius: 100px;
     line-height: 80px;
 }
+span {
+    font-size: 22px;
+}
 
 label {
     margin-top: 20px;
@@ -162,11 +160,12 @@ input {
     margin-top: 40px;
 }
 .betalanu {
-    margin: 20px auto;
+    margin: 20px auto 60px;
     border-radius: 8px;
     width: 340px;
     height: 60px;
     font-size: 24px;
+
     color: white;
     font-weight: 600;
     background-color: #020d74;

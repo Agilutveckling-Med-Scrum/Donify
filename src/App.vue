@@ -6,6 +6,9 @@
             /></router-link>
 
             <div class="rightside">
+                <router-link to="/all" class="link"
+                    >Alla välgörenheter</router-link
+                >
                 <router-link to="/aboutdonify" class="link"
                     >Om Donify</router-link
                 >
