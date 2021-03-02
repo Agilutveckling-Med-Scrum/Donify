@@ -281,6 +281,15 @@ span {
         justify-content: space-around;
         margin-top: 10px;
     }
+    .chosedOrg {
+        height: 180px;
+    }
+    .inputednum {
+        height: 80px;
+    }
+    .downinfo p {
+        margin: 100px 5px 30px;
+    }
 }
 @media (min-width: 380px) {
     .inputednum {

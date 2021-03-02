@@ -188,5 +188,21 @@ input {
         float: left;
         margin-right: 10px;
     }
+
+    .chosedOrg {
+        height: 180px;
+    }
+    .inputednum {
+        height: 80px;
+    }
+    .Betalningssätt {
+        height: 60px;
+    }
+    p img {
+        height: 60px;
+    }
+    .Betalningssätt p {
+        line-height: 60px;
+    }
 }
 </style>
