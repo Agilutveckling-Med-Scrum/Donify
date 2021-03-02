@@ -295,18 +295,24 @@
                         />
                     </g>
                 </svg>
-                <input
-                    type="checkbox"
-                    id="välgörenheter-check"
-                    v-model="checked.välgörenhet"
-                />
-                <label for="välgrörenheter-check">Välgörenheter</label>
-                <input
-                    type="checkbox"
-                    id="StartUps-check"
-                    v-model="checked.startUp"
-                />
-                <label for="StartUps-check">Start Ups</label>
+                <div class="checkboxes">
+                    <div class="first-check">
+                        <input
+                            type="checkbox"
+                            id="välgörenheter-check"
+                            v-model="checked.välgörenhet"
+                        />
+                        <label for="välgrörenheter-check">Välgörenheter</label>
+                    </div>
+                    <div class="second-check">
+                        <input
+                            type="checkbox"
+                            id="StartUps-check"
+                            v-model="checked.startUp"
+                        />
+                        <label for="StartUps-check">Start Ups</label>
+                    </div>
+                </div>
                 <b-button href="#" v-on:click="addFundraiser"
                     >Lämna In Ansökan</b-button
                 >
@@ -366,7 +372,65 @@ export default {
             }
             if (window.innerWidth < 650) {
                 let tl = gsap.timeline({ repeat: -1 })
-                let plane = gsap.timeline({ repeat: -1, delay: 2 })
+                let donify = gsap.timeline({ yoyo: true })
+                let plane = gsap.timeline({ repeat: -1, delay: 4.7 })
+
+                donify
+                    .from('#donify', { y: 200, scale: 0.5, delay: 1.5 })
+                    .to(
+                        '#donify',
+                        {
+                            rotation: 360,
+                            duration: 1
+                        },
+                        '-=.7'
+                    )
+                    .fromTo(
+                        '#make-someone-happy',
+                        { x: -400 },
+                        { x: 0, duration: 1, ease: 'back(2)' }
+                    )
+                //.to(
+                //    '#donify',
+                //    {
+                //        y: 10,
+                //        yoyo: true,
+                //        //ease: CustomEase.create(
+                //        //    'custom',
+                //        //    'M0,0 C0,0 0.104,-0.18 0.14,0.26 0.177,0.643 0.402,0.45 0.406,0.432 0.474,0.33 0.427,0.229 0.454,0.096 0.486,-0.064 0.634,0.03 0.626,0.084 0.616,0.144 0.605,0.343 0.636,0.384 0.686,0.466 0.774,0.421 0.82,0.396 0.87,0.363 0.846,0.086 0.904,0.088 1.008,0.092 1,0.374 1,0.374 '
+                //        //),
+                //        ease: 'back',
+                //        duration: 2,
+                //        repeat: -1
+                //    },
+                //    '-=.95'
+                //)
+                //.fromTo(
+                //    '#make-someone-happy',
+                //    {
+                //        y: -5,
+
+                //        //ease: CustomEase.create(
+                //        //    'custom',
+                //        //    'M0,0 C0,0 0.104,-0.18 0.14,0.26 0.177,0.643 0.402,0.45 0.406,0.432 0.474,0.33 0.427,0.229 0.454,0.096 0.486,-0.064 0.634,0.03 0.626,0.084 0.616,0.144 0.605,0.343 0.636,0.384 0.686,0.466 0.774,0.421 0.82,0.396 0.87,0.363 0.846,0.086 0.904,0.088 1.008,0.092 1,0.374 1,0.374 '
+                //        //),
+                //        duration: 1.8,
+                //        ease: 'back'
+                //    },
+                //    {
+                //        y: 5,
+                //        yoyo: true,
+                //        //ease: CustomEase.create(
+                //        //    'custom',
+                //        //    'M0,0 C0,0 0.104,-0.18 0.14,0.26 0.177,0.643 0.402,0.45 0.406,0.432 0.474,0.33 0.427,0.229 0.454,0.096 0.486,-0.064 0.634,0.03 0.626,0.084 0.616,0.144 0.605,0.343 0.636,0.384 0.686,0.466 0.774,0.421 0.82,0.396 0.87,0.363 0.846,0.086 0.904,0.088 1.008,0.092 1,0.374 1,0.374 '
+                //        //),
+                //        ease: 'back',
+                //        duration: 1.8,
+                //        repeat: -1
+                //    },
+                //    '<-=1.2'
+                //)
+
                 tl.fromTo(
                     '.cloud1 ',
                     {
@@ -385,7 +449,7 @@ export default {
                         '#Airplane',
                         {
                             x: -100,
-                            delay: 2
+                            delay: 3
                         },
                         { x: 700, duration: 18, color: 'red' }
                     )
@@ -519,6 +583,24 @@ input {
     margin: 20px 0;
 }
 
+.checkboxes {
+    display: flex;
+    margin-bottom: 75px;
+}
+.checkboxes label {
+    height: 0px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.first-check {
+    margin-right: 15px;
+}
+.second-check {
+    margin: 0px 15px 0px 25px;
+}
+
 h2 {
     color: white;
     font-size: 31.3px;
@@ -566,7 +648,7 @@ a {
 .root-fundraiser {
     background-color: #1f9eff;
     width: 100vw;
-    height: 320vh;
+    height: 310vh;
 }
 
 #make-someone-happy {
