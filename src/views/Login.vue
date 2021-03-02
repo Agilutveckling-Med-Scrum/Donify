@@ -4,27 +4,54 @@
         <form @submit.prevent="submitForm">
             <div class="px-3 py-2">
                 <label>Användarnamn</label>
-                <input type="email" v-model="email" class="form-control" placeholder="E-postadress" />
+                <input
+                    type="email"
+                    v-model="email"
+                    class="form-control"
+                    placeholder="E-postadress"
+                />
                 <span
-                v-if="(!$v.email.required || !$v.email.email) && $v.email.$dirty"
-                class="text-danger"
-                >Giltig e-post krävs!</span>
+                    v-if="
+                        (!$v.email.required || !$v.email.email) &&
+                            $v.email.$dirty
+                    "
+                    class="text-danger"
+                    >Giltig e-post krävs!</span
+                >
             </div>
 
             <div class="px-3 py-2">
                 <label>Lösenord</label>
-                <input type="password" v-model="password" class="form-control" placeholder="Lösenord"/>
+                <input
+                    type="password"
+                    v-model="password"
+                    class="form-control"
+                    placeholder="Lösenord"
+                />
                 <span
-                v-if="!$v.password.required && $v.password.$dirty"
-                class="text-danger"
-                >Lösenord krävs!</span>
+                    v-if="!$v.password.required && $v.password.$dirty"
+                    class="text-danger"
+                    >Lösenord krävs!</span
+                >
                 <span
-                v-if="(!$v.password.minLength || !$v.password.maxLength) && $v.password.$dirty"
-                class="text-danger"
-                >Lösenordet måste vara mellan {{ $v.password.$params.minLength.min}} och {{ $v.password.$params.maxLength.max}} tecken!</span>
+                    v-if="
+                        (!$v.password.minLength || !$v.password.maxLength) &&
+                            $v.password.$dirty
+                    "
+                    class="text-danger"
+                    >Lösenordet måste vara mellan
+                    {{ $v.password.$params.minLength.min }} och
+                    {{ $v.password.$params.maxLength.max }} tecken!</span
+                >
             </div>
-            
-        <b-button type="submit" variant="primary" @click="login" class="mx-auto">Logga in </b-button> 
+
+            <b-button
+                type="submit"
+                @click="login"
+                variant="primary"
+                class="mx-auto"
+                >Logga in
+            </b-button>
         </form>
         <p>Glömt ditt lösenord?</p>
         <p>Inget konto? Skapa nytt här</p>
@@ -32,15 +59,11 @@
 </template>
 
 <script>
-import {
-    required,
-    minLength,
-    maxLength,
-    email
-} from 'vuelidate/lib/validators'
+import { required, minLength, maxLength, email } from 'vuelidate/lib/validators'
 export default {
     data: () => ({
-         loginData:   [ {
+        loginData: [
+            {
                 email: 'johanna@gmail.com',
                 password: 'johanna'
             },
@@ -51,9 +74,10 @@ export default {
             {
                 email: 'carel@gmail.com',
                 password: 'heeej3'
-            }],
+            }
+        ],
         email: '',
-        password: '',
+        password: ''
     }),
     validations: {
         email: {
@@ -66,52 +90,45 @@ export default {
             minLength: minLength(6)
         }
     },
+
     methods: {
         login() {
             let error = true
-            
-            for (let n = 0; n < this.loginData.length; n++){
-                if(this.email == this.loginData[n].email && this.password == this.loginData[n].password) {
-                    error = false
+
+            for (let n = 0; n < this.loginData.length; n++) {
+                if (
+                    this.email == this.loginData[n].email &&
+                    this.password == this.loginData[n].password
+                ) {
+                    error = true 
                     this.$router.push({
                         name: 'Userpage'
                     })
-                }
-               
-                else if (error == true) {
+                } else if (error == false) {
                     alert('Fel användarnamn eller lösenord')
                     n = this.loginData.length
                 }
             }
-        }
-    },
+        },
         submitForm() {
             this.$v.$touch()
 
             if (!this.$v.$invalid) {
-                console.log(
-                    `Email: ${this.email}, Password: ${this.password}`
-                )
+                console.log(`Email: ${this.email}, Password: ${this.password}`)
             }
-        },
-        userpage() {
-            this.$router.push({
-                name: 'Userpage'
-            })
-        }
+        }       
     },
     name: 'Login'
 }
 </script>
 
-
 <style scoped>
 #login {
-    margin-top: 50px; 
-     margin-left: 20px; 
-    margin-right: 20px;   
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
     border: 2px solid #666666;
-    padding-top: 30px; 
+    padding-top: 30px;
 }
 
 label,
@@ -128,13 +145,13 @@ input {
 }
 
 h2 {
-    margin-left: 20px; 
-    margin-bottom: 20px; 
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 p {
     cursor: pointer;
-    color: #1F9EFF;
-    margin-top: 30px; 
+    color: #1f9eff;
+    margin-top: 30px;
 }
 </style>
