@@ -84,6 +84,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-bottom: 60px;
 }
 .mittkonto {
     text-align: center;
