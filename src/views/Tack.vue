@@ -55,6 +55,7 @@ export default {
 .TackPage {
     font-family: 'Open Sans', sans-serif;
     padding: 30px;
+    padding-bottom: 60px;
 }
 .tack p {
     font-size: 28px;
