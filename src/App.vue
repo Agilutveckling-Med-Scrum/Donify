@@ -111,6 +111,7 @@ img {
     font-weight: bold;
     color: #2c3e50;
     margin: 20px;
+
 }
 
 #nav a:hover {

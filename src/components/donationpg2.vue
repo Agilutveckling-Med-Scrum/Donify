@@ -1,6 +1,6 @@
 <template>
     <div class="donationPage2">
-        <div @click="Goback" class="backicon">
+        <div @click="$router.go(-1)" class="backicon">
             <i class="fa fa-angle-left"></i> Tillbaka
         </div>
         <div class="chosedOrg">
@@ -26,7 +26,9 @@
                             value="2"
                         />Banköverföring
                     </div>
-                    <div><img src="@/assets/bankcard.svg" alt="" /></div>
+                    <div class="Img">
+                        <img src="@/assets/bankcard.svg" alt="" />
+                    </div>
                 </label>
                 <label class="m-check ui-margin">
                     <div>
@@ -41,7 +43,9 @@
                     <div>
                         <input type="radio" name="remindType" value="2" />Swish
                     </div>
-                    <div><img src="@/assets/swish.svg" alt="" /></div>
+                    <div class="Img">
+                        <img src="@/assets/swish.svg" alt="" />
+                    </div>
                 </label>
             </div>
         </div>
@@ -69,11 +73,6 @@ export default {
             this.$router.push({
                 name: 'TackPage'
             })
-        },
-        Goback() {
-            this.$router.push({
-                name: 'Donationpage1'
-            })
         }
     },
     name: 'Donationpage2'
@@ -84,8 +83,10 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .donationPage2 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
     padding: 20px;
+}
+.backicon {
+    font-size: 22px;
 }
 
 .wwftext img {
@@ -135,6 +136,9 @@ img {
     border-radius: 100px;
     line-height: 80px;
 }
+span {
+    font-size: 22px;
+}
 
 label {
     margin-top: 20px;
@@ -153,15 +157,36 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 40px;
 }
 .betalanu {
-    margin: 20px auto;
+    margin: 20px auto 60px;
     border-radius: 8px;
     width: 340px;
     height: 60px;
     font-size: 24px;
+
     color: white;
     font-weight: 600;
     background-color: #020d74;
+}
+@media (min-width: 980px) {
+    label {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .Img img {
+        margin-left: 60px;
+    }
+    img {
+        width: 24px;
+        height: 24px;
+        height: 40px;
+    }
+    p img {
+        float: left;
+        margin-right: 10px;
+    }
 }
 </style>

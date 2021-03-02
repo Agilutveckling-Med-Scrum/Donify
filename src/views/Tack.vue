@@ -55,6 +55,7 @@ export default {
 .TackPage {
     font-family: 'Open Sans', sans-serif;
     padding: 30px;
+    padding-bottom: 60px;
 }
 .tack p {
     font-size: 28px;
@@ -64,6 +65,7 @@ export default {
 .backicon {
     display: flex;
     justify-content: space-between;
+    font-size: 22px;
 }
 .WWF img {
     float: right;
@@ -81,7 +83,7 @@ export default {
 }
 .line {
     border: 1px solid rgb(61, 60, 60);
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 p {
@@ -96,5 +98,20 @@ p {
 .container {
     display: flex;
     flex-direction: column;
+}
+@media (min-width: 380px) {
+    .bearcontainer img {
+        margin: 30px auto;
+        display: flex;
+        width: 400px;
+        vertical-align: middle;
+        margin-bottom: 6px;
+    }
+    .wildlife p {
+        text-align: justify;
+        padding: 0 8px 0 8px;
+        font-size: 14px;
+        line-height: 12px;
+    }
 }
 </style>
