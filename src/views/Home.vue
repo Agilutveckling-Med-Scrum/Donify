@@ -108,7 +108,7 @@ export default {
 position: relative;
 padding-top: 300px; 
 width: 100%;
-background: linear-gradient(to top, white, transparent), url("../pictures/facemask_640.jpg"); 
+background: linear-gradient(to top, white, transparent), url("../assets/facemask_640.jpg"); 
 background-size: cover; 
 }
 
@@ -117,7 +117,7 @@ background-size: cover;
 position: relative;
 padding-top: 300px; 
 width: 100%;
-background: linear-gradient(to top, black, transparent), url("../pictures/wwf_640.jpg"); 
+background: linear-gradient(to top, black, transparent), url("../assets/wwf_640.jpg"); 
 background-size: cover; 
 color: white; 
 }
@@ -232,12 +232,12 @@ img {
 @media screen and (min-width: 980px) {
 .picture-1 {
     padding-top: 600px; 
-    background: linear-gradient(to top, white, transparent), url("../pictures/facemask_1920.jpg"); 
+    background: linear-gradient(to top, white, transparent), url("../assets/facemask_1920.jpg"); 
     background-size: cover; 
 }
 .picture-2 {
     padding-top: 600px; 
-    background: linear-gradient(to top, black, transparent), url("../pictures/wwf_1920.jpg"); 
+    background: linear-gradient(to top, black, transparent), url("../assets/wwf_1920.jpg"); 
     background-size: cover; 
 }
 #toplist {
