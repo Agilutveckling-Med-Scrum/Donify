@@ -55,6 +55,7 @@ export default {
 .TackPage {
     font-family: 'Open Sans', sans-serif;
     padding: 30px;
+    padding-bottom: 60px;
 }
 .tack p {
     font-size: 28px;
@@ -97,5 +98,20 @@ p {
 .container {
     display: flex;
     flex-direction: column;
+}
+@media (min-width: 380px) {
+    .bearcontainer img {
+        margin: 30px auto;
+        display: flex;
+        width: 400px;
+        vertical-align: middle;
+        margin-bottom: 6px;
+    }
+    .wildlife p {
+        text-align: justify;
+        padding: 0 8px 0 8px;
+        font-size: 14px;
+        line-height: 12px;
+    }
 }
 </style>
