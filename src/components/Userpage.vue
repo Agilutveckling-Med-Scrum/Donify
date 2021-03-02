@@ -137,7 +137,15 @@ h4 {
   margin-top: 20px; 
   margin-bottom: 100px; 
 }
+@media screen and (min-width: 375px) and (max-width: 812px) {
+   #userpage {
+  margin-top: 50px; 
+  margin-left: 20px; 
+}
+}
 
+
+<<<<<<< HEAD
 
 @media screen and (min-width: 720px) {
 #userpage {
@@ -153,5 +161,13 @@ h4 {
   display: flex; 
   flex-direction: row;
 }
+=======
+@media screen and (min-width:813px) and (max-width: 980px) {
+#userpage {
+  margin-top: 50px; 
+  margin-left: 20px; 
+}
+
+>>>>>>> priyas
 }
 </style>

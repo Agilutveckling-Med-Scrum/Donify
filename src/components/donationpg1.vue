@@ -1,6 +1,6 @@
 <template>
     <div class="donationPage1">
-        <div @click="Goback" class="backicon">
+        <div @click="$router.go(-1)" class="backicon">
             <i class="fa fa-angle-left"></i> Tillbaka
         </div>
         <div class="chosedOrg">
@@ -15,7 +15,7 @@
         </div>
         <p>Hur mycket vill du donera?</p>
         <div class="slider">
-            <div>
+            <div class="inputednum">
                 <input type="text" v-model="numvalue" />
                 <select v-model="selected">
                     <option v-for="(item, key) in list" :key="item">{{
@@ -23,7 +23,9 @@
                     }}</option>
                 </select>
             </div>
-            <div><input :value="convertedNum()" />EUR</div>
+            <div class="convertednum">
+                <input :value="convertedNum()" /><span>SEK</span>
+            </div>
         </div>
 
         <div class="downinfo">
@@ -42,8 +44,12 @@
                         Varje år
                     </button>
                 </div>
-                <span v-show="isShowmonth">{{ popinfomonth }}</span>
-                <span v-show="isShowyear">{{ popinfoyear }}</span>
+                <span class="options" v-show="isShowmonth">{{
+                    popinfomonth
+                }}</span>
+                <span class="options" v-show="isShowyear">{{
+                    popinfoyear
+                }}</span>
                 <div class="downbutton">
                     <button
                         id="btn"
@@ -64,7 +70,6 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
-
 export default {
     created() {
         this.coolApi()
@@ -72,7 +77,6 @@ export default {
     data() {
         return {
             namevalue: '',
-
             list: '',
             popinfomonth: '',
             popinfoyear: '',
@@ -86,14 +90,16 @@ export default {
                 .get('https://api.exchangeratesapi.io/latest')
                 .then(response => {
                     this.list = response.data.rates
-
                     //console.log(Object.values(this.list)[0])
                 })
         },
         convertedNum() {
             for (let i = 0; i < Object.keys(this.list).length; i++) {
                 if (this.selected == Object.keys(this.list)[i]) {
-                    return this.numvalue / Object.values(this.list)[i]
+                    return (
+                        (this.numvalue / Object.values(this.list)[i]) *
+                        Object.values(this.list)[9]
+                    ).toFixed(2)
                 }
             }
         },
@@ -131,7 +137,6 @@ export default {
                 this.$store.commit('setnumValue', numvalue)
             }
         },
-
         selected: {
             get() {
                 return this.$store.state.selected
@@ -141,7 +146,6 @@ export default {
             }
         }
     },
-
     name: 'Donationpage1'
 }
 </script>
@@ -152,7 +156,6 @@ export default {
     font-family: 'Open Sans', sans-serif;
     padding: 20px;
 }
-
 .valde {
     font-size: 24px;
     font-weight: 900;
@@ -163,7 +166,7 @@ export default {
     border-radius: 100px;
     line-height: 80px;
 }
-img {
+.wwftext img {
     width: 8px;
     height: 12px;
     margin-right: 3px;
@@ -172,7 +175,12 @@ img {
     margin: 40px;
     height: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+}
+.convertednum {
+    display: flex;
+    align-items: center;
 }
 .chosedOrg {
     margin-top: 30px;
@@ -187,7 +195,16 @@ img {
     background-size: 100% 100%; */
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
-
+.inputednum {
+    display: flex;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #f1f4f4;
+}
+.inputednum input {
+    background-color: #f1f4f4;
+}
 .backicon {
     font-size: 22px;
 }
@@ -203,9 +220,10 @@ img {
 }
 .downbutton {
     margin: 0 auto;
+    padding-bottom: 80px;
 }
 .Tillbetalning {
-    margin-top: 60px;
+    margin-top: 90px;
     width: 160px !important;
     font-size: 18px !important;
     font-weight: 600 !important;
@@ -214,16 +232,33 @@ img {
     margin-top: 8px;
     font-size: 12px;
 }
+.downinfo p {
+    margin: 80px 5px 30px;
+}
+input {
+    border: none;
+    font-size: 20px;
+    font-weight: 800;
+    outline: none;
+}
 p {
-    margin: 40px 5px 30px;
+    margin: 50px 5px 30px;
     font-size: 24px;
 }
 select {
     display: block;
-    margin: 0 auto;
+    border: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
 }
 span {
+    margin-right: 10px;
+    font-size: 22px;
+}
+.options {
     margin: 0 auto;
+    margin-top: 30px;
 }
 #btn {
     font-size: 14px;
@@ -236,6 +271,24 @@ span {
     background-color: #020d74;
 }
 #btn:focus {
-    background-color: #3344e4;
+    background-color: #010d99;
+}
+@media (min-width: 780px) {
+    .upbuttons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+}
+@media (min-width: 380px) {
+    .inputednum {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+    }
+    .convertednum {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 </style>

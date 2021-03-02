@@ -148,7 +148,6 @@ export default {
 
 <style scoped lang="scss">
 /*mobile versions*/
-
 .grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -159,11 +158,9 @@ export default {
     position: relative;
     width: 80vw;
 }
-
 h3 {
     margin-top: 30px;
 }
-
 button {
     border-radius: 300px;
     font-size: 18px;
@@ -175,30 +172,25 @@ img {
     width: 100%;
     height: 178px;
 }
-
 picture {
     width: 100%;
     height: 100%;
 }
-
 .charity-root {
     position: relative;
     width: 100vw;
 }
-
 .charity-card-container {
     background-color: white;
     padding: 10px;
     border: 1px solid #fee;
     border-radius: 25px;
 }
-
 .text-div p {
     text-align: center;
     background-color: white;
     margin: 25px 10px;
 }
-
 .half-circle-text {
     position: absolute;
     top: 6%;
@@ -211,7 +203,6 @@ picture {
     text-align: center;
     width: 100%;
 }
-
 .half-circle-text-paragraph {
     position: absolute;
     top: 21.2%;
@@ -227,74 +218,61 @@ picture {
     border: 1px solid black;
     outline: none;
 }
-
 #search-icon {
     position: absolute;
     top: 13.5px;
     right: 25px;
     z-index: 2;
 }
-
 //Purple Balls
 #purple-half-circle {
     margin-bottom: 123px;
 }
-
 .XS-Small-Ball-Right {
     position: absolute;
     top: 25%;
     right: 5%;
 }
-
 .MD-Ball-Right {
     position: absolute;
     top: 96.5%;
     right: 0%;
 }
-
 .MD-Ball-Right2 {
     position: absolute;
     top: 148%;
     right: 0%;
 }
-
 .MD-Ball-Left {
     position: absolute;
     top: 109%;
     left: 0%;
 }
-
 //Media Queries
-
 @media (max-width: 409px) {
     .half-circle-text {
         top: 2.8%;
         left: 50%;
         font-size: 2.352em;
     }
-
     .half-circle-text-paragraph {
         top: 15.2%;
         font-size: 0.9em;
     }
-
     .XS-Small-Ball-Right {
         top: 22%;
     }
 }
-
 @media (min-width: 409px) and (max-width: 510px) {
     .half-circle-text {
         top: 2.8%;
         left: 50%;
         font-size: 2.7em;
     }
-
     .half-circle-text-paragraph {
         top: 16.5%;
         font-size: 1em;
     }
-
     .XS-Small-Ball-Right {
         top: 24.5%;
     }

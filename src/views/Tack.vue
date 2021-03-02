@@ -64,7 +64,6 @@ export default {
 .backicon {
     display: flex;
     justify-content: space-between;
-    font-size: 22px;
 }
 .WWF img {
     float: right;
@@ -82,7 +81,7 @@ export default {
 }
 .line {
     border: 1px solid rgb(61, 60, 60);
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
 }
 p {
@@ -97,5 +96,19 @@ p {
 .container {
     display: flex;
     flex-direction: column;
+}
+@media screen and (min-width: 375px) and (max-width: 812px) {
+    .TackPage {
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px;
+}
+
+}
+@media screen and (min-width:813px) and (max-width: 980px) {
+    .TackPage {
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px;
+}
+
 }
 </style>
