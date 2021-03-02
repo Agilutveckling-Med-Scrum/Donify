@@ -47,7 +47,7 @@
 
             <b-button
                 type="submit"
-                @click="login"
+                
                 variant="primary"
                 class="mx-auto"
                 >Logga in
@@ -100,14 +100,15 @@ export default {
                     this.email == this.loginData[n].email &&
                     this.password == this.loginData[n].password
                 ) {
-                    error = true 
+                    error = false 
                     this.$router.push({
                         name: 'Userpage'
                     })
-                } else if (error == false) {
-                    alert('Fel användarnamn eller lösenord')
-                    n = this.loginData.length
-                }
+                } 
+            }
+            if (error) {
+                alert('Fel användarnamn eller lösenord')
+               
             }
         },
         submitForm() {
@@ -116,6 +117,7 @@ export default {
             if (!this.$v.$invalid) {
                 console.log(`Email: ${this.email}, Password: ${this.password}`)
             }
+            this.login()
         }       
     },
     name: 'Login'
