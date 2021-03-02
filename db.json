@@ -3,36 +3,63 @@
     {
       "name": "Crisis Text Line",
       "description": "Människor i desparta sitautioner behöver någon att tala medså fort som möjligt. Crisis Text Line hjälper personer istor nöd som annars inte skulle våga bertätta om sinasvårigheter.",
-      "img": "https://www.reachmentoringprogram.com/wp-content/uploads/2020/07/social-share.png"
+      "img": "https://www.reachmentoringprogram.com/wp-content/uploads/2020/07/social-share.png",
+      "id": "1"
     },
     {
       "name": "American Humane",
       "description": "Hjälp djur i stor nöd runt om Amerika",
-      "img": "http://caninechronicle.com/wp-content/uploads/2015/06/American-Humane-Association-Logo.jpg"
+      "img": "http://caninechronicle.com/wp-content/uploads/2015/06/American-Humane-Association-Logo.jpg",
+      "id": "2"
     },
     {
       "name": "World Central Kitchen",
       "description": "WCK har levererat över 25 miljoner måltider sedan 2010. Medvolontörer i ett dussintal städer i Amerika levererar WCK250 000 måltider dagligen.",
       "img": "https://amp-server.s3.amazonaws.com/uploads/org/logo/05e96c406eb34862912837ff09276f48.png",
-      "id": "4"
-    },
-    {
-      "name": "Teststad",
-      "description": "ddd",
-      "img": "htp",
-      "id": "5"
+      "id": "3"
     }
   ],
   "allStartUps": [
     {
       "name": "Space Cube",
       "description": "Vi bygger astronaut utrustning med miljö fokus, vi behöver sponsorer som kan bredda vårat företag",
-      "img": "http://pigment.github.io/fake-logos/logos/vector/color/space-cube.svg"
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/space-cube.svg",
+      "id": "1"
     },
     {
       "name": "The Dance Studio",
       "description": "Vi hjälper barn i svåra situationer att dansa och finna en fristad",
-      "img": "http://pigment.github.io/fake-logos/logos/vector/color/the-dance-studio.svg"
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/the-dance-studio.svg",
+      "id": "2"
+    }
+  ],
+  "randomLogos": [
+    {
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/greens-food-suppliers.png"
+    },
+    {
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg"
+    },
+    {
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/crofts-accountants.svg"
+    },
+    {
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/cheshire-county-hygiene-services.svg"
+    },
+    {
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/fast-banana.png"
+    },
+    {
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/yoga-baby.png"
+    },
+    {
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/petes-blinds.png"
+    },
+    {
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/beauty-box.png"
+    },
+    {
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/beauty-box.png"
     }
   ]
 }
