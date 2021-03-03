@@ -181,10 +181,13 @@ margin-bottom: 50px;
     position: fixed;
     padding: 10px 10px ;
     bottom: 0;
-    width: 900px;
+    width: 100%;
+    margin: 0;
+    padding-bottom:10;
+    margin-right: 0;
 }
 }
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+@media only screen and (min-device-width: 813px) and (max-device-width: 980px) {
     #footer {
     background-color: grey;
     color: white;
@@ -195,6 +198,9 @@ margin-bottom: 50px;
     padding: 10px 10px ;
     bottom: 0;
     width: 100%;
+    flex-direction: row;
+    margin-bottom:30px;
+    
 }
 }
 #footer a {
