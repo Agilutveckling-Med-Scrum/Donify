@@ -96,6 +96,7 @@
                     >
                 </div>
             </div>
+            <div class="bottom"></div>
         </div>
         <h2 v-else>
             Start the local server to see charity listings, write in the
@@ -144,6 +145,9 @@ export default {
     height: 100vh;
     position: relative;
     width: 80vw;
+}
+.bottom {
+    height: 30px;
 }
 h3 {
     margin-top: 30px;

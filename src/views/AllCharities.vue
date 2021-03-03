@@ -1,25 +1,26 @@
 <template>
-    <div class="charity-container">
-        <Charities v-if="charities === true" />
-        <StartUps v-if="startUps === true" />
-        <div class="charity-root" v-if="categories">
-            <h1 class="half-circle-text">Alla <br />Kategorier</h1>
-            <p class="half-circle-text-paragraph">
-                Välj mellan våra två kategorier
-            </p>
+    <div>
+        <div class="charity-container">
+            <Charities v-if="charities === true" />
+            <StartUps v-if="startUps === true" />
+            <div class="charity-root" v-if="categories">
+                <h1 class="half-circle-text">Alla <br />Kategorier</h1>
+                <p class="half-circle-text-paragraph">
+                    Välj mellan våra två kategorier
+                </p>
 
-            <svg
-                id="purple-half-circle"
-                viewBox="0 0 414 251"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M422 0C422 32.9618 416.426 65.6008 405.596 96.0536C394.766 126.506 378.893 154.176 358.882 177.484C338.87 200.791 315.114 219.28 288.968 231.894C262.823 244.508 234.8 251 206.5 251C178.2 251 150.177 244.508 124.032 231.894C97.886 219.28 74.1295 200.791 54.1185 177.484C34.1075 154.176 18.2338 126.506 7.40395 96.0535C-3.42593 65.6008 -9 32.9618 -9 -1.52588e-05L206.5 0H422Z"
-                    fill="#8A2BE2"
-                />
-            </svg>
-            <!--<svg
+                <svg
+                    id="purple-half-circle"
+                    viewBox="0 0 414 251"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M422 0C422 32.9618 416.426 65.6008 405.596 96.0536C394.766 126.506 378.893 154.176 358.882 177.484C338.87 200.791 315.114 219.28 288.968 231.894C262.823 244.508 234.8 251 206.5 251C178.2 251 150.177 244.508 124.032 231.894C97.886 219.28 74.1295 200.791 54.1185 177.484C34.1075 154.176 18.2338 126.506 7.40395 96.0535C-3.42593 65.6008 -9 32.9618 -9 -1.52588e-05L206.5 0H422Z"
+                        fill="#8A2BE2"
+                    />
+                </svg>
+                <!--<svg
                 class="XS-Small-Ball-Right"
                 width="23"
                 height="28"
@@ -84,58 +85,60 @@
                 />
             </svg>-->
 
-            <div class="grid-container">
-                <b-input-group
-                    size="lg"
-                    class=" h5 mb-2"
-                    v-if="charities || startUps"
-                >
-                    <b-icon icon="search" id="search-icon"></b-icon>
-                    <b-form-input
+                <div class="grid-container">
+                    <b-input-group
                         size="lg"
-                        id="search"
-                        type="search"
-                        v-model="search"
-                        placeholder="Sök..."
+                        class=" h5 mb-2"
+                        v-if="charities || startUps"
                     >
-                    </b-form-input>
-                </b-input-group>
+                        <b-icon icon="search" id="search-icon"></b-icon>
+                        <b-form-input
+                            size="lg"
+                            id="search"
+                            type="search"
+                            v-model="search"
+                            placeholder="Sök..."
+                        >
+                        </b-form-input>
+                    </b-input-group>
 
-                <div class="charity-card-container">
-                    <picture>
-                        <img
-                            src="https://images.ctfassets.net/3wjbn0ndwf7t/5wSyFSSZBmguSUqYWSsmG2/04404569bf0120f2472d1aaf07ba673e/Last_Chance_for_Charitable_Donations.jpg"
-                        />
-                        <source media="(min-width: 325px)" srcset="" />
-                    </picture>
-                    <div class="text-div">
-                        <h3>Alla Välgörenheter</h3>
-                        <p>Så glädje genom att ge till välgörenheter</p>
-                        <b-button
-                            variant="primary"
-                            class="mx-auto"
-                            @click="showCharities()"
-                            >Mer</b-button
-                        >
+                    <div class="charity-card-container">
+                        <picture>
+                            <img
+                                src="https://images.ctfassets.net/3wjbn0ndwf7t/5wSyFSSZBmguSUqYWSsmG2/04404569bf0120f2472d1aaf07ba673e/Last_Chance_for_Charitable_Donations.jpg"
+                            />
+                            <source media="(min-width: 325px)" srcset="" />
+                        </picture>
+                        <div class="text-div">
+                            <h3>Alla Välgörenheter</h3>
+                            <p>Så glädje genom att ge till välgörenheter</p>
+                            <b-button
+                                variant="primary"
+                                class="mx-auto"
+                                @click="showCharities()"
+                                >Mer</b-button
+                            >
+                        </div>
                     </div>
-                </div>
-                <div class="charity-card-container">
-                    <picture>
-                        <img
-                            src="https://www.protranslate.net/blog/wp-content/uploads/2020/01/startup-blog.jpg"
-                        />
-                        <source media="(min-width: 325px)" srcset="" />
-                    </picture>
-                    <div class="text-div">
-                        <h3>Alla Start Ups</h3>
-                        <p>Sponsra de senaste banbrytande idéerna</p>
-                        <b-button
-                            variant="primary"
-                            class="mx-auto"
-                            @click="showStartUps()"
-                            >Mer</b-button
-                        >
+                    <div class="charity-card-container">
+                        <picture>
+                            <img
+                                src="https://www.protranslate.net/blog/wp-content/uploads/2020/01/startup-blog.jpg"
+                            />
+                            <source media="(min-width: 325px)" srcset="" />
+                        </picture>
+                        <div class="text-div">
+                            <h3>Alla Start Ups</h3>
+                            <p>Sponsra de senaste banbrytande idéerna</p>
+                            <b-button
+                                variant="primary"
+                                class="mx-auto"
+                                @click="showStartUps()"
+                                >Mer</b-button
+                            >
+                        </div>
                     </div>
+                    <div class="bottom"></div>
                 </div>
             </div>
         </div>
@@ -180,7 +183,6 @@ export default {
 
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-
 h1 {
     margin: 20px 0px 55px 0px;
     font: 'poppins';
@@ -207,7 +209,9 @@ p {
     top: 0;
     z-index: 1;
 }
-
+.bottom {
+    height: 30px;
+}
 .grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -360,11 +364,11 @@ picture {
 }
 
 //Desktop
-
 @media (min-width: 950px) {
     .grid-container {
         margin-bottom: 20px;
     }
+
     .charity-card-container {
         width: 55%;
         height: 100%;

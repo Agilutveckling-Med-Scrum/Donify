@@ -96,6 +96,7 @@
                     >
                 </div>
             </div>
+            <div class="bottom"></div>
         </div>
         <h2 v-else>
             Start the local server to see charity listings, write in the
@@ -180,7 +181,9 @@ picture {
     width: 100%;
     height: 100%;
 }
-
+.bottom {
+    height: 30px;
+}
 .charity-root {
     position: relative;
     width: 100vw;
