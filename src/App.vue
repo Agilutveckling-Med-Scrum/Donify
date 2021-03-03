@@ -6,6 +6,9 @@
             /></router-link>
 
             <div class="rightside">
+                <router-link to="/all" class="link"
+                    >Alla välgörenheter</router-link
+                >
                 <router-link to="/aboutdonify" class="link"
                     >Om Donify</router-link
                 >
@@ -110,8 +113,7 @@ img {
 .link {
     font-weight: bold;
     color: #2c3e50;
-
-    margin: 20px; 
+    margin: 20px;
 }
 
 #nav a:hover {

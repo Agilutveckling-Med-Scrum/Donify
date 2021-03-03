@@ -1,8 +1,8 @@
 <template>
     <div class="charity-root">
-        <h1 class="half-circle-text">Alla <br />Välgörenheter</h1>
+        <h1 class="half-circle-text">Alla <br />Start Ups</h1>
         <p class="half-circle-text-paragraph">
-            Sök eller scrolla ner för att se alla välgröenheter
+            Sök eller scrolla ner för att se alla Start Ups
         </p>
 
         <svg
@@ -13,7 +13,7 @@
         >
             <path
                 d="M422 0C422 32.9618 416.426 65.6008 405.596 96.0536C394.766 126.506 378.893 154.176 358.882 177.484C338.87 200.791 315.114 219.28 288.968 231.894C262.823 244.508 234.8 251 206.5 251C178.2 251 150.177 244.508 124.032 231.894C97.886 219.28 74.1295 200.791 54.1185 177.484C34.1075 154.176 18.2338 126.506 7.40395 96.0535C-3.42593 65.6008 -9 32.9618 -9 -1.52588e-05L206.5 0H422Z"
-                fill="#8A2BE2"
+                fill="#1F9EFF"
             />
         </svg>
         <svg
@@ -29,7 +29,7 @@
                 cy="13.8342"
                 rx="11.5"
                 ry="13.8342"
-                fill="#8A2BE2"
+                fill="#1F9EFF"
             />
         </svg>
         <svg
@@ -40,7 +40,7 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <ellipse cx="59" cy="70.9753" rx="59" ry="70.9753" fill="#8A2BE2" />
+            <ellipse cx="59" cy="70.9753" rx="59" ry="70.9753" fill="#1F9EFF" />
         </svg>
         <svg
             class="MD-Ball-Left"
@@ -50,7 +50,7 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <ellipse cx="47" cy="70.9753" rx="59" ry="70.9753" fill="#8A2BE2" />
+            <ellipse cx="47" cy="70.9753" rx="59" ry="70.9753" fill="#1F9EFF" />
         </svg>
         <svg
             class="MD-Ball-Right2"
@@ -60,7 +60,7 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
-            <ellipse cx="59" cy="70.9753" rx="59" ry="70.9753" fill="#8A2BE2" />
+            <ellipse cx="59" cy="70.9753" rx="59" ry="70.9753" fill="#1F9EFF" />
         </svg>
 
         <div class="grid-container" v-if="charities !== null">
@@ -113,12 +113,26 @@ export default {
     },
     methods: {
         getDonationData() {
-            fetch('http://localhost:3000/allCharities')
+            fetch('http://localhost:3000/allStartUps')
                 .then(response => {
                     return response.json()
                 })
                 .then(result => {
                     this.charities = result
+                    console.log(result)
+                })
+        },
+        addFundraiser() {
+            fetch('http://localhost:3000/allStartUps', {
+                body:
+                    '{ "name": "Teststad", "description": "ddd", "img": "htp", "id": "5"}',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST'
+            })
+                .then(response => response.json())
+                .then(result => {
                     console.log(result)
                 })
         }
@@ -134,6 +148,7 @@ export default {
 
 <style scoped lang="scss">
 /*mobile versions*/
+
 .grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -144,9 +159,11 @@ export default {
     position: relative;
     width: 80vw;
 }
+
 h3 {
     margin-top: 30px;
 }
+
 button {
     border-radius: 300px;
     font-size: 18px;
@@ -158,25 +175,30 @@ img {
     width: 100%;
     height: 178px;
 }
+
 picture {
     width: 100%;
     height: 100%;
 }
+
 .charity-root {
     position: relative;
     width: 100vw;
 }
+
 .charity-card-container {
     background-color: white;
     padding: 10px;
     border: 1px solid #fee;
     border-radius: 25px;
 }
+
 .text-div p {
     text-align: center;
     background-color: white;
     margin: 25px 10px;
 }
+
 .half-circle-text {
     position: absolute;
     top: 6%;
@@ -189,6 +211,7 @@ picture {
     text-align: center;
     width: 100%;
 }
+
 .half-circle-text-paragraph {
     position: absolute;
     top: 21.2%;
@@ -204,148 +227,76 @@ picture {
     border: 1px solid black;
     outline: none;
 }
+
 #search-icon {
     position: absolute;
     top: 13.5px;
     right: 25px;
     z-index: 2;
 }
+
 //Purple Balls
 #purple-half-circle {
     margin-bottom: 123px;
 }
+
 .XS-Small-Ball-Right {
     position: absolute;
     top: 25%;
     right: 5%;
 }
+
 .MD-Ball-Right {
     position: absolute;
     top: 96.5%;
     right: 0%;
 }
+
 .MD-Ball-Right2 {
     position: absolute;
     top: 148%;
     right: 0%;
 }
+
 .MD-Ball-Left {
     position: absolute;
     top: 109%;
     left: 0%;
 }
+
 //Media Queries
+
 @media (max-width: 409px) {
     .half-circle-text {
         top: 2.8%;
         left: 50%;
         font-size: 2.352em;
     }
+
     .half-circle-text-paragraph {
         top: 15.2%;
         font-size: 0.9em;
-        position: unset;
-        top: 0;
     }
+
     .XS-Small-Ball-Right {
         top: 22%;
     }
 }
+
 @media (min-width: 409px) and (max-width: 510px) {
     .half-circle-text {
         top: 2.8%;
         left: 50%;
         font-size: 2.7em;
     }
+
     .half-circle-text-paragraph {
         top: 16.5%;
         font-size: 1em;
     }
+
     .XS-Small-Ball-Right {
         top: 24.5%;
     }
-}
-
-//Desktop
-
-@media (min-width: 950px) {
-    #search,
-    #search-icon {
-        margin-top: 50px;
-    }
-
-    input {
-        position: relative;
-    }
-    .half-circle-text {
-        top: 2.8%;
-        left: 50%;
-        font-size: 3.7em;
-        position: relative;
-        color: black;
-    }
-
-    .half-circle-text-paragraph {
-        font-size: 22px;
-        top: 22.5%;
-        color: black;
-        margin-top: 25px;
-        position: relative;
-    }
-}
-
-.charity-card-container {
-    width: 43.9vw;
-
-    margin: 0 auto;
-}
-
-.charity-card-container {
-    width: 55%;
-    height: 100%;
-    height: auto;
-    margin: 20px auto 20px auto;
-}
-
-.charity-card-container img {
-    width: 43.9vw;
-    max-height: 33%;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    margin: -10px 0px 0px -10px;
-}
-.charity-card-container h3 {
-    font-size: 2.5em;
-    margin-top: 40px;
-}
-.charity-card-container p {
-    font-size: 1.1em;
-    margin-bottom: 45px;
-}
-.charity-card-container button {
-    font-size: 2em;
-    padding: 10px;
-}
-
-#purple-half-circle {
-    display: none;
-}
-
-.XS-Small-Ball-Right {
-    display: none;
-}
-
-.MD-Ball-Right {
-    display: none;
-}
-.MD-Ball-Right2 {
-    display: none;
-}
-.MD-Ball-Left {
-    display: none;
-}
-
-.XS-Small-Ball-Right {
-    top: 24.5%;
 }
 </style>

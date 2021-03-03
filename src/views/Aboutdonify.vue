@@ -3,9 +3,15 @@
     <h2 class="heading">Om Donify</h2>
     <div class="container">
       <picture>
-      <img class="balloons" src="../assets/helping-hand.png" alt="Balloons">
+          <img
+              class="helping-hand" 
+              src="../assets/helping-hand.png" 
+              alt="Woman holding hands with a child"
+          >
       </picture>
-      <div class="centered">Give a festive Gift</div>
+      <div class="centered">
+        Give a festive Gift
+      </div>
     </div>
     <h2>Donify är världens mest betrodda plattform online för insamling till välgörenhet</h2>
     <p>
@@ -13,11 +19,27 @@
       Donify samarbetar tätt med välkända välgörenhetsorganisationer och stämmer regelbundet av hur donationerna kommer till nytta.
     </p>
     <div class="sponsors">
-    <img class="happyman" alt="happy-man" src="../assets/happyman.png">
-    <img class="quote" alt="quote-from-cancerfonden" src="../assets/quote-cancer.png">
-    <img class="marie" src="../assets/mariecurie.png">
+      <img 
+          class="happyman" 
+          alt="happy-man" 
+          src="../assets/happyman.png"
+      >
+      <img 
+          class="quote" 
+          alt="quote from cancerfonden." 
+          src="../assets/quote-cancer.png"
+      >
+      <img 
+          class="marie" 
+          alt="Marie Curie foundation." 
+          src="../assets/mariecurie.png"
+      >
     </div>
-    <img class="map" src="../assets/map.png">
+    <img 
+        class="map" 
+        alt="Locations where Donify operate." 
+        src="../assets/map.png"
+    >
     <div class="locations">
     <div class="circle1">
       <p class="circletx1">Härifrån kan du donera</p>
@@ -39,7 +61,7 @@
 /* Open sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-.balloons {
+.helping-hand {
   width: 100%;
   height: auto;
 }
