@@ -47,7 +47,7 @@
                 </p>
             </div>
 
-            <div @click="Goback" class="backicon">
+            <div>
                 <input type="checkbox" id="faq-4" />
                 <h2 class="loggaut"><label for="faq-4">Logga ut</label></h2>
             </div>
@@ -57,13 +57,6 @@
 
 <script>
 export default {
-    methods: {
-        Tohome() {
-            this.$router.push({
-                name: 'Home'
-            })
-        }
-    },
     name: 'Donationpage3'
 }
 </script>
