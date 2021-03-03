@@ -19,7 +19,7 @@
                     fill="#8A2BE2"
                 />
             </svg>
-            <!--<svg
+            <svg
                 class="XS-Small-Ball-Right"
                 width="23"
                 height="28"
@@ -82,10 +82,14 @@
                     ry="70.9753"
                     fill="#8A2BE2"
                 />
-            </svg>-->
+            </svg>
 
             <div class="grid-container">
-                <b-input-group size="lg" class=" h5 mb-2">
+                <b-input-group
+                    size="lg"
+                    class=" h5 mb-2"
+                    v-if="charities || startUps"
+                >
                     <b-icon icon="search" id="search-icon"></b-icon>
                     <b-form-input
                         size="lg"
@@ -342,6 +346,54 @@ picture {
     .half-circle-text-paragraph {
         top: 16.5%;
         font-size: 1em;
+    }
+
+    .XS-Small-Ball-Right {
+        top: 24.5%;
+    }
+}
+
+//Desktop
+@media (min-width: 950px) {
+    .half-circle-text {
+        top: 2.8%;
+        left: 50%;
+        font-size: 3.7em;
+        position: relative;
+        color: black;
+    }
+
+    .half-circle-text-paragraph {
+        font-size: 22px;
+        top: 22.5%;
+        color: black;
+        margin-top: 25px;
+    }
+
+    .charity-card-container {
+        margin-top: 100px;
+    }
+
+    .charity-card-container {
+        width: 70%;
+        margin: 100px auto;
+    }
+    #purple-half-circle {
+        display: none;
+    }
+
+    .XS-Small-Ball-Right {
+        display: none;
+    }
+
+    .MD-Ball-Right {
+        display: none;
+    }
+    .MD-Ball-Right2 {
+        display: none;
+    }
+    .MD-Ball-Left {
+        display: none;
     }
 
     .XS-Small-Ball-Right {
