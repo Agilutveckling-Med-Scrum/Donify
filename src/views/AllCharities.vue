@@ -19,7 +19,7 @@
                     fill="#8A2BE2"
                 />
             </svg>
-            <!--<svg
+            <svg
                 class="XS-Small-Ball-Right"
                 width="23"
                 height="28"
@@ -82,10 +82,14 @@
                     ry="70.9753"
                     fill="#8A2BE2"
                 />
-            </svg>-->
+            </svg>
 
             <div class="grid-container">
-                <b-input-group size="lg" class=" h5 mb-2">
+                <b-input-group
+                    size="lg"
+                    class=" h5 mb-2"
+                    v-if="charities || startUps"
+                >
                     <b-icon icon="search" id="search-icon"></b-icon>
                     <b-form-input
                         size="lg"
@@ -238,7 +242,7 @@ picture {
 .charity-card-container {
     background-color: white;
     padding: 10px;
-    border: 1px solid #fee;
+    border: 1px solid rgb(221, 221, 221);
     border-radius: 25px;
 }
 
@@ -342,6 +346,74 @@ picture {
     .half-circle-text-paragraph {
         top: 16.5%;
         font-size: 1em;
+    }
+
+    .XS-Small-Ball-Right {
+        top: 24.5%;
+    }
+}
+
+//Desktop
+@media (min-width: 950px) {
+    .grid-container {
+        margin-bottom: 20px;
+    }
+    .charity-card-container {
+        width: 55%;
+        height: 100%;
+        margin: 100px auto 20px auto;
+    }
+    .charity-card-container h3 {
+        font-size: 3em;
+        margin-top: 40px;
+    }
+    .charity-card-container p {
+        font-size: 1.3em;
+        margin-bottom: 45px;
+    }
+    .charity-card-container button {
+        font-size: 2em;
+        padding: 10px;
+    }
+    .half-circle-text {
+        top: 2.8%;
+        left: 50%;
+        font-size: 3.7em;
+        position: relative;
+        color: black;
+    }
+
+    .half-circle-text-paragraph {
+        font-size: 22px;
+        top: 22.5%;
+        color: black;
+        margin-top: 25px;
+    }
+
+    .charity-card-container img {
+        width: 43.9vw;
+        height: 50%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        margin: -10px 0px 0px -10px;
+    }
+
+    #purple-half-circle {
+        display: none;
+    }
+
+    .XS-Small-Ball-Right {
+        display: none;
+    }
+
+    .MD-Ball-Right {
+        display: none;
+    }
+    .MD-Ball-Right2 {
+        display: none;
+    }
+    .MD-Ball-Left {
+        display: none;
     }
 
     .XS-Small-Ball-Right {
