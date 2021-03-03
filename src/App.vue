@@ -1,21 +1,23 @@
 <template>
     <div id="app">
-        <div id="nav" v-if="!mobileView">
-            <router-link to="/" id="logo"
-                ><img src="./assets/logo.png"
-            /></router-link>
+        <header>
+            <div id="nav" v-if="!mobileView">
+                <router-link to="/" id="logo"
+                    ><img src="./assets/logo.png"
+                /></router-link>
 
-            <div class="rightside">
-                <router-link to="/all" class="link"
-                    >Alla välgörenheter</router-link
-                >
-                <router-link to="/aboutdonify" class="link"
-                    >Om Donify</router-link
-                >
-                <router-link to="/login" class="link">Logga in</router-link>
+                <div class="rightside">
+                    <router-link to="/all" class="link"
+                        >Alla välgörenheter</router-link
+                    >
+                    <router-link to="/aboutdonify" class="link"
+                        >Om Donify</router-link
+                    >
+                    <router-link to="/login" class="link">Logga in</router-link>
+                </div>
             </div>
-        </div>
-        <MainTabBar v-if="mobileView" />
+            <MainTabBar v-if="mobileView" />
+        </header>
         <router-view />
     </div>
 </template>
@@ -103,6 +105,9 @@ img {
     display: flex;
     justify-content: space-between;
     margin: 20px;
+}
+header {
+    border: 0.5px solid #666666;
 }
 
 #nav a {

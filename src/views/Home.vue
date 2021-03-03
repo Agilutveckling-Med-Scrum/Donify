@@ -198,6 +198,10 @@ margin-bottom: 50px;
     padding: 0.5em;
     color: white;
 }
+
+#footer a:hover {
+    color: #ff00ff;
+}
 // Media Queries
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .aboutdonify{
