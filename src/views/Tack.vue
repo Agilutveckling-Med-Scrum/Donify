@@ -112,5 +112,8 @@ p {
         font-size: 14px;
         line-height: 12px;
     }
+    .WWF img {
+        margin-right: 200px;
+    }
 }
 </style>

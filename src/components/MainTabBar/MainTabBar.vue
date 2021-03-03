@@ -27,8 +27,7 @@
             <div slot="item-text">Välgörenheter</div>
         </tab-bar-item>
 
-        <tab-bar-item path="/info">
-
+        <tab-bar-item path="/userpage">
             <img
                 slot="item-icon"
                 src="../../assets/img/tabbar/profile.svg"
