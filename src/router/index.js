@@ -27,12 +27,6 @@ const routes = [
     },
 
     {
-        path: '/home',
-        name: 'Home',
-        component: Home
-    },
-
-    {
         path: '/fundraise',
         name: 'Fundraise',
         component: CreaterFundraiser

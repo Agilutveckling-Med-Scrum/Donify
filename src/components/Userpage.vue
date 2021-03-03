@@ -137,21 +137,19 @@ h4 {
   margin-top: 20px; 
   margin-bottom: 100px; 
 }
+@media screen and (min-width: 375px) and (max-width: 812px) {
+   #userpage {
+  margin-top: 50px; 
+  margin-left: 20px; 
+}
+}
 
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width:813px) and (max-width: 980px) {
 #userpage {
- display: flex; 
-   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  margin-top: 50px; 
+  margin-left: 20px; 
 }
-#info {
-  padding: 50px; 
-}
-#info-data {
-  display: flex; 
-  flex-direction: row;
-}
+
 }
 </style>

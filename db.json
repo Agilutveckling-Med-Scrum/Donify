@@ -17,6 +17,96 @@
       "description": "WCK har levererat över 25 miljoner måltider sedan 2010. Medvolontörer i ett dussintal städer i Amerika levererar WCK250 000 måltider dagligen.",
       "img": "https://amp-server.s3.amazonaws.com/uploads/org/logo/05e96c406eb34862912837ff09276f48.png",
       "id": "3"
+    },
+    {
+      "name": "Teststad",
+      "description": "ddd",
+      "img": "htp",
+      "id": "4"
+    },
+    {
+      "name": "Tester",
+      "description": "organiszation",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/fast-banana.png",
+      "id": "5"
+    },
+    {
+      "name": "asas",
+      "description": "asasassa",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/fast-banana.png",
+      "id": "6"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/greens-food-suppliers.png",
+      "id": "7"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/beauty-box.png",
+      "id": "8"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/fast-banana.png",
+      "id": "9"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/beauty-box.png",
+      "id": "10"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/crofts-accountants.svg",
+      "id": "11"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/beauty-box.png",
+      "id": "12"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/fast-banana.png",
+      "id": "13"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/petes-blinds.png",
+      "id": "14"
+    },
+    {
+      "name": "q",
+      "description": "q",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/yoga-baby.png",
+      "id": "15"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg",
+      "id": "16"
+    },
+    {
+      "name": "a",
+      "description": "s",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/beauty-box.png",
+      "id": "17"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/cheshire-county-hygiene-services.svg",
+      "id": "18"
     }
   ],
   "allStartUps": [
@@ -31,6 +121,42 @@
       "description": "Vi hjälper barn i svåra situationer att dansa och finna en fristad",
       "img": "http://pigment.github.io/fake-logos/logos/vector/color/the-dance-studio.svg",
       "id": "2"
+    },
+    {
+      "name": "",
+      "description": "",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/yoga-baby.png",
+      "id": "3"
+    },
+    {
+      "name": "Tester",
+      "description": "organiszation",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/fast-banana.png",
+      "id": "4"
+    },
+    {
+      "name": "Grupp 7",
+      "description": "Swisha mig tack",
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/crofts-accountants.svg",
+      "id": "5"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/greens-food-suppliers.png",
+      "id": "6"
+    },
+    {
+      "name": "a",
+      "description": "a",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/fast-banana.png",
+      "id": "7"
+    },
+    {
+      "name": "grupp 7",
+      "description": "blablablab",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/fast-banana.png",
+      "id": "8"
     }
   ],
   "randomLogos": [

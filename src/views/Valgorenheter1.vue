@@ -1,6 +1,6 @@
 
 <template>
-  <div class="valgorenheter-container">
+   <div class="grid-container">
         <h1>Välgörenheter</h1>
         <div class="search-wrapper">
         <input type="text" v-model="search" placeholder="Search Charity.."/>
@@ -9,7 +9,7 @@
       <button
                         type="button"
                         class="btn btn-primary btn-sm"
-                        @click="$router.push('/donationpg1')">Donera 
+                        @click="$router.push('/all')">Donera 
                     </button>
         
     </div>
@@ -51,7 +51,7 @@ p {
 }
 
 .valgorenheter-container {
-    display: grid;
+    display: flex;
     /*flex-direction: column;*/
     margin: 0 auto;
     text-align: center;
@@ -60,15 +60,23 @@ p {
     top: 0;
     z-index: 1;
 }
-.btn-group {
+button{
+ text-align: center;
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+    .valgorenheter-container {
+    display: flex;
+    /*flex-direction: column;*/
+    margin: 0 auto;
+    text-align: center;
+    width: 80vw;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+}
 
-    min-width: 160px;
-    height: 40px;
-    position: relative;
-    align-items: center;
-    margin: 10px 1px;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 </style>
