@@ -244,6 +244,8 @@ picture {
     .half-circle-text-paragraph {
         top: 15.2%;
         font-size: 0.9em;
+        position: unset;
+        top: 0;
     }
     .XS-Small-Ball-Right {
         top: 22%;
@@ -262,5 +264,88 @@ picture {
     .XS-Small-Ball-Right {
         top: 24.5%;
     }
+}
+
+//Desktop
+
+@media (min-width: 950px) {
+    #search,
+    #search-icon {
+        margin-top: 50px;
+    }
+
+    input {
+        position: relative;
+    }
+    .half-circle-text {
+        top: 2.8%;
+        left: 50%;
+        font-size: 3.7em;
+        position: relative;
+        color: black;
+    }
+
+    .half-circle-text-paragraph {
+        font-size: 22px;
+        top: 22.5%;
+        color: black;
+        margin-top: 25px;
+        position: relative;
+    }
+}
+
+.charity-card-container {
+    width: 43.9vw;
+
+    margin: 0 auto;
+}
+
+.charity-card-container {
+    width: 55%;
+    height: 100%;
+    height: auto;
+    margin: 20px auto 20px auto;
+}
+
+.charity-card-container img {
+    width: 43.9vw;
+    max-height: 33%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin: -10px 0px 0px -10px;
+}
+.charity-card-container h3 {
+    font-size: 2.5em;
+    margin-top: 40px;
+}
+.charity-card-container p {
+    font-size: 1.1em;
+    margin-bottom: 45px;
+}
+.charity-card-container button {
+    font-size: 2em;
+    padding: 10px;
+}
+
+#purple-half-circle {
+    display: none;
+}
+
+.XS-Small-Ball-Right {
+    display: none;
+}
+
+.MD-Ball-Right {
+    display: none;
+}
+.MD-Ball-Right2 {
+    display: none;
+}
+.MD-Ball-Left {
+    display: none;
+}
+
+.XS-Small-Ball-Right {
+    top: 24.5%;
 }
 </style>

@@ -242,7 +242,7 @@ picture {
 .charity-card-container {
     background-color: white;
     padding: 10px;
-    border: 1px solid #fee;
+    border: 1px solid rgb(221, 221, 221);
     border-radius: 25px;
 }
 
@@ -355,6 +355,26 @@ picture {
 
 //Desktop
 @media (min-width: 950px) {
+    .grid-container {
+        margin-bottom: 20px;
+    }
+    .charity-card-container {
+        width: 55%;
+        height: 100%;
+        margin: 100px auto 20px auto;
+    }
+    .charity-card-container h3 {
+        font-size: 3em;
+        margin-top: 40px;
+    }
+    .charity-card-container p {
+        font-size: 1.3em;
+        margin-bottom: 45px;
+    }
+    .charity-card-container button {
+        font-size: 2em;
+        padding: 10px;
+    }
     .half-circle-text {
         top: 2.8%;
         left: 50%;
@@ -370,14 +390,14 @@ picture {
         margin-top: 25px;
     }
 
-    .charity-card-container {
-        margin-top: 100px;
+    .charity-card-container img {
+        width: 43.9vw;
+        height: 50%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        margin: -10px 0px 0px -10px;
     }
 
-    .charity-card-container {
-        width: 70%;
-        margin: 100px auto;
-    }
     #purple-half-circle {
         display: none;
     }
