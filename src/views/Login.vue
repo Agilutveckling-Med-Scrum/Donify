@@ -47,7 +47,6 @@
 
             <b-button
                 type="submit"
-                
                 variant="primary"
                 class="mx-auto"
                 >Logga in
