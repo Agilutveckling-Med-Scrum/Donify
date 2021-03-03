@@ -314,7 +314,7 @@
                         <label for="StartUps-check">Start Ups</label>
                     </div>
                 </div>
-                <b-button href="#" v-on:click="addFundraiser"
+                <b-button href="#" v-on:click="$router.push('/Userpage')"
                     >Lämna In Ansökan</b-button
                 >
                 <span v-if="error">Fyll i alla formulär</span>

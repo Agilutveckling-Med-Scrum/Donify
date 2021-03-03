@@ -29,8 +29,8 @@
                 <h4>De 5 populäraste på Donify</h4>
                  <p
                         v-for="popular in toplist"
-                        v-bind:key="popular"
-                        :value="popular.key"
+                        v-bind:key="popular.id"
+                        :value="popular"
                         >{{popular.number}}{{ popular.name }}
                         </p>
             </div>
