@@ -1,15 +1,15 @@
 <template>
-    <div class="aboutdonify">
+    <div class="home">
         <div class="container">  
-
+        <div id="logo">
             <img src="../assets/logo.png"
             />
+            </div> 
 
-            <div class="picture-1"> 
+            <div id="picture-1"> 
                 <p class="text">
                   <strong>Aktuellt</strong><br>
-
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim amet, sagittis, vivamus lorem faucibus. Sed molestie pharetra massa rhoncus dolor tellus bibendum eleifend.
+                   WHO deklarerade i mars 2020 att coronasmittan är en global pandemi där miljontals människor blivit smit­tade och hun­dra­tusen­tals har dött. På bara några månader har coronaviruset blivit ett globalt hot mot allas hälsa.
                     </p>
                     </div>
                     <h4 id="text-under">make someone happy!</h4>
@@ -33,17 +33,20 @@
                         >{{popular.number}}{{ popular.name }}
                         </p>
             </div>
-
-            <div id="search">
-<h4>Använd sökfunktionen för att hitta specifika donationer</h4>
-            </div>
-
+            
 
             <div id="news" >
-                  <div class="picture-2">
+                <h4>Nyheter</h4>
+                  <div id="picture-2">
                     <p class="text">
-                      <strong>Nyheter</strong><br>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim amet, sagittis, vivamus lorem faucibus. Sed molestie pharetra massa rhoncus dolor tellus bibendum eleifend.
+                      <strong>WWF</strong><br>
+                       Earth Hour är världens största miljömanifestation. 2021 är ett viktigt år då världens ledare kommer fatta flera viktiga globa beslut. Var med och gör skillnad för planeten genom att göra förändringar i din vardag.
+                    </p>
+                    </div>
+                    <div id="picture-3">
+                    <p class="text">
+                      <strong>Startup</strong><br>
+                       Startupbolag eller uppstartsbolag kallas de bolag som precis börjat sin verksamhet. Entreprenörerna som äger en startup försöker hitta en skalbar affärsmodell och ständigt utveckla den istället för en fast modell.
                     </p>
                     </div>
                     <div id="btn-2">
@@ -51,6 +54,7 @@
                             Läs mer
                         </button>
                     </div>
+                    
                 
             </div>
         </div>  
@@ -103,7 +107,7 @@ export default {
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-.picture-1 {
+#picture-1 {
   margin-top: 40px; 
 position: relative;
 padding-top: 300px; 
@@ -112,12 +116,22 @@ background: linear-gradient(to top, white, transparent), url("../assets/facemask
 background-size: cover; 
 }
 
-.picture-2 {
+#picture-2 {
   margin-top: 20px; 
 position: relative;
 padding-top: 300px; 
 width: 100%;
 background: linear-gradient(to top, black, transparent), url("../assets/wwf_640.jpg"); 
+background-size: cover; 
+color: white; 
+}
+
+#picture-3 {
+  margin-top: 20px; 
+position: relative;
+padding-top: 300px; 
+width: 100%;
+background: linear-gradient(to top, black, transparent), url("../assets/startup_640.jpg"); 
 background-size: cover; 
 color: white; 
 }
@@ -128,7 +142,7 @@ color: white;
   left: 10px;
 }
 
-.aboutdonify {
+.home {
     display: flex;
 }
 
@@ -144,8 +158,12 @@ img{
     margin-left: 10px; 
 }
 
+#logo {
+     text-align: center; 
+}
+
 h4 {
-   margin-top: 20px;
+  margin-top: 20px;
   margin-bottom: 20px;
 
 }
@@ -166,14 +184,9 @@ h4 {
     text-align: right;
 }
 
- select {
+select {
     display: block;
     margin: 0 auto;
-}
-
-#search {
-margin-top: 50px; 
-margin-bottom: 50px; 
 }
 
 #toplist {
@@ -184,6 +197,7 @@ margin-bottom: 50px;
 }
 
 #news {
+    margin-top: 50px; 
     margin-bottom: 70px;
 }
 
@@ -221,7 +235,7 @@ margin-bottom: 50px;
 }
 
 @media screen and (min-width: 720px) {
-.picture-1, .picture-2 {
+#picture-1, #picture-2, #picture-3 {
     padding-top: 400px; 
 }
 img {
@@ -230,14 +244,19 @@ img {
 }
 
 @media screen and (min-width: 980px) {
-.picture-1 {
+#picture-1 {
     padding-top: 600px; 
     background: linear-gradient(to top, white, transparent), url("../assets/facemask_1920.jpg"); 
     background-size: cover; 
 }
-.picture-2 {
+#picture-2 {
     padding-top: 600px; 
     background: linear-gradient(to top, black, transparent), url("../assets/wwf_1920.jpg"); 
+    background-size: cover; 
+}
+#picture-3 {
+    padding-top: 600px; 
+    background: linear-gradient(to top, black, transparent), url("../assets/startup_1920.jpg"); 
     background-size: cover; 
 }
 #toplist {
