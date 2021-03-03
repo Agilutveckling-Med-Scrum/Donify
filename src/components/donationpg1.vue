@@ -254,6 +254,7 @@ span {
 .options {
     margin: 0 auto;
     margin-top: 30px;
+    font-size: 16px;
 }
 #btn {
     font-size: 14px;
@@ -282,6 +283,9 @@ span {
     }
     .downinfo p {
         margin: 100px 5px 30px;
+    }
+    .options {
+        font-size: 20px;
     }
 }
 @media (min-width: 380px) {
