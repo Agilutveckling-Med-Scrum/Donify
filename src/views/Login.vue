@@ -45,7 +45,7 @@
                 >
             </div>
 
-<div class="px-3 py-2">
+            <div class="px-3 py-2">
             <b-button
                 type="submit"
                 variant="primary"
@@ -56,7 +56,7 @@
         <p>Inget konto? Skapa nytt här</p>
         </div>
  </form>
-     </div>
+</div>
 </template>
 
 <script>
@@ -129,8 +129,7 @@ export default {
 #login {
     margin: 50px 30px 10px 30px;
     border: 2px solid #666666;
-    padding: 20px;
-    padding-top: 40px; 
+    padding: 40px;
 }
 
 label,
