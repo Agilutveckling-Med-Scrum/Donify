@@ -155,4 +155,29 @@ p {
     color: #1f9eff;
     margin-top: 30px;
 }
+
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: transparent;
+    color: black;
+    margin-left: 5px;
+}
+@media screen and (min-width: 375px) and (max-width: 812px) {
+    label,
+input {
+    display: block;
+}
+}
+
+
+@media screen and (min-width:813px) and (max-width: 980px) {
+    label,
+input {
+    display: block;
+}
+}
+
+
 </style>
+

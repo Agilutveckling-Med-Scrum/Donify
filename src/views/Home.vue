@@ -1,3 +1,4 @@
+
 <template>
     <div class="aboutdonify">
         <div class="container">  
@@ -62,10 +63,12 @@
       <a href="#" class="fa fa-linkedin" />
     </footer>
 
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </div>
+
 
   
 </template>
@@ -76,13 +79,10 @@ export default {
     name: 'Home',
     methods: {
         Todonera() {
-
             this.$router.push({
                 name: 'Donationpg1'
             })
-
             this.$router.push('/all')
-
         }
     },
     data: function() {
@@ -102,7 +102,6 @@ export default {
 
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-
 .picture-1 {
   margin-top: 40px; 
 position: relative;
@@ -111,7 +110,6 @@ width: 100%;
 background: linear-gradient(to top, white, transparent), url("../assets/facemask_640.jpg"); 
 background-size: cover; 
 }
-
 .picture-2 {
   margin-top: 20px; 
 position: relative;
@@ -121,73 +119,62 @@ background: linear-gradient(to top, black, transparent), url("../assets/wwf_640.
 background-size: cover; 
 color: white; 
 }
-
 .text {
   position: absolute;
   bottom: 2px;
   left: 10px;
 }
-
 .aboutdonify {
     display: flex;
 }
-
 #text-under {
     margin-top: 30px;
     margin-bottom: 20px; 
     color: #020D74; 
     text-align: center; 
 }
-
 img{
     margin-top: 30px; 
     margin-left: 10px; 
 }
-
 h4 {
    margin-top: 20px;
   margin-bottom: 20px;
-
 }
-
 #btn-1 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 70px;
 }
-
 #btn-2 {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 100px;
 }
-
 #readmore {
     text-align: right;
 }
-
  select {
     display: block;
     margin: 0 auto;
 }
-
 #search {
 margin-top: 50px; 
 margin-bottom: 50px; 
 }
-
 #toplist {
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 25px; 
     background-color: #D09E54; 
 }
-
 #news {
     margin-bottom: 70px;
 }
 
-#footer {
+
+@media (min-width: 950px)  {
+    #footer {
     background-color: grey;
     color: white;
     height: 5vh;
@@ -195,10 +182,15 @@ margin-bottom: 50px;
     justify-content: center;
     position: fixed;
     padding: 10px 10px ;
-    bottom: 1em;
-    width: 70%;
+    bottom: 0;
+    width: 100%;
+    flex-direction: row;
+    
+    padding-bottom:10;
+    margin-right: 0;
+    
 }
-
+}
 #footer a {
     display: flex;
     justify-content: center;
@@ -206,10 +198,7 @@ margin-bottom: 50px;
     padding: 0.5em;
     color: white;
 }
-
-
 // Media Queries
-
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
     .aboutdonify{
       flex-direction: column;
@@ -219,7 +208,6 @@ margin-bottom: 50px;
         width: 100%;
     }
 }
-
 @media screen and (min-width: 720px) {
 .picture-1, .picture-2 {
     padding-top: 400px; 
@@ -228,7 +216,6 @@ img {
     display: none; 
     }
 }
-
 @media screen and (min-width: 980px) {
 .picture-1 {
     padding-top: 600px; 

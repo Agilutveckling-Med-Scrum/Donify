@@ -88,7 +88,6 @@ export default {
 .backicon {
     font-size: 22px;
 }
-
 .wwftext img {
     width: 8px;
     height: 12px;
@@ -115,7 +114,6 @@ img {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     line-height: 40px;
 }
-
 .chosedOrg {
     display: flex;
     justify-content: center;
@@ -139,7 +137,6 @@ img {
 span {
     font-size: 22px;
 }
-
 label {
     margin-top: 20px;
     display: flex;

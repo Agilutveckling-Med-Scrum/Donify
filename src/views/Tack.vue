@@ -65,7 +65,6 @@ export default {
 .backicon {
     display: flex;
     justify-content: space-between;
-    font-size: 22px;
 }
 .WWF img {
     float: right;
@@ -83,7 +82,7 @@ export default {
 }
 .line {
     border: 1px solid rgb(61, 60, 60);
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
 }
 p {

@@ -23,13 +23,10 @@
  -->
             <div>
                 <input type="checkbox" id="faq-1" />
-                <h2><label for="faq-1">Min donatehistorik</label></h2>
+                <h2><label for="faq-1">Min insamlingshistorik</label></h2>
                 <p class="q-paragraph">
-                    <ul>
-                        <li>uppnå sina mål med hjälp
-                    av användarnas ekonomiska stöd.</li>
-                    </ul>
-                   
+                    Din insamling har bidragit till 20394 måltider, eller
+                    skolmaterial till 10758 elever.
                 </p>
             </div>
 
@@ -37,25 +34,20 @@
                 <input type="checkbox" id="faq-2" />
                 <h2><label for="faq-2">Kontakta Oss</label></h2>
                 <p class="q-paragraph">
-                    You can send email to us : Donify@gmail.com <br />
-                    Or you can call us : 077-7878787
+                    Du kan skicka mejl till oss : Donify@gmail.com <br />
+                    Eller du kan ringa oss : 077-7878787
                 </p>
             </div>
             <div>
                 <input type="checkbox" id="faq-3" />
                 <h2><label for="faq-3">Om Donify</label></h2>
                 <p class="q-paragraph">
-                    Donify hjälper organisationer att uppnå sina mål med hjälp
-                    av användarnas ekonomiska stöd. Donationstjänsten kan hjälpa
-                    samt stötta slutkunder i den breda skalan. Allt från att
-                    hjälpa samhällets mest utsatta med medicin, till ett
-                    nystartat företag att uppnå sin dröm. Donify samarbetar tätt
-                    med välkända välgörenhetsorganisationer och stämmer
-                    regelbundet av hur donationerna kommer till nytta.
+                    Donify är världens mest betrodda plattform online för
+                    insamling till välgörenhet
                 </p>
             </div>
 
-            <div  @click="Goback" class="backicon">
+            <div @click="Goback" class="backicon">
                 <input type="checkbox" id="faq-4" />
                 <h2 class="loggaut"><label for="faq-4">Logga ut</label></h2>
             </div>
@@ -91,7 +83,6 @@ export default {
     font-weight: 800;
     font-size: 20px;
 }
-
 .info {
     display: flex;
     flex-direction: column;
@@ -99,7 +90,6 @@ export default {
     align-items: center;
     margin-top: 30px;
 }
-
 img {
     height: 240px;
     width: 340px;
@@ -146,7 +136,6 @@ input[type='checkbox']:checked ~ h2 label::before {
     margin-left: -4px;
     margin-top: -4px;
 }
-
 .q-paragraph {
     max-height: 0;
     overflow: hidden;
@@ -154,7 +143,6 @@ input[type='checkbox']:checked ~ h2 label::before {
     transition: max-height 0.4s ease;
     font-family: 'Raleway', 'sans-serif';
 }
-
 input[type='checkbox']:checked ~ h2 ~ p {
     max-height: 50px;
 }
