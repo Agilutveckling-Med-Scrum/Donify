@@ -19,7 +19,7 @@
                     fill="#8A2BE2"
                 />
             </svg>
-            <svg
+            <!--<svg
                 class="XS-Small-Ball-Right"
                 width="23"
                 height="28"
@@ -82,7 +82,7 @@
                     ry="70.9753"
                     fill="#8A2BE2"
                 />
-            </svg>
+            </svg>-->
 
             <div class="grid-container">
                 <b-input-group
@@ -180,7 +180,6 @@ export default {
 
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
 h1 {
     margin: 20px 0px 55px 0px;
@@ -191,6 +190,13 @@ p {
     font: 'OpenSans';
 }
 
+.charity-card-container img {
+    width: 80.9vw;
+    height: 50%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin: -10px -10px 0px -10px;
+}
 .charity-container {
     display: flex;
     flex-direction: column;
@@ -354,6 +360,7 @@ picture {
 }
 
 //Desktop
+
 @media (min-width: 950px) {
     .grid-container {
         margin-bottom: 20px;

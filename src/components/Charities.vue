@@ -134,6 +134,7 @@ export default {
 
 <style scoped lang="scss">
 /*mobile versions*/
+
 .grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -162,10 +163,15 @@ picture {
     width: 100%;
     height: 100%;
 }
-.charity-root {
-    position: relative;
-    width: 100vw;
+
+.charity-card-container img {
+    width: 80vw;
+    max-height: 33%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin: -10px -10px 0px -10px;
 }
+
 .charity-card-container {
     background-color: white;
     padding: 10px;
@@ -216,22 +222,23 @@ picture {
 }
 .XS-Small-Ball-Right {
     position: absolute;
+    display: static;
     top: 25%;
     right: 5%;
 }
 .MD-Ball-Right {
     position: absolute;
-    top: 96.5%;
+    top: 59.5%;
     right: 0%;
 }
 .MD-Ball-Right2 {
     position: absolute;
-    top: 148%;
+    top: 135%;
     right: 0%;
 }
 .MD-Ball-Left {
     position: absolute;
-    top: 109%;
+    top: 96%;
     left: 0%;
 }
 //Media Queries
@@ -244,8 +251,6 @@ picture {
     .half-circle-text-paragraph {
         top: 15.2%;
         font-size: 0.9em;
-        position: unset;
-        top: 0;
     }
     .XS-Small-Ball-Right {
         top: 22%;
@@ -268,7 +273,7 @@ picture {
 
 //Desktop
 
-@media (min-width: 950px) {
+@media screen and (min-width: 950px) {
     #search,
     #search-icon {
         margin-top: 50px;
@@ -287,65 +292,59 @@ picture {
 
     .half-circle-text-paragraph {
         font-size: 22px;
-        top: 22.5%;
+        top: 2.5%;
         color: black;
         margin-top: 25px;
         position: relative;
     }
-}
 
-.charity-card-container {
-    width: 43.9vw;
+    .charity-card-container {
+        width: 43.9vw;
 
-    margin: 0 auto;
-}
+        margin: 0 auto;
+    }
 
-.charity-card-container {
-    width: 55%;
-    height: 100%;
-    height: auto;
-    margin: 20px auto 20px auto;
-}
+    .charity-card-container {
+        width: 55%;
+        height: 100%;
+        height: auto;
+        margin: 20px auto 20px auto;
+    }
 
-.charity-card-container img {
-    width: 43.9vw;
-    max-height: 33%;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    margin: -10px 0px 0px -10px;
-}
-.charity-card-container h3 {
-    font-size: 2.5em;
-    margin-top: 40px;
-}
-.charity-card-container p {
-    font-size: 1.1em;
-    margin-bottom: 45px;
-}
-.charity-card-container button {
-    font-size: 2em;
-    padding: 10px;
-}
+    .charity-card-container img {
+        width: 43.9vw;
+        max-height: 33%;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        margin: -10px 0px 0px -10px;
+    }
+    .charity-card-container h3 {
+        font-size: 2.5em;
+        margin-top: 40px;
+    }
+    .charity-card-container p {
+        font-size: 1.1em;
+        margin-bottom: 45px;
+    }
+    .charity-card-container button {
+        font-size: 2em;
+        padding: 10px;
+    }
 
-#purple-half-circle {
-    display: none;
-}
-
-.XS-Small-Ball-Right {
-    display: none;
-}
-
-.MD-Ball-Right {
-    display: none;
-}
-.MD-Ball-Right2 {
-    display: none;
-}
-.MD-Ball-Left {
-    display: none;
-}
-
-.XS-Small-Ball-Right {
-    top: 24.5%;
+    #purple-half-circle {
+        display: none;
+    }
+    .XS-Small-Ball-Right {
+        display: none;
+    }
+    .MD-Ball-Right {
+        display: none;
+    }
+    .MD-Ball-Right2 {
+        display: none;
+    }
+    .MD-Ball-Left {
+        display: none;
+    }
 }
 </style>

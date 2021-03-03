@@ -43,7 +43,7 @@ export default {
     methods: {
         handleResize() {
             this.windowWidth = window.innerWidth
-            if (this.windowWidth > 720) {
+            if (this.windowWidth > 949) {
                 console.log(this.windowWidth)
                 this.mobileView = false
             } else {

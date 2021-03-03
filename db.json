@@ -107,6 +107,36 @@
       "description": "a",
       "img": "http://pigment.github.io/fake-logos/logos/vector/color/cheshire-county-hygiene-services.svg",
       "id": "18"
+    },
+    {
+      "name": "",
+      "description": "",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/beauty-box.png",
+      "id": "19"
+    },
+    {
+      "name": "dssdsd",
+      "description": "ascdscv",
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/crofts-accountants.svg",
+      "id": "20"
+    },
+    {
+      "name": "ewergergver",
+      "description": "ewe",
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg",
+      "id": "21"
+    },
+    {
+      "name": "",
+      "description": "",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/yoga-baby.png",
+      "id": "22"
+    },
+    {
+      "name": "Banan Boats Company",
+      "description": "Helping poor monkeys",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/yoga-baby.png",
+      "id": "23"
     }
   ],
   "allStartUps": [
@@ -157,6 +187,24 @@
       "description": "blablablab",
       "img": "http://pigment.github.io/fake-logos/logos/small/color/fast-banana.png",
       "id": "8"
+    },
+    {
+      "name": "",
+      "description": "",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/beauty-box.png",
+      "id": "9"
+    },
+    {
+      "name": "ewew",
+      "description": "fers",
+      "img": "http://pigment.github.io/fake-logos/logos/small/color/greens-food-suppliers.png",
+      "id": "10"
+    },
+    {
+      "name": "ewergergver",
+      "description": "ewe",
+      "img": "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg",
+      "id": "11"
     }
   ],
   "randomLogos": [

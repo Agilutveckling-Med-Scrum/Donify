@@ -314,7 +314,7 @@
                         <label for="StartUps-check">Start Ups</label>
                     </div>
                 </div>
-                <b-button href="#" v-on:click="$router.push('/Userpage')"
+                <b-button href="#" v-on:click="addFundraiser()"
                     >Lämna In Ansökan</b-button
                 >
                 <span v-if="error">Fyll i alla formulär</span>
@@ -393,46 +393,6 @@ export default {
                         { x: -400 },
                         { x: 0, duration: 1, ease: 'back(2)' }
                     )
-                //.to(
-                //    '#donify',
-                //    {
-                //        y: 10,
-                //        yoyo: true,
-                //        //ease: CustomEase.create(
-                //        //    'custom',
-                //        //    'M0,0 C0,0 0.104,-0.18 0.14,0.26 0.177,0.643 0.402,0.45 0.406,0.432 0.474,0.33 0.427,0.229 0.454,0.096 0.486,-0.064 0.634,0.03 0.626,0.084 0.616,0.144 0.605,0.343 0.636,0.384 0.686,0.466 0.774,0.421 0.82,0.396 0.87,0.363 0.846,0.086 0.904,0.088 1.008,0.092 1,0.374 1,0.374 '
-                //        //),
-                //        ease: 'back',
-                //        duration: 2,
-                //        repeat: -1
-                //    },
-                //    '-=.95'
-                //)
-                //.fromTo(
-                //    '#make-someone-happy',
-                //    {
-                //        y: -5,
-
-                //        //ease: CustomEase.create(
-                //        //    'custom',
-                //        //    'M0,0 C0,0 0.104,-0.18 0.14,0.26 0.177,0.643 0.402,0.45 0.406,0.432 0.474,0.33 0.427,0.229 0.454,0.096 0.486,-0.064 0.634,0.03 0.626,0.084 0.616,0.144 0.605,0.343 0.636,0.384 0.686,0.466 0.774,0.421 0.82,0.396 0.87,0.363 0.846,0.086 0.904,0.088 1.008,0.092 1,0.374 1,0.374 '
-                //        //),
-                //        duration: 1.8,
-                //        ease: 'back'
-                //    },
-                //    {
-                //        y: 5,
-                //        yoyo: true,
-                //        //ease: CustomEase.create(
-                //        //    'custom',
-                //        //    'M0,0 C0,0 0.104,-0.18 0.14,0.26 0.177,0.643 0.402,0.45 0.406,0.432 0.474,0.33 0.427,0.229 0.454,0.096 0.486,-0.064 0.634,0.03 0.626,0.084 0.616,0.144 0.605,0.343 0.636,0.384 0.686,0.466 0.774,0.421 0.82,0.396 0.87,0.363 0.846,0.086 0.904,0.088 1.008,0.092 1,0.374 1,0.374 '
-                //        //),
-                //        ease: 'back',
-                //        duration: 1.8,
-                //        repeat: -1
-                //    },
-                //    '<-=1.2'
-                //)
 
                 tl.fromTo(
                     '.cloud1 ',
@@ -528,6 +488,7 @@ export default {
                     .then(response => response.json())
                     .then(result => {
                         console.log(result)
+                        this.$router.push('/Userpage')
                     })
                     .catch(err => {
                         console.log(err)
@@ -549,6 +510,7 @@ export default {
                     .then(response => response.json())
                     .then(result => {
                         console.log(result)
+                        this.$router.push('/Userpage')
                     })
                     .catch(err => {
                         console.log(err)
@@ -570,6 +532,7 @@ export default {
                     .then(result => {
                         console.log(result)
                         this.serverError = false
+                        this.$router.push('/Userpage')
                     })
                     .catch(err => {
                         console.log(err)
@@ -615,6 +578,11 @@ h2 {
     font-size: 31.3px;
     margin: 65px 15px 0px 15px;
 }
+span {
+    margin-top: -100px;
+    margin-bottom: 100px;
+    color: yellow;
+}
 
 textarea {
     box-shadow: 0px 13px 2px rgba(0, 0, 0, 0.48);
@@ -652,12 +620,13 @@ a {
     padding: 10px;
     box-shadow: 0px 7.5px 2px rgba(0, 0, 0, 0.48);
     font-weight: 900;
+    margin: 10px auto 100px auto;
 }
 
 .root-fundraiser {
     background-color: #1f9eff;
     width: 100vw;
-    height: 310vh;
+    height: auto;
 }
 
 #make-someone-happy {
