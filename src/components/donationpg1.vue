@@ -70,7 +70,6 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
-
 export default {
     created() {
         this.coolApi()
@@ -78,7 +77,6 @@ export default {
     data() {
         return {
             namevalue: '',
-
             list: '',
             popinfomonth: '',
             popinfoyear: '',
@@ -92,7 +90,6 @@ export default {
                 .get('https://api.exchangeratesapi.io/latest')
                 .then(response => {
                     this.list = response.data.rates
-
                     //console.log(Object.values(this.list)[0])
                 })
         },
@@ -135,7 +132,6 @@ export default {
                 this.$store.commit('setnumValue', numvalue)
             }
         },
-
         selected: {
             get() {
                 return this.$store.state.selected
@@ -145,7 +141,6 @@ export default {
             }
         }
     },
-
     name: 'Donationpage1'
 }
 </script>
@@ -156,7 +151,6 @@ export default {
     font-family: 'Open Sans', sans-serif;
     padding: 20px;
 }
-
 .valde {
     font-size: 24px;
     font-weight: 900;
@@ -203,7 +197,6 @@ export default {
     border-radius: 4px;
     background-color: #f1f4f4;
 }
-
 .inputednum input {
     background-color: #f1f4f4;
 }
@@ -261,6 +254,7 @@ span {
 .options {
     margin: 0 auto;
     margin-top: 30px;
+    font-size: 16px;
 }
 #btn {
     font-size: 14px;
@@ -289,6 +283,9 @@ span {
     }
     .downinfo p {
         margin: 100px 5px 30px;
+    }
+    .options {
+        font-size: 20px;
     }
 }
 @media (min-width: 380px) {
