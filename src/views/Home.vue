@@ -1,4 +1,3 @@
-
 <template>
     <div class="aboutdonify">
         <div class="container">  
@@ -171,8 +170,6 @@ margin-bottom: 50px;
 #news {
     margin-bottom: 70px;
 }
-
-
 @media (min-width: 950px)  {
     #footer {
     background-color: grey;
