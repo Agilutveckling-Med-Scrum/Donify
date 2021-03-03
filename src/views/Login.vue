@@ -45,16 +45,18 @@
                 >
             </div>
 
+            <div class="px-3 py-2">
             <b-button
                 type="submit"
                 variant="primary"
                 class="mx-auto"
                 >Logga in
             </b-button>
-        </form>
         <p>Glömt ditt lösenord?</p>
         <p>Inget konto? Skapa nytt här</p>
-    </div>
+        </div>
+ </form>
+</div>
 </template>
 
 <script>
@@ -125,11 +127,9 @@ export default {
 
 <style scoped>
 #login {
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 50px 30px 10px 30px;
     border: 2px solid #666666;
-    padding-top: 30px;
+    padding: 40px;
 }
 
 label,
