@@ -98,7 +98,6 @@ export default {}
     z-index: 1;
     background-color: blueviolet;
 }
-
 #donify {
     position: absolute;
     top: 50%;
@@ -107,13 +106,11 @@ export default {}
     width: 80%;
     height: 100%;
 }
-
 /* #donify path:nth-child(1) {
   stroke-dasharray: 989px;
   stroke-dashoffset: 989px;
   animation: line-anim 2s ease forwards;
 } */
-
 /* D */
 #donify path:nth-child(2) {
     stroke-dasharray: 989px;
@@ -132,7 +129,6 @@ export default {}
     stroke-dashoffset: 628px;
     animation: line-anim 2s ease forwards;
 }
-
 /* if */
 #donify path:nth-child(5) {
     stroke-dasharray: 1076px;
@@ -161,7 +157,6 @@ export default {}
   stroke-dashoffset: 605px;
   animation: line-anim 2s ease forwards;
 } */
-
 @keyframes line-anim {
     to {
         stroke-dashoffset: 0;

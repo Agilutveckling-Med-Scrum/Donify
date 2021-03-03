@@ -13,7 +13,21 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@media screen and (min-width: 375px) and (max-width: 812px) {
+    .about {
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px;
+}
+
+}
+@media screen and (min-width:813px) and (max-width: 980px) {
+    .about {
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px;
+}
+}
 #footer {
   color: black;
   height: 6vh;

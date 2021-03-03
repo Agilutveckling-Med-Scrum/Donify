@@ -91,7 +91,6 @@ export default {
     font-weight: 800;
     font-size: 20px;
 }
-
 .info {
     display: flex;
     flex-direction: column;
@@ -99,7 +98,6 @@ export default {
     align-items: center;
     margin-top: 30px;
 }
-
 img {
     height: 240px;
     width: 340px;
@@ -146,7 +144,6 @@ input[type='checkbox']:checked ~ h2 label::before {
     margin-left: -4px;
     margin-top: -4px;
 }
-
 .q-paragraph {
     max-height: 0;
     overflow: hidden;
@@ -154,7 +151,6 @@ input[type='checkbox']:checked ~ h2 label::before {
     transition: max-height 0.4s ease;
     font-family: 'Raleway', 'sans-serif';
 }
-
 input[type='checkbox']:checked ~ h2 ~ p {
     max-height: 50px;
 }
