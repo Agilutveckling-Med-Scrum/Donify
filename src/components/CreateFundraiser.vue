@@ -401,6 +401,60 @@ export default {
                     },
                     {
                         x: 700,
+                        duration: 100,
+                        scale: 1,
+                        opacity: 0.3,
+                        repeat: -1
+                    }
+                )
+                plane
+                    .fromTo(
+                        '#Airplane',
+                        {
+                            x: -100,
+                            delay: 3
+                        },
+                        { x: 700, duration: 18, color: 'red' }
+                    )
+                    .fromTo(
+                        '#Airplane',
+                        {
+                            x: -100,
+                            delay: 2
+                        },
+                        { x: 850, y: 74, duration: 15, rotation: 10 }
+                    )
+            }
+            //DESKTOP
+
+            if (window.innerWidth > 950) {
+                let tl = gsap.timeline({ repeat: -1 })
+                let donify = gsap.timeline({ yoyo: true })
+                let plane = gsap.timeline({ repeat: -1, delay: 4.7 })
+
+                donify
+                    .from('#donify', { y: 200, scale: 0.5, delay: 1.5 })
+                    .to(
+                        '#donify',
+                        {
+                            rotation: 360,
+                            duration: 1
+                        },
+                        '-=.7'
+                    )
+                    .fromTo(
+                        '#make-someone-happy',
+                        { x: -1000 },
+                        { x: 0, duration: 1, ease: 'back(2)' }
+                    )
+
+                tl.fromTo(
+                    '.cloud1 ',
+                    {
+                        x: -1500
+                    },
+                    {
+                        x: 1100,
                         duration: 70,
                         scale: 1,
                         opacity: 0.3,
