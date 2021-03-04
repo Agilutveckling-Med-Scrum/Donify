@@ -107,7 +107,7 @@ img {
     margin: 20px;
 }
 header {
-    border: 0.5px solid #666666;
+    border-bottom: 0.5px solid #666666;
 }
 
 #nav a {
