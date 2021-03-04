@@ -46,17 +46,14 @@
             </div>
 
             <div class="px-3 py-2">
-            <b-button
-                type="submit"
-                variant="primary"
-                class="mx-auto"
-                >Logga in
-            </b-button>
-        <p>Glömt ditt lösenord?</p>
-        <p>Inget konto? Skapa nytt här</p>
-        </div>
- </form>
-</div>
+                <b-button type="submit" variant="primary" class="mx-auto"
+                    >Logga in
+                </b-button>
+                <p>Glömt ditt lösenord?</p>
+                <p>Inget konto? Skapa nytt här</p>
+            </div>
+        </form>
+    </div>
 </template>
 
 <script>
@@ -101,25 +98,24 @@ export default {
                     this.email == this.loginData[n].email &&
                     this.password == this.loginData[n].password
                 ) {
-                    error = false 
+                    error = false
                     this.$router.push({
                         name: 'Userpage'
                     })
-                } 
+                }
             }
             if (error) {
                 alert('Fel användarnamn eller lösenord')
-               
             }
         },
         submitForm() {
             this.$v.$touch()
 
             if (!this.$v.$invalid) {
-                console.log(`Email: ${this.email}, Password: ${this.password}`)
+                //console.log(`Email: ${this.email}, Password: ${this.password}`)
             }
             this.login()
-        }       
+        }
     },
     name: 'Login'
 }
@@ -129,7 +125,8 @@ export default {
 #login {
     margin: 50px 30px 10px 30px;
     border: 2px solid #666666;
-    padding: 40px;
+    padding: 20px;
+    padding-top: 40px;
 }
 
 label,
@@ -154,5 +151,25 @@ p {
     cursor: pointer;
     color: #1f9eff;
     margin-top: 30px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: transparent;
+    color: black;
+    margin-left: 5px;
+}
+@media screen and (min-width: 375px) and (max-width: 812px) {
+    label,
+    input {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 813px) and (max-width: 980px) {
+    label,
+    input {
+        display: block;
+    }
 }
 </style>
